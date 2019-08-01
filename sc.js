@@ -185,4 +185,4 @@ robot.on('message', message => {
 
 
 
-robot.login(process.env.BOT_TOKEN);
+robot.login(process.env.BOT_SECRET);
