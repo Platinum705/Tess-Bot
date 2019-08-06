@@ -146,7 +146,11 @@ function msdl() {
 message.channel.bulkDelete(1)
 }
 setTimeout(msdl, 1000);
+
+function ls() {
 message.channel.send("Я отправил тебе список команд в личные сообщения")
+}
+setTimeout(ls, 1000);
 
 function helpS() {  
         const embed = new Discord.RichEmbed()
