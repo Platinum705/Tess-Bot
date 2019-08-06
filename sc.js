@@ -164,7 +164,7 @@ function helpS() {
                 .then(() => sentMessage.react('🇪'))
                     .then(() => sentMessage.react('🇱'))
                     .then(() => sentMessage.react('🇵'))
-                    .catch(() => console.error('One of the emojis failed to react.'));
+                    .catch(() => console.error('ъуъ'));
            
         });
       }
@@ -172,26 +172,6 @@ setTimeout(helpS, 2000);
     }
 });
 
-robot.on('message', message => {
-	const args = message.content.slice(p.length).trim().split(/ +/g);
-	const command = args.shift().toLowerCase();
-	if(message.content.startsWith(p + 'poll')) {
-
-		message.delete().catch(O_o => {});
-		const say_poll_embed = args.join(" ");
-		const embed = new Discord.RichEmbed()
-			.setColor(`#00FFFF`)
-			.setDescription(say_poll_embed)
-			.setFooter("голосование|Tess bot")
-			.setTimestamp();	
-            message.channel.send({
-                embed
-            }).then(function(message) {
-                message.react(robot.emojis.find(emoji => emoji.name === "one"));
-                message.react(robot.emojis.find(emoji => emoji.name === "two")); 
-            }).catch(function() {});
-        }
-    }); 
 
 
 
