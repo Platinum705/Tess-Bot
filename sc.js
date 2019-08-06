@@ -142,7 +142,7 @@ robot.on('message', message => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
     message.reply("Загрузка команд...");
-function msdl {
+function msdl() {
 message.channel.bulkDelete(1)
 }
 setTimeout(msdl, 7000)
