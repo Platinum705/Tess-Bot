@@ -145,8 +145,8 @@ robot.on('message', message => {
 function msdl() {
 message.channel.bulkDelete(1)
 }
-setTimeout(msdl, 1000)
-message.channel.send("Я отправил тебе список команд в личные сообщения)
+setTimeout(msdl, 1000);
+message.channel.send("Я отправил тебе список команд в личные сообщения")
 
 function helpS() {  
         const embed = new Discord.RichEmbed()
@@ -162,7 +162,6 @@ function helpS() {
                     .then(() => sentMessage.react('🇵'))
                     .catch(() => console.error('One of the emojis failed to react.'));
            
- 
         });
       }
 setTimeout(helpS, 2000);
