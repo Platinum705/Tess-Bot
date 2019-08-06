@@ -142,6 +142,11 @@ robot.on('message', message => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
     message.channel.send("Загрузка команд...");
+function msdl() {
+message.delete()
+}
+setTimeout(msdl, 7000);
+
 function helpS() {  
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
