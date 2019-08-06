@@ -141,6 +141,11 @@ robot.on('message', message => {
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
+function helpS() {
+  message.channel.send("Загрузка команд...");
+}
+
+setTimeout(helpS, 8000);
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor("#00BFFF")
