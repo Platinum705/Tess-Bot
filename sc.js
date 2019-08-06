@@ -141,11 +141,7 @@ robot.on('message', message => {
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
-function helpS() {
-  message.channel.send("Загрузка команд...");
-}
-
-setTimeout(helpS, 8000);
+function helpS() {  
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor("#00BFFF")
@@ -158,6 +154,8 @@ setTimeout(helpS, 8000);
                     .then(() => sentMessage.react('🇱'))
                     .then(() => sentMessage.react('🇵'))
                     .catch(() => console.error('One of the emojis failed to react.'));
+           }
+ message.channel.send("Загрузка команд...");
         });
     }
 });
