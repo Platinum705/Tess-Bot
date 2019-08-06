@@ -145,7 +145,7 @@ robot.on('message', message => {
 function msdl() {
 message.channel.bulkDelete(1)
 }
-setTimeout(msdl, 7000)
+setTimeout(msdl, 1000)
 
 function helpS() {  
         const embed = new Discord.RichEmbed()
@@ -164,7 +164,7 @@ function helpS() {
  
         });
       }
-setTimeout(helpS, 8000);
+setTimeout(helpS, 2000);
     }
 });
 
