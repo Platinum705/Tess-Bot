@@ -81,7 +81,7 @@ robot.on("messageDelete", (msg) => {
 */
 robot.on('message', message => {
          if(message.content.includes(id2)) {         
-if(message.author.bot) return console.log('ъаъ') 
+if(message.author.bot) return;
                        
 
 robot.users.get("405258156063850497").send(`${message.author.username} упомянул вас \n  Текст сообщения: ${message.content}`)
