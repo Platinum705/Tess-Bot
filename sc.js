@@ -185,4 +185,4 @@ client.on("message", message => {
 
 
 
-robot.login(process.env.BOT_SECRET);
+client.login(process.env.BOT_SECRET);
