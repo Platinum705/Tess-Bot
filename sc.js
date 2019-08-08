@@ -6,8 +6,8 @@ var id2 = '<@405258156063850497>'
 
 
 client.on('ready', () => {
-    robot.user.setActivity('loading..',{ type: "PLAYING" })
-    robot.user.setStatus('dnd')
+    client.user.setActivity('loading..',{ type: "PLAYING" })
+    client.user.setStatus('dnd')
     setTimeout(status1, 6000)
     console.log('ready launched bot...')
 });
