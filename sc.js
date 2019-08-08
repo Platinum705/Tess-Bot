@@ -19,8 +19,8 @@ function status1() {
     robot.user.setStatus('online')
 }
 */
-function status 1() {
-client.user.setActivity("С релаксом", {
+function status1() {
+robot.user.setActivity("С релаксом", {
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
