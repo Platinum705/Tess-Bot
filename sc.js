@@ -171,7 +171,7 @@ setTimeout(helpS, 2000);
 });
 
 client.on("message", message => {
-    if (msg.content.toLowerCase().startsWith(prefix + "clear")) {
+    if (message.content.toLowerCase().startsWith(prefix + "clear")) {
         async function clear() {
             message.delete();
             const fetched = await message.channel.fetchMessages({limit: 99});
