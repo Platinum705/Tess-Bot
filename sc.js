@@ -1,33 +1,26 @@
 const Discord = require("discord.js");
-const robot = new Discord.Client();
 const fs = require("fs");
 const client = new Discord.Client();
-const bot = new Discord.Client();
 var p = "tess!"
 var id2 = '<@405258156063850497>'
 
 
-robot.on('ready', () => {
+client.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
     setTimeout(status1, 6000)
     console.log('ready launched bot...')
 });
-/*
+
 function status1() {
-    robot.user.setActivity('В tess!help' ,{ type: "PLAYING" })
-    robot.user.setStatus('online')
-}
-*/
-function status1() {
-robot.user.setActivity("Dragon Nest Mobile", {
+client.user.setActivity("Dragon Nest Mobile", {
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
 }
 
 
-robot.on('message', message => {
+client.on('message', message => {
   if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
@@ -38,7 +31,7 @@ message.channel.send('Pinging...').then(sent => {
 
 
 
-robot.on('message', message => {
+client.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
 try {
 var mentions1 = message.mentions
@@ -54,7 +47,7 @@ message.channel.send('Ты уверен что это человек имеет 
 	}
 });
 
-robot.on("message",(message) =>
+client.on("message",(message) =>
 
 	{  
 
@@ -70,26 +63,26 @@ robot.on("message",(message) =>
 	});
 	 
 /*
-robot.on("messageDelete", (msg) => {	
+client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){	
     var date = new Date(msg.timestamp);	
     if (typeof msg.attachments[0] !== 'undefined'){	
 	console.log('Кинул в лс удаленное сообщение')	
-      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);	
+      client.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);	
     } else {	
-      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);	
+      client.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);	
     };	
   } else {	
-    robot.users.get("405258156063850497").send("Удалено сообщение.");	
+    client.users.get("405258156063850497").send("Удалено сообщение.");	
   };	
 });                                    
 */
-robot.on('message', message => {
+client.on('message', message => {
          if(message.content.includes(id2)) {         
 if(message.author.bot) return;
                        
 
-robot.users.get("405258156063850497").send(`${message.author.username} упомянул вас \n  Текст сообщения: ${message.content}`)
+client.users.get("405258156063850497").send(`${message.author.username} упомянул вас \n  Текст сообщения: ${message.content}`)
 
 
 
@@ -100,7 +93,7 @@ robot.users.get("405258156063850497").send(`${message.author.username} упом�
 
  });
 
-robot.on('message', message => {
+client.on('message', message => {
 	if(message.content === (p + 'logo')) {
 try {
 	const embed = new Discord.RichEmbed()
@@ -115,7 +108,7 @@ message.channel.send('Произошла ошибка, возможно, вы п
 	}
 });
 
-robot.on('message', message => {
+client.on('message', message => {
     if(message.content.startsWith(p + 'afk on')) {
         const embed = new Discord.RichEmbed()
             .setTitle("AFK")
@@ -130,7 +123,7 @@ robot.on('message', message => {
             }
 });
  
-    robot.on('message', message => {
+    client.on('message', message => {
         if(message.content.startsWith(p + 'afk off')) {
             const embed = new Discord.RichEmbed()
                 .setTitle("AFK")
@@ -144,7 +137,7 @@ robot.on('message', message => {
             }
         });
 
-robot.on('message', message => {
+client.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
     message.channel.send("Загрузка команд...");
 function msdl() {
@@ -177,12 +170,12 @@ setTimeout(helpS, 2000);
     }
 });
 
-client.on("message", msg => {
+client.on("message", message => {
     if (msg.content.toLowerCase().startsWith(prefix + "clear")) {
         async function clear() {
-            msg.delete();
-            const fetched = await msg.channel.fetchMessages({limit: 99});
-            msg.channel.bulkDelete(fetched);
+            message.delete();
+            const fetched = await message.channel.fetchMessages({limit: 99});
+            message.channel.bulkDelete(fetched);
         }
         clear();
     }
