@@ -20,7 +20,7 @@ function status1() {
 }
 */
 function status1() {
-robot.user.setActivity("С релаксом", {
+robot.user.setActivity("Dragon Nest Mobile", {
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
