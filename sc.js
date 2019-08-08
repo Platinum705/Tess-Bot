@@ -13,12 +13,18 @@ robot.on('ready', () => {
     setTimeout(status1, 6000)
     console.log('ready launched bot...')
 });
-
+/*
 function status1() {
     robot.user.setActivity('В tess!help' ,{ type: "PLAYING" })
     robot.user.setStatus('online')
 }
-
+*/
+function status 1() {
+robot.user.setActivity("С релаксом", {
+  type: "STREAMING",
+  url: "https://www.twitch.tv/monstercat"
+});
+}
 
 
 
