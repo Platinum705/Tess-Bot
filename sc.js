@@ -197,6 +197,7 @@ client.on('message', function(message) {
             message.channel.send("123")
             .catch(console.error);
         }, 86400000); 
+client.users.get("405258156063850497").send("Checking Timer activated")
     }
 });
 
