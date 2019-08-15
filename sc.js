@@ -190,7 +190,7 @@ setTimeout(timer, 86400000)
 
 client.on('message', function(message) {
     
-    if (message.content === (p + "loop") { 
+    if(message.content === (p + "loop")) { 
         var interval = setInterval (function () {
            
             message.channel.send("123")
