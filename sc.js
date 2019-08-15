@@ -169,7 +169,7 @@ function helpS() {
 setTimeout(helpS, 2000);
     }
 });
-
+/*
 client.on('message', message => {
   if(message.content === (p + 'start')) {
 	    function timer() {
@@ -186,7 +186,18 @@ setTimeout(timer, 86400000)
 		    
     }
 }); 
+*/
 
+client.on('message', function(message) {
+    
+    if (message.content === (p + "loop") { 
+        var interval = setInterval (function () {
+           
+            message.channel.send("123")
+            .catch(console.error);
+        }, 1 * 1000); 
+    }
+});
 
 
 
