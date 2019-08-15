@@ -170,8 +170,8 @@ setTimeout(helpS, 2000);
     }
 });
 
-robot.on('message', message => {
-  if (message.content === (p + 'start')) {
+client.on('message', message => {
+  if(message.content === (p + 'start')) {
 	    function timer() {
 message.channel.send("@everyone, до мирового босса осталось 15 минут")
 console.log("STARTING TIMER")
