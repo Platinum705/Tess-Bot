@@ -170,6 +170,24 @@ setTimeout(helpS, 2000);
     }
 });
 
+robot.on('message', message => {
+  if (message.content === (p + 'start')) {
+	    function timer() {
+message.channel.send("@everyone, до мирового босса осталось 15 минут")
+console.log("STARTING TIMER")
+}
+setTimeout(checkTimer, 3000)
+	
+function checkTimer() {
+client.users.get("405258156063850497").send("Checking Timer activated")
+}
+setTimeout(timer, 86400000)
+
+		    
+    }
+}); 
+
+
 
 
 
