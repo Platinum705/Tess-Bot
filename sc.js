@@ -77,6 +77,7 @@ client.on("messageDelete", (msg) => {
   };	
 });                                    
 */
+/*
 client.on('message', message => {
          if(message.content.includes(id2)) {         
 if(message.author.bot) return;
@@ -92,7 +93,7 @@ client.users.get("405258156063850497").send(`${message.author.username} упом
     
 
  });
-
+*/
 client.on('message', message => {
 	if(message.content === (p + 'logo')) {
 try {
@@ -195,7 +196,7 @@ client.on('message', function(message) {
            
             message.channel.send("123")
             .catch(console.error);
-        }, 1 * 1000); 
+        }, 86400000); 
     }
 });
 
