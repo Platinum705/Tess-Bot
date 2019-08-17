@@ -192,13 +192,21 @@ setTimeout(timer, 86400000)
 client.on('message', function(message) {
     
     if(message.content === (p + "loop")) { 
+function checkt() {
 console.log("жмых");
-
+setTimeout(checkt2, 2000)
+}
+function checkt2() {
+console.log("жмых 2")
+setTimeout(int, 2000)
+}
         function int() {           
             client.users.get("405258156063850497").send("Start Timer")
+console.log("start TIMER")
             .catch(console.error);
-}
 setTimeout(int2, 21600000)
+}
+
 
 function int2() {
 client.users.get("405258156063850497").send("Checking Timer activated2")
