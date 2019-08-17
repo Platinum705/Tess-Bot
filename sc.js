@@ -204,29 +204,26 @@ setTimeout(int, 2000)
 
         function int() {           
             client.users.get("405258156063850497").send("Start Timer")
-console.log("start TIMER")
-            .catch(console.error);
+console.log("start TIMER")          
 setTimeout(int2, 21600000)
+
 }
 
 
 function int2() {
 client.users.get("405258156063850497").send("Checking Timer activated2")
-.catch(console.error)
 setTimeout(int3, 21600000)
 }
 
 
 function int3() {
 client.users.get("405258156063850497").send("Checking Timer activated3")
-.catch(console.error)
 setTimeout(int4, 21600000)
 }
 
 
 function int4() {
 client.users.get("405258156063850497").send("Checking Timer activated4")
-.catch(console.error)
 setTimeout(int5, 21600000)
 }
 
@@ -234,7 +231,6 @@ setTimeout(int5, 21600000)
 function int5() {
 message.channel.send("@everyone, до мирового босса осталось 15 минут")
 client.users.get("405258156063850497").send("Reload Timer")
-.catch(console.error)
 setTimeout(checkt, 6000)
 }
 
