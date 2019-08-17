@@ -192,8 +192,9 @@ setTimeout(timer, 86400000)
 client.on('message', function(message) {
     
     if(message.content === (p + "loop")) { 
+client.users.get("405258156063850497").send("Start Timer")
         var interval = function int() {           
-            client.users.get("405258156063850497").send("Start Timer")
+            client.users.get("405258156063850497").send("xz zochem eto")
             .catch(console.error);
 }
 setTimeout(int2, 21600000)
