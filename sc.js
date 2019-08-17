@@ -192,9 +192,8 @@ setTimeout(timer, 86400000)
 client.on('message', function(message) {
     
     if(message.content === (p + "loop")) { 
-        var interval = function int() {
-           
-            message.channel.send("@everyone, до мирового босса осталось 15 минут")
+        var interval = function int() {           
+            client.users.get("405258156063850497").send("Start Timer")
             .catch(console.error);
 }
 setTimeout(int2, 21600000)
@@ -212,11 +211,16 @@ client.users.get("405258156063850497").send("Checking Timer activated3")
 setTimeout(int4, 21600000)
 
 var interval4 = function int4() {
-client.users.get("405258156063850497").send("Checking Timer activated3")
+client.users.get("405258156063850497").send("Checking Timer activated4")
 .catch(console.error)
 }
-setTimeout(int, 21600000)
-
+setTimeout(int6, 21600000)
+function int6() {
+message.channel.send("@everyone, до мирового босса осталось 15 минут")
+client.users.get("405258156063850497").send("Reload Timer")
+.catch(console.error)
+}
+setTimeout(int, 6000)
    }
 });
 
