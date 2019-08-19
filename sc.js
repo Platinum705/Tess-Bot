@@ -194,10 +194,9 @@ client.on('message', function(message) {
     if(message.content === (p + "loop")) { 
 function checkt() {
 console.log("жмых")
-setTimeout(int, 2000)
+
 }
-
-
+setTimeout(int, 2000)
        }
 
 function int() {           
