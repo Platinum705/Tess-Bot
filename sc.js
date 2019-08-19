@@ -163,7 +163,7 @@ function helpS() {
                 .then(() => sentMessage.react('🇪'))
                     .then(() => sentMessage.react('🇱'))
                     .then(() => sentMessage.react('🇵'))
-                    .catch(() => console.error('ъуъ'));
+                    .catch(console.error)
            
         });
       }
@@ -174,33 +174,33 @@ setTimeout(helpS, 2000);
 client.on('message', function(message) {
     
     if(message.content === (p + "loop")) { 
+message.channel.send("@everyone, до мирового босса осталось 15 минут")
 setTimeout(int, 2000)
 
  }
 
 function int() {           
 console.log("start TIMER")          
-setTimeout(int2, 5000)
+setTimeout(int2, 21600000)
 }
 
 
 function int2() {
 client.users.get("405258156063850497").send("Checking Timer activated2")
-setTimeout(int3, 5000)
+setTimeout(int3, 21600000)
 }
 
 
 function int3() {
 client.users.get("405258156063850497").send("Checking Timer activated3")
-setTimeout(int4, 5000)
+setTimeout(int4, 21600000)
 }
 
 
 function int4() {
 client.users.get("405258156063850497").send("Checking Timer activated4")
-setTimeout(int5, 5000)
+setTimeout(int5, 21600000)
 }
-//21600000(вернуть на места к функциям)
 
 function int5() {
 message.channel.send("@everyone, до мирового босса осталось 15 минут")
