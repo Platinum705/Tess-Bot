@@ -194,41 +194,42 @@ client.on('message', function(message) {
     if(message.content === (p + "loop")) { 
 function checkt() {
 console.log("жмых")
-}
 setTimeout(int, 2000)
+}
 
-        function int() {           
+
+       }
+
+function int() {           
 console.log("start TIMER")          
-setTimeout(int2, 21600000)
-
+setTimeout(int2, 10000)
 }
 
 
 function int2() {
 client.users.get("405258156063850497").send("Checking Timer activated2")
-setTimeout(int3, 21600000)
+setTimeout(int3, 10000)
 }
 
 
 function int3() {
 client.users.get("405258156063850497").send("Checking Timer activated3")
-setTimeout(int4, 21600000)
+setTimeout(int4, 10000)
 }
 
 
 function int4() {
 client.users.get("405258156063850497").send("Checking Timer activated4")
-setTimeout(int5, 21600000)
+setTimeout(int5, 10000)
 }
-
+//21600000(вернуть на места к функциям)
 
 function int5() {
 message.channel.send("@everyone, до мирового босса осталось 15 минут")
 client.users.get("405258156063850497").send("Reload Timer")
 setTimeout(checkt, 6000)
 }
-
-   }
+   
 });
 
 
