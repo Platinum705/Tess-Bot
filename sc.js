@@ -6,6 +6,15 @@ var id2 = '<@405258156063850497>'
 
 
 client.on('ready', () => {
+const channel = client.channels.get("547774207392743425");
+  if (!channel) return console.error("The channel does not exist!");
+  channel.join().then(connection => {
+    
+    console.log("Successfully connected.");
+  }).catch(e => {
+    
+    console.error(e);
+  });
     client.user.setActivity('loading..',{ type: "PLAYING" })
     client.user.setStatus('dnd')
     setTimeout(status1, 6000)
