@@ -174,6 +174,7 @@ setTimeout(helpS, 2000);
 client.on('message', function(message) {
     
     if(message.content === (p + "loop")) { 
+message.delete()
 message.channel.send("@everyone, до мирового босса осталось 15 минут")
 setTimeout(int, 2000)
 
@@ -210,7 +211,15 @@ setTimeout(int, 6000)
    
 });
 
+client.on('message', message => {
+if(message.content === (p + 'test')) {
+client.guild.channel.get("606075755386109973").send("test")
 
+
+
+  }
+
+});
 
 
 client.login(process.env.BOT_SECRET);
