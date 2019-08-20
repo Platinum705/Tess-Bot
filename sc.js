@@ -213,7 +213,7 @@ setTimeout(int, 6000)
 
 client.on('message', message => {
 if(message.content === (p + 'test')) {
-client.guild.channel.get("606075755386109973").send("test")
+client.guildChannel.get("606075755386109973").send("test")
 
 
 
