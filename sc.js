@@ -13,18 +13,12 @@ client.on('ready', () => {
 });
 
 function status1() {
-client.user.setActivity("Dragon Nest Mobile", {
+let UTC = new Date()
+client.user.setActivity(UTC + "UTC+5", {
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
-setTimeout(status2, 20000)
-}
-function status2() {
-let vremjya = new Date()
-client.user.setActivity(vremjya + "UTC+5", {
-type: "PLAYING"
-});
-setTimeout(status1, 20000)
+
 }
 
 client.on('message', message => {
