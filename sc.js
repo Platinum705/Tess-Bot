@@ -13,11 +13,12 @@ client.on('ready', () => {
 });
 
 function status1() {
-let UTC = new Date()
-let UTC2 = UTC.getHours()
-let UTC3 = UTC.getMinutes()
+//let UTC = new Date()
+let UTC = (new Date()).toLocalString('ru-RU', 'Russian/Moscow')
+//let UTC2 = UTC.getHours()
+//let UTC3 = UTC.getMinutes()
 
-client.user.setActivity(UTC2 + ":" + UTC3 ,{
+client.user.setActivity(UTC ,{
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
@@ -215,34 +216,16 @@ setTimeout(int, 6000)
    
 });
 
-
+/*
 client.on('message', message => {
          if(message.content === ("test")) { 
-function getWeekDay(date) {
-  let days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'ВС'];
 
-  return days[date.getDay()];
-}
-
-let date = new Date(); 
-var dd = getWeekDay(date)
-if(dd === 'ПН') {
-message.reply("1")
-}
-
-
-                   
-
-
-
-
-               
         }
 
     
 
  });
-
+*/
 
 
 
