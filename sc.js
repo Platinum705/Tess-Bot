@@ -218,13 +218,15 @@ setTimeout(int, 6000)
 
 client.on('message', message => {
          if(message.content === ("test")) { 
-var date = new Date()    
-    date4 = "ПН"
 function getWeekDay(date) {
   let days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'ВС'];
 
   return days[date.getDay()];
-if(days === 'ПН') {
+}
+
+let date = new Date(); 
+var dd = getWeekDay(date)
+if(dd === 'ПН') {
 message.reply("1")
 }
 }
