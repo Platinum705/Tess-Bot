@@ -14,7 +14,7 @@ client.on('ready', () => {
 
 function status1() {
 let UTC = new Date()
-client.user.setActivity(UTC.setHours(0, 0, 0, 0);, {
+client.user.setActivity(UTC.setHours(0, 0, 0, 0), {
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
