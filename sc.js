@@ -218,16 +218,16 @@ setTimeout(int, 6000)
 
 client.on('message', message => {
 	if(message.content === (p + 'test')) {
-
 		var date = new Date();
-var date2 = date.getDate();
+var date2 = date.getDate()
+var date3 = date.getMonth()
+if(date2 = "26") {
+if(date3 = "8") {
 
-if(date2 === "2019,8,26") {
+message.reply("1")
+}
+}
 
-message.channel.send("1")
-} else { 
-message.reply("2")
-          }
 	}
 });
 
