@@ -13,12 +13,11 @@ client.on('ready', () => {
 });
 
 function status1() {
-//let UTC = new Date()
-let UTC = (new Date()).toLocaleString('Russian/Moscow');
-//let UTC2 = UTC.getHours()
-//let UTC3 = UTC.getMinutes()
+let UTC = new Date()
+let UTC2 = UTC.getHours()
+let UTC3 = UTC.getMinutes()
 
-client.user.setActivity(UTC ,{
+client.user.setActivity(UTC2 + ":" + UTC3 ,{
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
