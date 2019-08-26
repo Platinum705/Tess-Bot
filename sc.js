@@ -221,8 +221,8 @@ client.on('message', message => {
 		var date = new Date();
 var date2 = date.getDate()
 var date3 = date.getMonth()
-if(date2 = "26") {
-if(date3 = "8") {
+if(date2 === "26") {
+if(date3 === "8") {
 
 message.reply("1")
 }
