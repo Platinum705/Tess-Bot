@@ -220,7 +220,7 @@ client.on('message', message => {
          if(message.content === ("test")) { 
 let date = new Date()
 let date2 = (date.getDate() + 1)
-message.reply(date1 + date2)
+message.reply(date + date2)
 
 
 
