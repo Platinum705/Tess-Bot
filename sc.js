@@ -14,7 +14,7 @@ client.on('ready', () => {
 
 function status1() {
 //let UTC = new Date()
-let UTC = (new Date()).toLocalString('ru-RU', 'Russian/Moscow')
+let UTC = (new Date()).toLocalString('en-UC', 'Russian/Moscow');
 //let UTC2 = UTC.getHours()
 //let UTC3 = UTC.getMinutes()
 
