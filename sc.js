@@ -223,6 +223,7 @@ if(date === 2019,7,27) {
 message.channel.send("1")
 } else { 
 message.reply("2")
+          }
 	}
 });
 
