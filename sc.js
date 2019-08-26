@@ -14,8 +14,10 @@ client.on('ready', () => {
 
 function status1() {
 let UTC = new Date()
-let UTC2 = UTC.getHours() && UTC.getMinutes() && UTC.getSeconds()
-client.user.setActivity(UTC2 + "local time",{
+let UTC2 = UTC.getHours()
+let UTC3 = UTC.getMinutes()
+let UTC4 = UTC.getSeconds()
+client.user.setActivity(UTC2 + ":" + UTC3 + ":" + UTC4 ,{
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
@@ -220,7 +222,7 @@ client.on('message', message => {
 		var date = new Date();
 var date2 = date.getDate();
 
-if(date2 === "2019,7,26") {
+if(date2 === "2019,8,26") {
 
 message.channel.send("1")
 } else { 
