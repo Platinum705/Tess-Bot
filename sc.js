@@ -16,8 +16,8 @@ function status1() {
 let UTC = new Date()
 let UTC2 = UTC.getHours()
 let UTC3 = UTC.getMinutes()
-let UTC4 = UTC.getSeconds()
-client.user.setActivity(UTC2 + ":" + UTC3 + ":" + UTC4 ,{
+
+client.user.setActivity(UTC2 + ":" + UTC3 ,{
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
