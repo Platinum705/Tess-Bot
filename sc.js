@@ -17,8 +17,15 @@ client.user.setActivity("Dragon Nest Mobile", {
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
+setTimeout(status2, 20000)
 }
-
+function status2() {
+let vremjya = new Date()
+client.user.setActivity(vremjya + "UTC+5", {
+type: "PLAYING"
+});
+setTimeout(status1, 20000)
+}
 
 client.on('message', message => {
   if (message.content === (p + 'ping')) {
