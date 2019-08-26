@@ -221,8 +221,10 @@ client.on('message', message => {
 
                      var date = new Date()
 var date2 = getWeekDay(date)
-date3 = "ПН"
-if(date2 === date3) {
+date3 = date2 
+date4 = "ПН"
+console.log(date3)
+if(date3 === date4) {
 message.reply("1")
 }
 
