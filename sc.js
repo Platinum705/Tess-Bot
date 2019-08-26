@@ -229,7 +229,7 @@ var dd = getWeekDay(date)
 if(dd === 'ПН') {
 message.reply("1")
 }
-}
+
 
                    
 
