@@ -218,7 +218,7 @@ client.on('message', message => {
 	if(message.content === (p + 'test')) {
 
 		var date = new Date();
-var date2 = date.getDate());
+var date2 = date.getDate();
 
 if(date2 === "2019,7,26") {
 
