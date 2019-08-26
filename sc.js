@@ -215,16 +215,21 @@ setTimeout(int, 6000)
    
 });
 
-/*
+
 client.on('message', message => {
          if(message.content === ("test")) { 
+let date = now Date()
+let date2 = (date.getDate() + 1)
+message.reply(date1 + date2)
 
-        }
+
+
+        
 
     
-
+  }
  });
-*/
+
 
 
 
