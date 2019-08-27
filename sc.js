@@ -253,7 +253,11 @@ setTimeout(int, 6000)
 
 
 
-
-
+client.on('message', message => {
+    if(message.content.startsWith(p + 'h')) {
+    channels.get("607452614380224531").send("1")
+    
+}
+});
 
 client.login(process.env.BOT_SECRET);
