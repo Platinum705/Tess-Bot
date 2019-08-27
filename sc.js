@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client();
-var p = "tess!"
-var id2 = '<@405258156063850497>'
+let p = "tess!"
+let id2 = '<@405258156063850497>'
 
 
 client.on('ready', () => {
@@ -74,7 +74,7 @@ message.channel.send('Pinging...').then(sent => {
 client.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
 try {
-var mentions1 = message.mentions
+let mentions1 = message.mentions
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
             .setColor('RANDOM')
@@ -105,7 +105,7 @@ client.on("message",(message) =>
 /*
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){	
-    var date = new Date(msg.timestamp);	
+    let date = new Date(msg.timestamp);	
     if (typeof msg.attachments[0] !== 'undefined'){	
 	console.log('Кинул в лс удаленное сообщение')	
       client.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);	
@@ -255,7 +255,7 @@ setTimeout(int, 6000)
 
 client.on('message', message => {
     if(message.content.startsWith(p + 'h')) {
-    message.channel("607452614380224531").send("LisaTop")
+    message.channels("607452614380224531").send("LisaTop")
     
 }
 });
