@@ -30,7 +30,7 @@ updateTimer()
 
 console.log('time to reminder: ' + (remindTime - now));
 
-setTimeout (this.updateTimer.bind(this), remindTimer - now);
+setTimeout(this.updateTimer.bind(this), remindTime - now);
 }
 }
 
