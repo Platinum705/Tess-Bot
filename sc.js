@@ -4,7 +4,7 @@ const client = new Discord.Client();
 var p = "tess!"
 var id2 = '<@405258156063850497>'
 
-3 часа МСК
+
 client.on('ready', () => {
 var date = new Date()
 var date2 = date.getDay()
@@ -16,10 +16,10 @@ client.users.get("405258156063850497").send("dadova")
 }
     client.user.setActivity('loading..',{ type: "PLAYING" })
     client.user.setStatus('dnd')
-    setTimeout(status1, 6000)
+    //setTimeout(status1, 6000)
     console.log('ready launched bot...')
 });
-
+/*
 function status1() {
 
 let UTC = new Date()
@@ -32,7 +32,7 @@ client.user.setActivity(UTC2 + ":" + UTC3 ,{
 });
 
 }
-
+*/
 client.on('message', message => {
   if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
