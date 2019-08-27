@@ -13,6 +13,7 @@ client.on('ready', () => {
 });
 
 function status1() {
+
 let UTC = new Date()
 let UTC2 = UTC.getHours()
 let UTC3 = UTC.getMinutes()
@@ -218,16 +219,21 @@ setTimeout(int, 6000)
 
 client.on('message', message => {
          if(message.content === ("test")) { 
+
 let date = new Date()
-let date2 = (date.getDate() + 1)
-message.reply(date + date2)
-
-
+let date2 = date.getDay()
+let pre-date2 = date 2
 
         
 
     
   }
+if(pre-date2 === "2") {
+message.reply("11111")
+} else {
+message.reply("pidor")
+
+}
  });
 
 
