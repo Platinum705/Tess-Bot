@@ -6,6 +6,12 @@ var id2 = '<@405258156063850497>'
 
 
 client.on('ready', () => {
+var date = new Date()
+var date2 = date.getDay()
+if(date2 === 2) {
+client.users.get("405258156063850497").send("dadova")
+
+}
     client.user.setActivity('loading..',{ type: "PLAYING" })
     client.user.setStatus('dnd')
     setTimeout(status1, 6000)
