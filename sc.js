@@ -34,14 +34,15 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 }
 }
 
-let reminder = new Reminder('09:20', () => {
-client.channels.get("514582027878662144").send("@everyone, до мирового босса осталось 10 минут")
+let reminder = new Reminder('09:15', () => {
+client.channels.get("514582027878662144").send("@everyone, до мирового босса осталось 15 минут")
 });
-
+/*
 let UTC = new Date()
 let UTC2 = UTC.getHours()
 let UTC3 = UTC.getMinutes()
-    client.user.setActivity(UTC2 + ":" + UTC3 ,{
+*/
+    client.user.setActivity('REMIND TIMER',{
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
