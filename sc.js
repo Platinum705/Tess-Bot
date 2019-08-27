@@ -223,17 +223,17 @@ client.on('message', message => {
 let date = new Date()
 let date2 = date.getDay()
 
-
-        
-
-    
-  }
 if(date2 === "2") {
 message.reply("11111")
 } else {
 message.reply("pidor")
 
 }
+        
+
+    
+  }
+
  });
 
 
