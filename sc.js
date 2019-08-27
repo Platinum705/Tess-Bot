@@ -6,25 +6,51 @@ var id2 = '<@405258156063850497>'
 
 
 client.on('ready', () => {
-var date = new Date()
-var date2 = date.getDay()
-var time = date.getHours()
-var time2 = date.getMinutes()
-if(date2 === 2 && time === 9 && time2 === 30) {
-client.users.get("405258156063850497").send("dadova")
-
+class Reminder
+{ 
+  constructor(timeString, callback)
+  {
+       this.remindHandler = callback;
+       let timeArray = timeString.split(':');
+       this.hours = parseInt(time Array[0]);
+       this.minutes = parseInt(timeArray [1]);
+       this.updateTimer();
 }
-    client.user.setActivity('loading..',{ type: "PLAYING" })
+
+updateTimer()
+{
+    let now = new Date();
+
+   let remindTime = new Date();
+   remindTime.setHours(this.hours);
+   remindTime.setMinutes(this.minutes);
+
+   if(now.getTime() == remindTime.getTime()) this.remindHandler();
+   if(now >= remindTime ) remindTime.setDate(remindTime.getDate() + 1);
+
+console.log('time to reminder: ' + (remindTime - now));
+
+setTimeout (this.updateTimer.bind(this), remindTimer - now);
+}
+}
+
+let reminder = new Reminder('09:30', () => {
+console.log("1")
+}
+let UTC = new Date()
+let UTC2 = UTC.getHours()
+let UTC3 = UTC.getMinutes()
+    client.user.setActivity(UTC2 + ":" + UTC3 ,{
+  type: "STREAMING",
+  url: "https://www.twitch.tv/monstercat"
+});
     client.user.setStatus('dnd')
-    //setTimeout(status1, 6000)
     console.log('ready launched bot...')
 });
 /*
 function status1() {
 
-let UTC = new Date()
-let UTC2 = UTC.getHours()
-let UTC3 = UTC.getMinutes()
+
 
 client.user.setActivity(UTC2 + ":" + UTC3 ,{
   type: "STREAMING",
@@ -224,25 +250,6 @@ setTimeout(int, 6000)
    
 });
 
-
-client.on('message', message => {
-         if(message.content === ("test")) { 
-
-var date = new Date()
-var date2 = date.getDay()
-console.log(date2)
-if(date2 === 2) {
-message.reply("11111")
-} else {
-message.reply("pidor")
-
-}
-        
-
-    
-  }
-
- });
 
 
 
