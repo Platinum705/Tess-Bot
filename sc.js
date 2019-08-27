@@ -45,7 +45,6 @@ let UTC3 = UTC.getMinutes()
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
-    client.user.setStatus('dnd')
     console.log('ready launched bot...')
 });
 /*
