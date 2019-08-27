@@ -220,10 +220,10 @@ setTimeout(int, 6000)
 client.on('message', message => {
          if(message.content === ("test")) { 
 
-let date = new Date()
-let date2 = date.getDay()
-
-if(date2 === "2") {
+var date = new Date()
+var date2 = date.getDay()
+console.log(date2)
+if(date2 === 2) {
 message.reply("11111")
 } else {
 message.reply("pidor")
