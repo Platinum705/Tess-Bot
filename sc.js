@@ -12,7 +12,7 @@ class Reminder
   {
        this.remindHandler = callback;
        let timeArray = timeString.split(':');
-       this.hours = parseInt(time Array[0]);
+       this.hours = parseInt(timeArray[0]);
        this.minutes = parseInt(timeArray [1]);
        this.updateTimer();
 }
