@@ -36,7 +36,8 @@ setTimeout (this.updateTimer.bind(this), remindTimer - now);
 
 let reminder = new Reminder('09:30', () => {
 console.log("1")
-}
+});
+
 let UTC = new Date()
 let UTC2 = UTC.getHours()
 let UTC3 = UTC.getMinutes()
