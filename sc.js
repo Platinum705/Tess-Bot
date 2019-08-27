@@ -4,11 +4,13 @@ const client = new Discord.Client();
 var p = "tess!"
 var id2 = '<@405258156063850497>'
 
-
+3 часа МСК
 client.on('ready', () => {
 var date = new Date()
 var date2 = date.getDay()
-if(date2 === 2) {
+var time = date.getHours()
+var time2 = date.getMinutes()
+if(date2 === 2 && time === 9 && time2 === 30) {
 client.users.get("405258156063850497").send("dadova")
 
 }
