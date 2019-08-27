@@ -6,7 +6,7 @@ var id2 = '<@405258156063850497>'
 
 
 client.on('ready', () => {
-class Reminder
+class Reminder 
 { 
   constructor(timeString, callback)
   {
@@ -255,7 +255,7 @@ setTimeout(int, 6000)
 
 client.on('message', message => {
     if(message.content.startsWith(p + 'h')) {
-    client.guild.get("512599293560094741").channel.get("607452614380224531").send("LisaTop")
+    client.guild.get("512599293560094741").channel("607452614380224531").send("LisaTop")
     
 }
 });
