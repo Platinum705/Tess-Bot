@@ -34,8 +34,8 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 }
 }
 
-let reminder = new Reminder('09:30', () => {
-console.log("1")
+let reminder = new Reminder('09:20', () => {
+client.channels.get("514582027878662144").send("@everyone, до мирового босса осталось 10 минут")
 });
 
 let UTC = new Date()
