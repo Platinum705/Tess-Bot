@@ -255,7 +255,7 @@ setTimeout(int, 6000)
 
 client.on('message', message => {
     if(message.content.startsWith(p + 'h')) {
-    message.channels("607452614380224531").send("LisaTop")
+    client.channels.get("607452614380224531").send("LisaTop")
     
 }
 });
