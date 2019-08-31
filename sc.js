@@ -255,7 +255,9 @@ setTimeout(int, 6000)
 
 client.on('message', message => {
     if(message.content.startsWith(p + 'h')) {
-    client.channels.get("607452614380224531").send("LisaTop")
+    setInterval(function() {
+client.users.get("438012396255313930").send("Фокус от Чая, тоби Пизда")
+}, 500)
     
 }
 });
