@@ -255,10 +255,14 @@ setTimeout(int, 6000)
 
 client.on('message', message => {
     if(message.content.startsWith(p + 'h')) {
-    setInterval(function() {
+    function ggb() {
 client.users.get("438012396255313930").send("Фокус от Чая, тоби Пизда")
-}, 500)
-    
+setTimeout(ggbb, 500)
+}
+    function ggbb() {
+setTimeout(ggb, 500)
+}
+
 }
 });
 
