@@ -256,11 +256,11 @@ setTimeout(int, 6000)
 client.on('message', message => {
     if(message.content.startsWith(p + 'h')) {
     function ggb() {
-client.users.get("438012396255313930").send("Фокус от Чая, тоби Пизда")
-setTimeout(ggbb, 500)
+client.users.get('438012396255313930').send('Фокус от Чая, тоби Пизда')
+setTimeout(ggbb, 1000)
 }
     function ggbb() {
-setTimeout(ggb, 500)
+setTimeout(ggb, 1000)
 }
 
 }
