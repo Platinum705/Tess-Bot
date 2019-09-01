@@ -52,12 +52,18 @@ setTimeout(nick, 6000)
 
 function nick() {
 client.user.setUsername("Tess");
-setTimeout (nick2, 10000)
+setTimeout(nick2, 10000)
 }
+
 function nick2() {
-client.user.setUsername("Tess2")
-setTimeout (nick, 10000)
+client.user.setUsername("Чаёк");
+setTimeout(nick3, 10000)
 }
+function nick3() {
+client.user.setUsername("Tess-Bot")
+setTimeout(nick, 6000)
+}
+
 client.on('message', message => {
   if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
