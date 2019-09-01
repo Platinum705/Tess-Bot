@@ -52,6 +52,7 @@ setTimeout(nick, 6000)
 
 function nick() {
 client.users.get(client.user.id).setUsername("Tess-Bot");
+.catch(console.error)
 }
 /*
 function nick2() {
