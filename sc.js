@@ -37,29 +37,27 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 let reminder = new Reminder('09:15', () => {
 client.channels.get("514582027878662144").send("@everyone, до мирового босса осталось 15 минут")
 });
-/*
+
 let UTC = new Date()
 let UTC2 = UTC.getHours()
 let UTC3 = UTC.getMinutes()
-*/
+    
     client.user.setActivity('REMIND TIMER',{
   type: "STREAMING",
   url: "https://www.twitch.tv/monstercat"
 });
+setTimeout(nick, 6000)
     console.log('ready launched bot...')
 });
-/*
-function status1() {
 
-
-
-client.user.setActivity(UTC2 + ":" + UTC3 ,{
-  type: "STREAMING",
-  url: "https://www.twitch.tv/monstercat"
-});
-
+function nick() {
+client.user.setUsername("Tess");
+setTimeout (nick2, 10000)
 }
-*/
+function nick2() {
+client.user.setUsername("Tess2")
+setTimeout (nick, 10000)
+}
 client.on('message', message => {
   if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
