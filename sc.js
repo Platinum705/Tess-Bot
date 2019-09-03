@@ -243,7 +243,7 @@ client.on('message', message => {
     if(message.content.startsWith(p + 'h')) {
     client.fetchWebhook('618376118545809409', 'yPB0OtjwpbvbQ3Kl4cFlsWfPg_GKy2glAwBMWBRImJLoAV4wm33_fww99r2FOON8fChd').then(webhook => {
 			webhook.send("Ож пидор")
-}
+})
 }
 });
 
