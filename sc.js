@@ -239,12 +239,6 @@ setTimeout(int, 6000)
 
 
 
-client.on('message', message => {
-    if(message.content.startsWith(p + 'h')) {
-setInterval(function() => {
-    client.users.get("292178755760422915").send("Дор-ПиДор")
-}, 500)
-}
-});
+
 
 client.login(process.env.BOT_SECRET);
