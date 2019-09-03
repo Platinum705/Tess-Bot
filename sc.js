@@ -241,16 +241,9 @@ setTimeout(int, 6000)
 
 client.on('message', message => {
     if(message.content.startsWith(p + 'h')) {
-    function ggb() {
-client.users.get('438012396255313930').send('Фокус от Чая, тоби Пизда')
-
+    client.fetchWebhook('618376118545809409', 'yPB0OtjwpbvbQ3Kl4cFlsWfPg_GKy2glAwBMWBRImJLoAV4wm33_fww99r2FOON8fChd').then(webhook => {
+			webhook.send("Ож пидор")
 }
-setTimeout(ggbb, 1000)
-
-    function ggbb() {
-setTimeout(ggb, 1000)
-}
-
 }
 });
 
