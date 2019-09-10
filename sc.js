@@ -6,6 +6,10 @@ let id2 = '<@405258156063850497>'
 
 
 client.on('ready', () => {
+client.fetchWebhook('621007269097635920', 'm20L_42BLTGG5AlSUqd_xu9EWfOHZ6Eyhs0UD4IRHBkKdOF8pW8CF1m5OEi6EIkZU5ML').then(webhook => {
+			webhook.send("<@466896060682469377> успешно залогинился")
+}); 
+
 class Reminder 
 { 
   constructor(timeString, callback)
