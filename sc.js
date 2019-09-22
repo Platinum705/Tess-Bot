@@ -37,9 +37,14 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 }
 
 let reminder = new Reminder('09:15', () => {
-
+let randomizer = [
+"https://bit.ly/2m34j2e",
+"https://bit.ly/2m3A7UH",
+"https://bit.ly/2muFPPN"
+]
+let randomizer2 = Math.floor(Math.random()*randomizer.length)
 client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MDe82I4WqQsTnx4q8bG1R3ll27mdnHdAX').then(webhook => {
-			webhook.send("@everyone, до мирового босса осталось 15 минут")
+			webhook.send("@everyone, до мирового босса осталось 15 минут" + randomizer[randomizer2])
  });
 });
 
@@ -241,16 +246,17 @@ setTimeout(int, 6000)
 }
    
 });
-
+/*
 client.on('message', message => {
 if(message.content === ('test')) {
 let randomizer = [
-"https://ru.m.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Meteora.jpg",
-"https://simple-fauna.ru/wp-content/uploads/2019/01/zayac-belyak_2.jpg",
+"https://bit.ly/2m34j2e",
+"https://bit.ly/2m3A7UH",
+"https://bit.ly/2muFPPN"
 ]
 let randomizer2 = Math.floor(Math.random()*randomizer.length)
 message.channel.send(randomizer[randomizer2])
 }
 });
-
+*/
 client.login(process.env.BOT_SECRET);
