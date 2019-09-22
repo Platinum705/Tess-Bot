@@ -248,8 +248,8 @@ let randomizer = [
 "https://ru.m.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Meteora.jpg",
 "https://simple-fauna.ru/wp-content/uploads/2019/01/zayac-belyak_2.jpg",
 ]
-let randomizer2 = Math.floor((Math.random()*randomizer.length))
-message.channel.send(randomizer2)
+let randomizer2 = Math.floor(Math.random()*randomizer.length)
+message.channel.send(randomizer[randomizer2])
 }
 });
 
