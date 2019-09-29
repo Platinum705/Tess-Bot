@@ -252,6 +252,7 @@ if(message.content === ('test')) {
 client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MDe82I4WqQsTnx4q8bG1R3ll27mdnHdAX').then(webhook => {
 			webhook.send("Добрый вечер. Приветствую Вас в дискорде гильдии Метеора.")
  });
+}
 });
 
 client.login(process.env.BOT_SECRET);
