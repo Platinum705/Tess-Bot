@@ -244,15 +244,15 @@ setTimeout(int, 6000)
 client.on('message', message => {
 if(message.content.includes('Добрый утро')) {
 let nn = message.author.username
-message.channel.send("Добрый утречко" + nn)
+message.channel.send("Добрый утречко, " + nn)
 }
 if(message.content.includes("Добрый день")) {
 let nn2 = message.author.username
-message.channel.send("Добрый денёчек" + nn2)
+message.channel.send("Добрый денёчек, " + nn2)
 }
 if(message.content.includes("Добрый вечер")) {
 let nn3 = message.author.username
-message.channel.send("Добрейший вечерочек \n" + nn3)
+message.channel.send("Добрейший вечерочек, " + nn3)
 }
 });
 
