@@ -240,13 +240,20 @@ setTimeout(int, 6000)
 }
    
 });
-/*
+
 client.on('message', message => {
-if(message.content === ('test')) {
-client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MDe82I4WqQsTnx4q8bG1R3ll27mdnHdAX').then(webhook => {
-			webhook.send("Добрый вечер. Приветствую Вас в дискорде гильдии Метеора.")
- });
+if(message.content.includes('Добрый утро')) {
+let nn = message.author.username
+message.channel.send("Добрый утречко" + nn)
+}
+if(message.content.includes("Добрый день")) {
+let nn2 = message.author.username
+message.channel.send("Добрый денёчек" + nn2)
+}
+if(message.content.includes("Добрый вечер")) {
+len nn3 = message.author.username
+message.channel.send("Добрейший вечерочек \n" + nn3)
 }
 });
-*/
+
 client.login(process.env.BOT_SECRET);
