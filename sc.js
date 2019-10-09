@@ -251,7 +251,7 @@ let nn2 = message.author.username
 message.channel.send("Добрый денёчек" + nn2)
 }
 if(message.content.includes("Добрый вечер")) {
-len nn3 = message.author.username
+let nn3 = message.author.username
 message.channel.send("Добрейший вечерочек \n" + nn3)
 }
 });
