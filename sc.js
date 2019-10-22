@@ -36,7 +36,7 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 }
 }
 //9:15
-let reminder = new Reminder('16:00', () => {
+let reminder = new Reminder('15:40', () => {
 /*
 client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MDe82I4WqQsTnx4q8bG1R3ll27mdnHdAX').then(webhook => {
 			webhook.send("@everyone, до мирового босса осталось 15 минут")
