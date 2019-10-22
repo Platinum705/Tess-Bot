@@ -28,7 +28,7 @@ updateTimer()
    remindTime.setMinutes(this.minutes);
 
    if(now.getTime() == remindTime.getTime()) this.remindHandler();
-   if(now >= remindTime ) remindTime.setDate(remindTime.getDate() + 2);
+   if(now >= remindTime ) remindTime.setDate(remindTime.getDate() + 1);
 
 console.log('time to reminder: ' + (remindTime - now));
 
