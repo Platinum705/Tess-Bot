@@ -45,7 +45,7 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 
 });
 
-    client.user.setActivity('Twilight cat and Fluffy kitten',{
+    client.user.setActivity('на Twilight cat and Fluffy kitten',{
   type: "WATCHING"
   //url: "https://www.twitch.tv/monstercat"
 });
