@@ -46,8 +46,8 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 });
 
     client.user.setActivity('on github.com',{
-  type: "STREAMING"
-  url: "https://www.twitch.tv/monstercat"
+  type: "PLAYING"
+  //url: "https://www.twitch.tv/monstercat"
 });
     console.log('Я НЕ ЕБНУЛСЯ')
 });
