@@ -7,7 +7,7 @@ let id2 = '<@405258156063850497>'
 
 client.on('ready', () => {
 
-
+/*
 class Reminder 
 { 
   constructor(timeString, callback)
@@ -44,14 +44,17 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 
 
 });
-
-    client.user.setActivity('Викингов',{
+*/
+    client.user.setActivity('Battlefield 4',{
   type: "PLAYING"
   //url: "https://www.twitch.tv/monstercat"
 });
-    console.log('Я НЕ ЕБНУЛСЯ')
+    console.log('Я НЕ ЕБНУЛСЯ') 
 });
 
+client.on('guildMemberAdd', member => {
+    member.guild.channels.get('channelID').send("Welcome"); 
+});
 
 client.on('message', message => {
   if (message.content === (p + 'ping')) {
