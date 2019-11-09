@@ -7,7 +7,7 @@ let id2 = '<@405258156063850497>'
 
 client.on('ready', () => {
 
-/*
+
 class Reminder 
 { 
   constructor(timeString, callback)
@@ -44,7 +44,7 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 
 
 });
-*/
+
     client.user.setActivity('Battlefield 4',{
   type: "PLAYING"
   //url: "https://www.twitch.tv/monstercat"
