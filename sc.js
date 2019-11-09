@@ -53,7 +53,21 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 });
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.get('channelID').send("Welcome"); 
+const embed = new Discord.RichEmbed()
+            .setTitle("Помощь")
+            .setColor("#00BFFF")
+            .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar** - стырить аву пользователя \n ***Этот список будет дополняться т.к автор ленивая жопа***')
+            .setFooter("Tess bot")
+            .setTimestamp(); 
+    member.guild.channels.get("514582027878662144").send({embed}).then(sentMessage => {   
+            sentMessage.react('🇭')
+                .then(() => sentMessage.react('🇪'))
+                    .then(() => sentMessage.react('🇱'))
+                    .then(() => sentMessage.react('🇵'))
+                    .catch(console.error)
+           
+        });
+    
 });
 
 client.on('message', message => {
