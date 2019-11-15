@@ -51,7 +51,7 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 });
     console.log('Я НЕ ЕБНУЛСЯ') 
 });
-
+/*
 client.on('guildMemberAdd', member => {
 const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
@@ -69,7 +69,7 @@ const embed = new Discord.RichEmbed()
         });
     
 });
-
+*/
 client.on('message', message => {
   if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
