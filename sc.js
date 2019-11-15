@@ -59,7 +59,7 @@ const embed = new Discord.RichEmbed()
             .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar** - стырить аву пользователя \n ***Этот список будет дополняться т.к автор ленивая жопа***')
             .setFooter("Tess bot")
             .setTimestamp(); 
-    member.guild.channels.get("514582027878662144").send({embed}).then(sentMessage => {   
+    client.channels.get("514582027878662144").send({embed}).then(sentMessage => {   
             sentMessage.react('🇭')
                 .then(() => sentMessage.react('🇪'))
                     .then(() => sentMessage.react('🇱'))
