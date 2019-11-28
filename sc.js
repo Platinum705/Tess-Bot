@@ -45,15 +45,14 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 
 });
 
-client.on('ready', () => {
             setInterval(() => {
-                client.user.setActivity("Смотрит текущее время - " + new Date().toLocaleTimeString('ru', {
+                client.user.setActivity(new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Moscow'
     }), {
                     type: 'WATCHING'
                 })
             }, 10000)
-        })
+        
 
 /*
     client.user.setActivity('Battlefield 4',{
