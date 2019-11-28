@@ -46,12 +46,13 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 });
 
             setInterval(() => {
-                client.user.setActivity(new Date(Date.UTC(hour, minute, second)),{
-        
-    
+                client.user.setActivity("на время по мск - " + new Date().toLocaleTimeString('ru', {
+        timeZone: 'Europe/Moscow'
+    }), {
                     type: 'WATCHING'
                 })
-            }, 2000)
+            }, 5000)
+        })
         
 
 /*
