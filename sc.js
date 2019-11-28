@@ -58,9 +58,10 @@ client.on('ready', () => {
 /*
     client.user.setActivity('Battlefield 4',{
   type: "PLAYING"
-*/
+
   //url: "https://www.twitch.tv/monstercat"
 });
+*/
     console.log('Я НЕ ЕБНУЛСЯ') 
 });
 /*
