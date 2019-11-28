@@ -46,9 +46,9 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 });
 
             setInterval(() => {
-                client.user.setActivity(new Date(Date.UTC(hour, minute, second));
+                client.user.setActivity(new Date(Date.UTC(hour, minute, second)),{
         
-    {
+    
                     type: 'WATCHING'
                 })
             }, 2000)
