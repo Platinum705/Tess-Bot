@@ -51,7 +51,7 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
     {
                     type: 'WATCHING'
                 })
-            }, 10000)
+            }, 2000)
         
 
 /*
