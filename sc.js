@@ -287,6 +287,9 @@ if(message.content.includes("Добрый вечер")) {
 let nn3 = message.author.username
 message.channel.send("Добрейший вечерочек, " + nn3)
 }
+if(message.content.includes(p + "time")) {
+message.channel.send("серк" + new Date() + "\n" + "ss")
+}
 });
 
 client.login(process.env.BOT_SECRET);
