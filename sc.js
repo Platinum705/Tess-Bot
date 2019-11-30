@@ -48,6 +48,7 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
             setInterval(() => {
                 client.user.setActivity("на время по мск - " + new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Moscow'
+        hour12: 'False'
     }), {
                     type: 'WATCHING'
                 })
