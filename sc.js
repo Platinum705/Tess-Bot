@@ -288,7 +288,8 @@ let nn3 = message.author.username
 message.channel.send("Добрейший вечерочек, " + nn3)
 }
 if(message.content.includes(p + "time")) {
-message.channel.send("серк" + new Date() + "\n" + "ss")
+message.channel.send("серк" + new Date().toLocaleTimeString('ua', {
+        timeZone: 'Europe/Kiev' + "\n" + "ss")
 }
 });
 
