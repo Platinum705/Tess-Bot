@@ -53,6 +53,8 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
         timeZone: 'Europe/Moscow',
 hour: 'numeric',
 hour12: false ,
+minute: 'numeric',
+second: 'numeric',
     }), {
                     type: 'WATCHING'
                 
