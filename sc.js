@@ -302,21 +302,21 @@ var uakiev = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Kiev',
 hour:'numeric',
 hour12: false ,
-minute = 'numeric'
+minute: 'numeric'
  });
 
 var Lisa = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Samara',
 hour:'numeric',
 hour12: false ,
-minute = 'numeric'
+minute: 'numeric'
  })
 
 var tym = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Tyumen',
 hour:'numeric',
 hour12: false ,
-minute = 'numeric'
+minute: 'numeric'
  })
 
 
