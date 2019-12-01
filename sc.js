@@ -313,7 +313,7 @@ minute: 'numeric'
  })
 
 var tym = new Date().toLocaleTimeString('ru', {
-        timeZone: 'Europe/Yekaterinburg',
+        timeZone: 'Asia/Yekaterinburg',
 hour:'numeric',
 hour12: false ,
 minute: 'numeric'
