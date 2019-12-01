@@ -308,14 +308,14 @@ minute = 'numeric'
 var Lisa = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Samara',
 hour:'numeric',
-hour12 = false,
+hour12 = false ,
 minute = 'numeric'
  })
 
 var tym = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Tyumen',
 hour:'numeric',
-hour12 = false,
+hour12 = false ,
 minute = 'numeric'
  })
 
