@@ -306,7 +306,7 @@ var Lisa = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Samara'
  })
 */
-message.channel.send("Время на Украине: " + uakiev)
+message.channel.send("Время на Украине: " + uakiev + Lisa)
 }
 });
 
