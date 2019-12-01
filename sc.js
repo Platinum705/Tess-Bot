@@ -297,13 +297,15 @@ let nn3 = message.author.username
 message.channel.send("Добрейший вечерочек, " + nn3)
 }
 if(message.content.includes(p + "time")) {
-let uakiev = new Date().toLocaleTimeString('ru', {
+/*
+var uakiev = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Kiev'
  });
-let lisa = new Date().toLocaleTimeString('ru', {
+*/
+var Lisa = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Izhevsk'
- });
-message.channel.send("Время на Украине: " + uakiev + "\n Время в Ижевске: " + lisa)
+ })
+message.channel.send("Время на Украине: " + Lisa)
 }
 });
 
