@@ -301,11 +301,11 @@ if(message.content.includes(p + "time")) {
 var uakiev = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Kiev'
  });
-/*
+
 var Lisa = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Samara'
  })
-*/
+
 message.channel.send("Время на Украине: " + uakiev + Lisa)
 }
 });
