@@ -303,7 +303,7 @@ var uakiev = new Date().toLocaleTimeString('ru', {
  });
 */
 var Lisa = new Date().toLocaleTimeString('ru', {
-        timeZone: 'Europe/Izhevsk'
+        timeZone: 'Azia/Izhevsk'
  })
 message.channel.send("Время на Украине: " + Lisa)
 }
