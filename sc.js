@@ -299,14 +299,28 @@ message.channel.send("Добрейший вечерочек, " + nn3)
 if(message.content.includes(p + "time")) {
 
 var uakiev = new Date().toLocaleTimeString('ru', {
-        timeZone: 'Europe/Kiev'
+        timeZone: 'Europe/Kiev',
+hour:'numeric',
+hour12 = false,
+minute = 'numeric'
  });
 
 var Lisa = new Date().toLocaleTimeString('ru', {
-        timeZone: 'Europe/Samara'
+        timeZone: 'Europe/Samara',
+hour:'numeric',
+hour12 = false,
+minute = 'numeric'
  })
 
-message.channel.send("Время на Украине: " + uakiev + Lisa)
+var tym = new Date().toLocaleTimeString('ru', {
+        timeZone: 'Europe/Tyumen',
+hour:'numeric',
+hour12 = false,
+minute = 'numeric'
+ })
+
+
+message.channel.send("Время на Украине: " + uakiev + "\n" + "Время в Ижевске: " + Lisa + "\n" + "Время в Тюмени: " + tym)
 }
 });
 
