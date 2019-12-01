@@ -301,7 +301,7 @@ if(message.content.includes(p + "time")) {
 var uakiev = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Kiev',
 hour:'numeric',
-hour12 = false,
+hour12 = false ,
 minute = 'numeric'
  });
 
