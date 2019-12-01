@@ -300,7 +300,7 @@ if(message.content.includes(p + "time")) {
 let uakiev = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Kiev'
  })
-let lisa = var uakiev = new Date().toLocaleTimeString('ru', {
+let lisa = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Izhevsk'
  })
 message.channel.send("Время на Украине: " + uakiev + "\n" + "Время в Ижевске: " + lisa)
