@@ -64,35 +64,6 @@ second: 'numeric',
         
         
 
-/*
-client.on('guildMemberAdd', member => {
-const embed = new Discord.RichEmbed()
-            .setTitle("Помощь")
-            .setColor("#00BFFF")
-            .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar** - стырить аву пользователя \n ***Этот список будет дополняться т.к автор ленивая жопа***')
-            .setFooter("Tess bot")
-            .setTimestamp(); 
-    client.channels.get("514582027878662144").send({embed}).then(sentMessage => {   
-            sentMessage.react('🇭')
-                .then(() => sentMessage.react('🇪'))
-                    .then(() => sentMessage.react('🇱'))
-                    .then(() => sentMessage.react('🇵'))
-                    .catch(console.error)
-           
-        });
-    
-});
-*/
-client.on('message', message => {
-  if (message.content === (p + 'ping')) {
-message.channel.send('Pinging...').then(sent => {
-    sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
-	console.log('OwO')
-    });
-  }
-});
-
-
 
 client.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
@@ -234,59 +205,8 @@ setTimeout(helpS, 2000);
     }
 });
 
-client.on('message', function(message) {
-    
-    if(message.content === (p + "loop")) { 
-message.delete()
-message.channel.send("@everyone, до мирового босса осталось **15 минут**")
-setTimeout(int, 2000)
-
- }
-
-function int() {           
-console.log("start TIMER")          
-setTimeout(int2, 21600000)
-}
-
-
-function int2() {
-client.users.get("405258156063850497").send("Checking Timer activated2")
-setTimeout(int3, 21600000)
-}
-
-
-function int3() {
-client.users.get("405258156063850497").send("Checking Timer activated3")
-setTimeout(int4, 21600000)
-}
-
-
-function int4() {
-client.users.get("405258156063850497").send("Checking Timer activated4")
-setTimeout(int5, 21600000)
-}
-
-function int5() {
-message.channel.send("@everyone, до мирового босса **осталось 15 минут**")
-client.users.get("405258156063850497").send("Reload Timer")
-setTimeout(int, 6000)
-}
-   
-});
 
 client.on('message', message => {
-if(message.content.includes('Добрый утро')) {
-let nn = message.author.username
-message.channel.send("Добрый утречко, " + nn)
-}
-if(message.content.includes("Добрый день")) {
-let nn2 = message.author.username
-message.channel.send("Добрый денёчек, " + nn2)
-}
-if(message.content.includes("Добрый вечер")) {
-let nn3 = message.author.username
-message.channel.send("Добрейший вечерочек, " + nn3)
-}
 if(message.content.includes(p + "invitebot")) {
 const embed1 = new Discord.RichEmbed()
             .setTitle("Приглашение")
@@ -295,6 +215,7 @@ const embed1 = new Discord.RichEmbed()
             .setFooter("Tess bot")
             .setTimestamp();
     message.channel.send({embed1})
+
 }
 
 if(message.content.includes(p + "time")) {
@@ -315,7 +236,7 @@ minute: 'numeric'
 
 var tym = new Date().toLocaleTimeString('ru', {
         timeZone: 'Asia/Yekaterinburg',
-hour:'numeric',
+hour:'numeric'
 hour12: false ,
 minute: 'numeric'
  })
@@ -325,15 +246,8 @@ hour:'numeric',
 hour12: false ,
 minute: 'numeric'
  })
-//var msgg = "Время на Украине: " + uakiev + "\n" + "Время в Ижевске: " + Lisa + "\n" + "Время в Тюмени: " + tym + "\n" + "Время в Москве: " + msc + "\n" + "\n" + "\n" + "Если в данном списке вы не видите своего времени, то обратитесь в личные сообщения к <@405258156063850497> указав свой город и часовой пояс (пример: Мой город Москва, часовой пояс GMT+3)"
 
 message.channel.send("Время на Украине: " + uakiev + "\n" + "Время в Ижевске: " + Lisa + "\n" + "Время в Тюмени: " + tym + "\n" + "Время в Москве: " + msc + "\n" + "\n" + "\n" + "Если в данном списке вы не видите своего времени, то обратитесь в личные сообщения к <@405258156063850497> указав свой город и часовой пояс (пример: Мой город Москва, часовой пояс GMT+3)").then((msg) => { 
-setInterval(() => {
-msg.edit("Время на Украине: " + uakiev + "\n" + "Время в Ижевске: " + Lisa + "\n" + "Время в Тюмени: " + tym + "\n" + "Время в Москве: " + msc + "\n" + "\n" + "\n" + "Если в данном списке вы не видите своего времени, то обратитесь в личные сообщения к <@405258156063850497> указав свой город и часовой пояс (пример: Мой город Москва, часовой пояс GMT+3)")
-}, 60000)
-})
-
-
 
 }
 });
