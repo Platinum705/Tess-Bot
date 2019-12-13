@@ -218,7 +218,7 @@ function helpS() {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor("#00BFFF")
-            .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar** - стырить аву пользователя \n ***Этот список будет дополняться т.к автор ленивая жопа***')
+            .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar** - стырить аву пользователя \n ***Этот список будет дополняться т.к автор ленивая жопа*** \n ***invitebot*** - пригласить бота к себе на сервер')
             .setFooter("Tess bot")
             .setTimestamp();
     client.users.get(message.author.id).send({embed}).then(sentMessage => {   
@@ -287,6 +287,17 @@ if(message.content.includes("Добрый вечер")) {
 let nn3 = message.author.username
 message.channel.send("Добрейший вечерочек, " + nn3)
 }
+if(message.content.includes(p + "invitebot)) {
+const embed = new Discord.RichEmbed()
+            .setTitle("Приглашение")
+            .setColor("#00BFFF")
+            .setDescription('Пригласить бота с правами администратора: \n https://discordapp.com/api/oauth2/authorize?client_id=466896060682469377&permissions=8&scope=bot \n Пригласить бота без прав администратора: \n https://discordapp.com/api/oauth2/authorize?client_id=466896060682469377&permissions=0&scope=bot')
+            .setFooter("Tess bot")
+            .setTimestamp();
+    message.channel.send({embed})
+
+}
+
 if(message.content.includes(p + "time")) {
 
 var uakiev = new Date().toLocaleTimeString('ru', {
