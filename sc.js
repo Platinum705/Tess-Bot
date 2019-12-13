@@ -287,7 +287,7 @@ if(message.content.includes("Добрый вечер")) {
 let nn3 = message.author.username
 message.channel.send("Добрейший вечерочек, " + nn3)
 }
-if(message.content.includes(p + "invitebot)) {
+if(message.content.includes(p + "invitebot")) {
 const embed = new Discord.RichEmbed()
             .setTitle("Приглашение")
             .setColor("#00BFFF")
@@ -295,7 +295,6 @@ const embed = new Discord.RichEmbed()
             .setFooter("Tess bot")
             .setTimestamp();
     message.channel.send({embed})
-
 }
 
 if(message.content.includes(p + "time")) {
