@@ -64,16 +64,7 @@ second: 'numeric',
         
         
 
-/*
-    client.user.setActivity('Battlefield 4',{
-  type: "PLAYING"
 
-  //url: "https://www.twitch.tv/monstercat"
-});
-*/
-    console.log('Я НЕ ЕБНУЛСЯ') 
-});
-/*
 client.on('guildMemberAdd', member => {
 const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
@@ -96,7 +87,7 @@ client.on('message', message => {
   if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
-	console.log('Кто то узнал пинг бота!')
+	console.log('OwO')
     });
   }
 });
