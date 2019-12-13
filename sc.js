@@ -80,7 +80,7 @@ message.channel.send('Ты уверен что это человек имеет 
 		}
 	}
 });
-
+/*
 client.on("message",(message) =>
 
 	{  
@@ -95,6 +95,7 @@ client.on("message",(message) =>
 	    }
 }
 	});
+*/
 	 
 /*
 client.on("messageDelete", (msg) => {	
