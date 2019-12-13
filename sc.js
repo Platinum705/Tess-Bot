@@ -217,7 +217,7 @@ const embed1 = new Discord.RichEmbed()
     message.channel.send({embed1})
 
 }
-
+/*
 if(message.content.includes(p + "time")) {
 
 var uakiev = new Date().toLocaleTimeString('ru', {
@@ -251,5 +251,5 @@ message.channel.send("Время на Украине: " + uakiev + "\n" + "Вр�
 
 }
 });
-
+*/
 client.login(process.env.BOT_SECRET);
