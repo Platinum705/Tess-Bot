@@ -64,7 +64,7 @@ second: 'numeric',
         
         
 
-
+/*
 client.on('guildMemberAdd', member => {
 const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
