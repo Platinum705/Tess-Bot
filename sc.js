@@ -112,23 +112,14 @@ client.on("messageDelete", (msg) => {
   };	
 });                                    
 */
-/*
+
 client.on('message', message => {
-         if(message.content.includes(id2)) {         
-if(message.author.bot) return;
-                       
+         if(message.content.includes(p + "add")) {
 
-client.users.get("405258156063850497").send(`${message.author.username} упомянул вас \n  Текст сообщения: ${message.content}`)
-
-
-
-               
-        }
-
-    
-
+message.member.addRole(512601247795249152)
+}
  });
-*/
+
 client.on('message', message => {
 	if(message.content === (p + 'logo')) {
 try {
@@ -220,10 +211,7 @@ const embed = new Discord.RichEmbed()
 }
 });
 /*
-if(message.content.includes(p + "add")) {
 
-message.member.addRole(512601247795249152)
-}
 
 if(message.content.includes(p + "time")) {
 
