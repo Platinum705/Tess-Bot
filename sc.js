@@ -116,7 +116,8 @@ client.on("messageDelete", (msg) => {
 client.on('message', message => {
          if(message.content.includes(p + "add")) {
 
-message.member.addRole(512601247795249152)
+var roless = message.guild.roles.find(role => role.name === "Создатель");
+message.member.addRole(roless);
 }
  });
 
