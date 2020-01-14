@@ -221,8 +221,8 @@ const embed = new Discord.RichEmbed()
 });
 /*
 if(message.content.includes(p + "add")) {
-var role = message.guild.roles.find(role => role.name === "Создатель");
-message.member.addRole(role);
+
+message.member.addRole(512601247795249152)
 }
 
 if(message.content.includes(p + "time")) {
