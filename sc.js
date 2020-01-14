@@ -220,6 +220,11 @@ const embed = new Discord.RichEmbed()
 }
 });
 /*
+if(message.content.includes(p + "add")) {
+var role = message.guild.roles.find(role => role.name === "Создатель");
+message.member.addRole(role);
+}
+
 if(message.content.includes(p + "time")) {
 
 var uakiev = new Date().toLocaleTimeString('ru', {
