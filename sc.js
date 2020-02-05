@@ -213,7 +213,7 @@ const embed = new Discord.RichEmbed()
 });
 
 
-
+/*
 if(message.content.includes(p + "time")) {
 
 var uakiev = new Date().toLocaleTimeString('ru', {
@@ -246,6 +246,6 @@ minute: 'numeric'
 message.channel.send("Время на Украине: " + uakiev + "\n" + "Время в Ижевске: " + Lisa + "\n" + "Время в Тюмени: " + tym + "\n" + "Время в Москве: " + msc + "\n" + "\n" + "\n" + "Если в данном списке вы не видите своего времени, то обратитесь в личные сообщения к <@405258156063850497> указав свой город и часовой пояс (пример: Мой город Москва, часовой пояс GMT+3)").then((msg) => { 
 
 }
-
+*/
 
 client.login(process.env.BOT_SECRET);
