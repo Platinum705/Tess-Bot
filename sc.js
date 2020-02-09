@@ -171,6 +171,7 @@ mention = message.mentions.users.first();
            message.channel.send("done!")
 
 }
+/*
 if(msg.includes( emoji("583194072190156811"))) {
 let emojiCounter = client.count["counter"].sadEmoji;
 client.count ["counter"] = {
@@ -183,6 +184,7 @@ message.channel.send("emoji counted")
 });
 
  }
+*/
   });
 
 client.on('message', message => {
