@@ -158,7 +158,7 @@ client.on("messageDelete", (msg) => {
 client.on('message', message => {
          if(message.content.includes(p + "add")) {
 
-message.reply( emoji("583194072190156811"))
+message.reply("dhdhdhhdhd" + emoji("583194072190156811"))
 }
  });
 
