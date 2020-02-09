@@ -154,8 +154,7 @@ client.on("messageDelete", (msg) => {
 client.on('message', message => {
          if(message.content.includes(p + "add")) {
 
-var roless = message.guild.roles.find(role => role.name === "Создатель");
-message.member.addRole(roless);
+message.reply(":sad:")
 }
  });
 
@@ -251,10 +250,10 @@ const embed = new Discord.RichEmbed()
 });
 
 
-
+/*
 if(message.content.includes(p + "time")) {
 message.channel.send(":sad:")
-/*
+
 var uakiev = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Kiev',
 hour:'numeric',
@@ -283,9 +282,9 @@ minute: 'numeric'
  });
 
 message.channel.send("Время на Украине: " + uakiev + "\n" + "Время в Ижевске: " + Lisa + "\n" + "Время в Тюмени: " + tym + "\n" + "Время в Москве: " + msc + "\n" + "\n" + "\n" + "Если в данном списке вы не видите своего времени, то обратитесь в личные сообщения к <@405258156063850497> указав свой город и часовой пояс (пример: Мой город Москва, часовой пояс GMT+3)").then((msg) => { 
-*/
-}
 
+}
+*/
 
 
 
