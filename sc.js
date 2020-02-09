@@ -81,7 +81,7 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 let reminder = new Reminder('9:15', () => {
 
 client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MDe82I4WqQsTnx4q8bG1R3ll27mdnHdAX').then(webhook => {
-			webhook.send("@everyone, до мирового босса осталось 15 минут. Не огорчайте и не расстраивайте падшую, зайдите, пожалуйста" + emoji("583194072190156811"))
+			webhook.send("@everyone, до мирового босса осталось 15 минут. Не огорчайте и не заставляйте падшую плакать, зайдите, пожалуйста" + emoji("583194072190156811"))
  });
 
 
