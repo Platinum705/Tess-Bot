@@ -7,7 +7,7 @@ let id2 = '<@405258156063850497>'
 const config = require('./config.json');
 const size = config.colors;
 const rainbow = new Array(size);
-client.counter = ("./counter.json")
+client.count = ("./count.json")
 
 for (var i=0; i<size; i++) {
 var red = sin_to_hex(i, 0 * Math.PI * 2/3);  
@@ -172,11 +172,11 @@ mention = message.mentions.users.first();
 
 }
 if(msg.includes( emoji("583194072190156811"))) {
-let emojiCounter = client.counter["counter"].sadEmoji;
-client.counter ["counter"] = {
+let emojiCounter = client.count["counter"].sadEmoji;
+client.count ["counter"] = {
 sadEmoji: emojiCounter + 1
 }
-fs.writeFile ("./counter.json", JSON.stringify (client.counter, null, 4), err => {
+fs.writeFile ("./count.json", JSON.stringify (client.count, null, 4), err => {
 if (err) throw err;
 message.channel.send("emoji counted")
 
