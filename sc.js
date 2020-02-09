@@ -77,7 +77,7 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 let reminder = new Reminder('9:15', () => {
 
 client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MDe82I4WqQsTnx4q8bG1R3ll27mdnHdAX').then(webhook => {
-			webhook.send("@everyone, до мирового босса осталось 15 минут")
+			webhook.send("@everyone, до мирового босса осталось 15 минут. Не огорчайте и не расстраивайте падшую, зайдите, пожалуйста :sad:")
  });
 
 
@@ -251,9 +251,10 @@ const embed = new Discord.RichEmbed()
 });
 
 
-/*
-if(message.content.includes(p + "time")) {
 
+if(message.content.includes(p + "time")) {
+message.channel.send(":sad:")
+/*
 var uakiev = new Date().toLocaleTimeString('ru', {
         timeZone: 'Europe/Kiev',
 hour:'numeric',
@@ -282,9 +283,9 @@ minute: 'numeric'
  });
 
 message.channel.send("Время на Украине: " + uakiev + "\n" + "Время в Ижевске: " + Lisa + "\n" + "Время в Тюмени: " + tym + "\n" + "Время в Москве: " + msc + "\n" + "\n" + "\n" + "Если в данном списке вы не видите своего времени, то обратитесь в личные сообщения к <@405258156063850497> указав свой город и часовой пояс (пример: Мой город Москва, часовой пояс GMT+3)").then((msg) => { 
-
+/*
 }
-*/
+
 
 
 
