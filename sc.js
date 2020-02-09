@@ -165,7 +165,7 @@ mention = message.mentions.users.first();
          if(msg.startsWith (p + "send")) {
            if (mention == null) { return; }
            message.delete();
-           mentionMessage = message.content.slice (8);
+           mentionMessage = message.content.slice (10);
            mention.sendMessage (mentionMessage);
            message.channel.send("done!")
 
