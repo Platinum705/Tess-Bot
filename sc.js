@@ -41,6 +41,10 @@ place++;
 }
 }
 
+function emoji (id) {
+return client.emojis.get(id).toString();
+} 
+
 client.on('ready', () => {
 
 if(config.speed < 10){console.log("The minimum speed is 60.000, if this gets abused your bot might get IP-banned"); process.exit(1);}
@@ -77,7 +81,7 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 let reminder = new Reminder('9:15', () => {
 
 client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MDe82I4WqQsTnx4q8bG1R3ll27mdnHdAX').then(webhook => {
-			webhook.send("@everyone, до мирового босса осталось 15 минут. Не огорчайте и не расстраивайте падшую, зайдите, пожалуйста :sad:")
+			webhook.send("@everyone, до мирового босса осталось 15 минут. Не огорчайте и не расстраивайте падшую, зайдите, пожалуйста" + emoji("583194072190156811"))
  });
 
 
@@ -154,7 +158,7 @@ client.on("messageDelete", (msg) => {
 client.on('message', message => {
          if(message.content.includes(p + "add")) {
 
-message.reply(":sad:")
+message.reply( emoji("583194072190156811"))
 }
  });
 
