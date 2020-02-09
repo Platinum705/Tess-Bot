@@ -7,7 +7,7 @@ let id2 = '<@405258156063850497>'
 const config = require('./config.json');
 const size = config.colors;
 const rainbow = new Array(size);
-client.count = ("./count.json")
+client.count = require("./count.json")
 
 for (var i=0; i<size; i++) {
 var red = sin_to_hex(i, 0 * Math.PI * 2/3);  
