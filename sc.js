@@ -156,9 +156,19 @@ client.on("messageDelete", (msg) => {
 */
 
 client.on('message', message => {
-         if(message.content.includes(p + "add")) {
+     msg = message.content.toLowerCase();
 
-message.reply("dhdhdhhdhd" + emoji("583194072190156811"))
+if(message.author.bot) return;
+
+mention = message.mentions.users.first();
+
+         if(msg.startsWith (p + "send")) {
+           if (mention == null) { return; }
+           message.delete();
+           mentionMessage = message.content.slice (8);
+           mention.sendMessage (mentionMessage);
+           message.channel.send("done!")
+
 }
  });
 
