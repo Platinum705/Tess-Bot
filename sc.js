@@ -248,7 +248,7 @@ function helpS() {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor("#00BFFF")
-            .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar** - стырить аву пользователя \n **tess!invitebot** - пригласить бота к себе на сервер \n ***Этот список будет дополняться т.к автор ленивая жопа***')
+            .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar {@user}** - стырить аву пользователя \n **tess!invitebot** - пригласить бота к себе на сервер \n **tess!send {@user} {message} - отправить сообщение от имени бота пользователю в личные сообщения (команда бесполезная, но играться можно)** \n ***Этот список будет дополняться т.к автор ленивая жопа***')
             .setFooter("Tess bot")
             .setTimestamp();
     client.users.get(message.author.id).send({embed}).then(sentMessage => {   
