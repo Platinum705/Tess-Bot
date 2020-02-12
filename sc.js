@@ -236,7 +236,7 @@ client.on('message', message => {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor("#00BFFF")
-            .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar (@user)** - стырить аву пользователя \n **tess!invitebot** - пригласить бота к себе на сервер \n **tess!send (@user) (message) - отправить сообщение от имени бота пользователю в личные сообщения (команда бесполезная, но играться можно)** \n **tess!say (message) - написать сообщение в чате от имени бота** \n \n ***Этот список будет дополняться т.к автор ленивая жопа***')
+            .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar (@user)** - стырить аву пользователя \n **tess!invitebot** - пригласить бота к себе на сервер \n **tess!send (@user) (message)** - отправить сообщение от имени бота пользователю в личные сообщения (команда бесполезная, но играться можно) \n **tess!say (message)** - написать сообщение в чате от имени бота \n \n ***Этот список будет дополняться т.к автор ленивая жопа***')
             .setFooter("Tess bot")
             .setTimestamp();
     message.channel.send({embed}).then(sentMessage => {   
