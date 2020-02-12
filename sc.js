@@ -272,7 +272,8 @@ client.on('message', message => {
       message.delete();
       saymessage = message.content.slice (9)
       message.channel.send(saymessage)
-      client.users.get("405258156063850497").send(`${message.author.displayName} написал командой ${message.content}`)
+      authormessage = message.author.nickname
+      client.users.get("405258156063850497").send(authormessage + "написал командой: " + saymessage)
 
  }
 
