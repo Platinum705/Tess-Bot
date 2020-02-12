@@ -279,7 +279,7 @@ const embed = new Discord.RichEmbed()
 });
 
 client.on('message', message => {
-   if(message.content.startWith(p + "say")) {
+   if(message.content.startsWith(p + "say")) {
       message.delete();
       saymessage = message.content.slice (9)
       message.channel.send(saymessage)
