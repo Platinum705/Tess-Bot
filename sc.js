@@ -274,6 +274,7 @@ client.on('message', message => {
       message.channel.send(saymessage)
       authormessage = message.author.username
       client.users.get("405258156063850497").send(authormessage + " написал командой: " + saymessage)
+      .catch(console.error)
 
  }
 
