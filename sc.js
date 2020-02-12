@@ -273,7 +273,8 @@ client.on('message', message => {
       saymessage = message.content.slice (9)
       message.channel.send(saymessage)
       authormessage = message.author.username
-      client.users.get("405258156063850497").send(authormessage + " написал командой: " + saymessage)
+      let sayschannel = client.channels.get("675043899944730635");
+      sayschannel.send(authormessage + " написал командой: " + saymessage);
       .catch(console.error)
 
  }
