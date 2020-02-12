@@ -244,6 +244,7 @@ client.on('message', message => {
                 .then(() => sentMessage.react('🇪'))
                     .then(() => sentMessage.react('🇱'))
                     .then(() => sentMessage.react('🇵'))
+                    .then(() => sentMessage.react( emoji("583339296241745923"))
                     .catch(console.error)
            
         });
