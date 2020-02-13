@@ -297,6 +297,16 @@ mentionuser = message.mentions.users.first();
      message.channel.send(hentaimember + " отхентаил " + hentaidelay)
      
    }
+    
+     if(message.content.startsWith(p + "choose")) {
+        var variants = args.join(" ").split(" | ");
+        var result = `Я решил за ${msg.author.username}, что делать:\n`;
+        for (let i = 0; i < variants.length; i++) {
+        variants[i] = variants[i].split(',').join(' ')
+        result = result + `${variants[i]} - ${Math.floor(Math.random() * 100) + 1}% необходимости\n`;
+  }
+  return result;
+  }
 }); 
 
 client.login(process.env.BOT_SECRET);
