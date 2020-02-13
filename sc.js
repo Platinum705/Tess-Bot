@@ -281,7 +281,7 @@ client.on('message', message => {
 
 mentionuser = message.mentions.users.first();
    if(message.content.startsWith(p + "burn")) {
-     if (mentionuser = null) { return; }
+     if (mentionuser == null) { return; }
      numberfire = 3
      fireNumber = Math.floor (Math.random() * (numberfire - 1 + 1))+1;
      firemember = message.author
