@@ -286,7 +286,7 @@ mentionuser = message.mentions.users.first();
      fireNumber = Math.floor (Math.random() * (numberfire - 1 + 1))+1;
      firemember = message.author
      firedelay = message.content.slice (10)
-     message.channel.send(firemember + " сжег " + firedelay, { files: ["./images/burn/" + fireNumber + ".gif"]} )
+     message.channel.send(firemember + " сжег(сожгла) " + firedelay, { files: ["./images/burn/" + fireNumber + ".gif"]} )
 
   }
 
@@ -294,19 +294,11 @@ mentionuser = message.mentions.users.first();
      if (mentionuser == null) { return; }
      hentaimember = message.author
      hentaidelay = message.content.slice (9)
-     message.channel.send(hentaimember + " отхентаил " + hentaidelay)
+     message.channel.send(hentaimember + " отхентаил(а) " + hentaidelay)
      
    }
     
-     if(message.content.startsWith(p + "choose")) {
-        var variants = args.join(" ").split(" | ");
-        var result = `Я решил за ${msg.author.username}, что делать:\n`;
-        for (let i = 0; i < variants.length; i++) {
-        variants[i] = variants[i].split(',').join(' ')
-        result = result + `${variants[i]} - ${Math.floor(Math.random() * 100) + 1}% необходимости\n`;
-  }
-  return result;
-  }
+     
 }); 
 
 client.login(process.env.BOT_SECRET);
