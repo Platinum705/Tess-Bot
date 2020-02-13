@@ -279,6 +279,14 @@ client.on('message', message => {
 
  }
 
+   if(message.content.startsWith(p + "сжечь")) {
+     firemember = message.author.mention
+     mentionuser = message.mentions.users.first();
+     firedelay = message.content.slice (11)
+     if (mentionuser = null) { return; }
+     message.channel.send(firemember + " сжег " + firedelay)
+
+  }
 
 }); 
 
