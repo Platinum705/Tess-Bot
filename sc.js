@@ -280,7 +280,7 @@ client.on('message', message => {
  }
 
    if(message.content.startsWith(p + "сжечь")) {
-     firemember = message.author.mention
+     firemember = message.author.user.mention
      mentionuser = message.mentions.users.first();
      firedelay = message.content.slice (11)
      if (mentionuser = null) { return; }
