@@ -289,7 +289,13 @@ mentionuser = message.mentions.users.first();
      message.channel.send(firemember + " сжег " + firedelay, { files: ["./images/burn/" + fireNumber + ".gif"]} )
 
   }
-
+   if(message.content.startsWith(p + "sex") {
+     if (mentionuser == null) { return; }
+     hentaimember = message.author
+     hentaidelay = message.content.slice (9)
+     message.channel.send(hentaimember + " отхентаил " + hentaidelay)
+     
+   }
 }); 
 
 client.login(process.env.BOT_SECRET);
