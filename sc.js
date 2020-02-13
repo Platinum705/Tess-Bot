@@ -279,13 +279,13 @@ client.on('message', message => {
 
  }
 
+mentionuser = message.mentions.users.first();
    if(message.content.startsWith(p + "burn")) {
+     if (mentionuser = null) { return; }
      numberfire = 3
      fireNumber = Math.floor (Math.random() * (numberfire - 1 + 1))+1;
      firemember = message.author
-     mentionuser = message.mentions.users.first();
      firedelay = message.content.slice (10)
-     if (mentionuser = null) { return; }
      message.channel.send(firemember + " сжег " + firedelay, { files: ["./images/burn/" + fireNumber + ".gif"]} )
 
   }
