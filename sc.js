@@ -286,7 +286,7 @@ client.on('message', message => {
      mentionuser = message.mentions.users.first();
      firedelay = message.content.slice (10)
      if (mentionuser = null) { return; }
-     message.channel.send(firemember + " сжег " + firedelay + { files: ["./images/burn/" + fireNumber + ".gif"]} )
+     message.channel.send(firemember + " сжег " + firedelay, { files: ["./images/burn/" + fireNumber + ".gif"]} )
 
   }
 
