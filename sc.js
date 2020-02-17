@@ -299,6 +299,7 @@ mentionuser = message.mentions.users.first();
    }
     
     if(message.content.startsWith(p + "clear")) {
+      message.delete()
 try {
      delmsg = message.content.slice (11) 
      message.channel.bulkDelete(delmsg).then(() => {
