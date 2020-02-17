@@ -302,6 +302,8 @@ mentionuser = message.mentions.users.first();
      msg.channel.fetchMessages({limit: messagecount}) 
     .then(messages => {
       msg.channel.bulkDelete(messages);
+
+    }
   }
      
 }); 
