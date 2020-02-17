@@ -303,7 +303,7 @@ mentionuser = message.mentions.users.first();
     .then(messages => {
       msg.channel.bulkDelete(messages);
 
-    }
+    });
   }
      
 }); 
