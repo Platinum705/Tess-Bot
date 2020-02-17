@@ -299,9 +299,9 @@ mentionuser = message.mentions.users.first();
    }
     
     if(message.content.startsWith(p + "clear")) {
-    delmsg = message.content.slice (11)
-message.channel.bulkDelete(delmsg).then(() => {
-  message.channel.send("Deleted" + delmsg + "messages.").then(msg => msg.delete(3000));
+    //delmsg = message.content.slice (11)
+message.channel.bulkDelete(100).then(() => {
+  message.channel.send("Deleted messages.").then(msg => msg.delete(3000));
 });
 
   }
