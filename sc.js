@@ -298,7 +298,7 @@ mentionuser = message.mentions.users.first();
      hentaimember = message.author
      hentaidelay = message.content.slice (9)
      message.channel.send(hentaimember + " отхентаил(а) " + hentaidelay, { files: ["./images/hentai/" + hentaiNumber + ".gif"]} )
-     
+     .catch(console.error)
    }
     
     if(message.content.startsWith(p + "clear")) {
