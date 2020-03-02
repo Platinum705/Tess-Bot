@@ -307,7 +307,8 @@ mentionuser = message.mentions.users.first();
      }
 
    if (hentairand == 2) {
-     message.channel.send(hentaimember + " отхентаил(а) " + hentaidelay, { files: ["./images/hentai2/" + hentaiCount2 + ".gif"]} )
+     hentaiNumber2 = Math.floor (Math.random() * (hentaiCount2 - 1 + 1))+1;
+     message.channel.send(hentaimember + " отхентаил(а) " + hentaidelay, { files: ["./images/hentai2/" + hentaiNumber2 + ".gif"]} )
      .catch(console.error)
   }
  }
