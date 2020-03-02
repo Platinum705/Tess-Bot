@@ -292,23 +292,29 @@ mentionuser = message.mentions.users.first();
 
    if(message.content.startsWith(p + "sex")) {
      if (message.channel.nsfw == false) { return message.channel.send("Разрешено только в каналах с nsfw") }
-     if (mentionuser == null) { return; }    
-     hentaiCount2 = 6
+     if (mentionuser == null) { return; }  
+     hentairand = Math.floor(Math.random() * 2) + 1
+     
+     
+      
+     
+    
+     if (hentairand == 1) {
      hentaiCount = 9
      hentaiNumber = Math.floor (Math.random() * (hentaiCount - 1 + 1))+1;
      hentaimember = message.author
      hentaidelay = message.content.slice (9)
-     hentairand = Math.floor(Math.random() * 2) + 1
-
-     if (hentairand == 1) {
      message.channel.send(hentaimember + " отхентаил(а) " + hentaidelay, { files: ["./images/hentai/" + hentaiNumber + ".gif"]} )
      .catch(console.error)
 
      }
 
    if (hentairand == 2) {
+     hentaiCount2 = 6
+     hentaimember2 = message.author
+     hentaidelay2 = message.content.slice (9)
      hentaiNumber2 = Math.floor (Math.random() * (hentaiCount2 - 1 + 1))+1;
-     message.channel.send(hentaimember + " отхентаил(а) " + hentaidelay, { files: ["./images/hentai2/" + hentaiNumber2 + ".gif"]} )
+     message.channel.send(hentaimember2 + " отхентаил(а) " + hentaidelay2, { files: ["./images/hentai2/" + hentaiNumber2 + ".gif"]} )
      .catch(console.error)
   }
  }
