@@ -293,7 +293,7 @@ mentionuser = message.mentions.users.first();
    if(message.content.startsWith(p + "sex")) {
      if (message.channel.nsfw == false) { return message.channel.send("Разрешено только в каналах с nsfw") }
      if (mentionuser == null) { return; }    
-     //hentaiCount2 = 
+     hentaiCount2 = 6
      hentaiCount = 9
      hentaiNumber = Math.floor (Math.random() * (hentaiCount - 1 + 1))+1;
      hentaimember = message.author
