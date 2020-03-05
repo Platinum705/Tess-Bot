@@ -306,7 +306,7 @@ mentionuser = message.mentions.users.first();
      }
 
    if (hentairand == 2) {
-     hentaiCount2 = 6
+     hentaiCount2 = 9
      hentaimember2 = message.author
      hentaiNumber2 = Math.floor (Math.random() * (hentaiCount2 - 1 + 1))+1;
      hentaidelay2 = message.content.slice (9)
