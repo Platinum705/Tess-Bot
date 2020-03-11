@@ -327,7 +327,7 @@ try {
  message.channel.send("Вы уверены что указали число сообщений для удаления?")
  }
   }
-
+/*
    if(message.content.startsWith(p + "choose")) 
      choose2 = message.content.slice (12);  
      choose = Math.floor(Math.random() * 2) + 1;
@@ -337,7 +337,7 @@ try {
      if(choose == 2) {
       message.channel.send("Мой ответ на вопрос " + choose2 + " - нет")
    }
-     
+     */
 
 }); 
 
