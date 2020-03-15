@@ -330,17 +330,17 @@ try {
  message.channel.send("Вы уверены что указали число сообщений для удаления?")
  }
   }
-/*
-   if(message.content.startsWith(p + "choose")) 
-     choose2 = message.content.slice (12);  
-     choose = Math.floor(Math.random() * 2) + 1;
-     if(choose == 1) {
-      message.channel.send("Мой ответ на вопрос " + choose2 + " - да")
-  }
-     if(choose == 2) {
-      message.channel.send("Мой ответ на вопрос " + choose2 + " - нет")
-   }
-     */
+ 
+if(message.content.startsWith(p + "say2")) {
+      message.delete();
+      saymessage2 = message.content.slice (10)
+      
+      
+      let sayschannel2 = client.channels.get("677796816678551583")
+      sayschannel2.send(saymessage2)
+      .catch(console.error)
+
+ }
 
 }); 
 
