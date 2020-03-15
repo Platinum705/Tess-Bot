@@ -289,7 +289,7 @@ mentionuser = message.mentions.users.first();
      message.channel.send(firemember + " сжег(сожгла) " + firedelay, { files: ["./images/burn/" + fireNumber + ".gif"]} )
 
   }
-
+  
    if(message.content.startsWith(p + "sex")) {
      if (mentionuser == null) { return; }
      if (message.channel.nsfw == false) { return message.channel.send("Разрешено только в каналах с nsfw") }
@@ -315,6 +315,16 @@ mentionuser = message.mentions.users.first();
   }
  }
     
+
+    if(message.content.includes(p + "move")) {
+     const args = message.content.slice(10).trim().split(/ +/g);
+     const mem = message.author
+     const move = args.join(" ")
+     const move2 = client.channels.get("688631048514568192").move
+       mem.setVoiceChannel(move2)
+
+  }
+
     if(message.content.startsWith(p + "clear")) {
       message.delete()
 try {
