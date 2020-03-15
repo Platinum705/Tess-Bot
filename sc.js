@@ -316,14 +316,7 @@ mentionuser = message.mentions.users.first();
  }
     
 
-    if(message.content.includes(p + "move")) {
-     const args = message.content.slice(10).trim().split(/ +/g);
-     const mem = message.author
-     const move = args.join(" ")
-     const move2 = client.channels.get("688631048514568192").move
-       mem.setVoiceChannel(move2)
-
-  }
+    
 
     if(message.content.startsWith(p + "clear")) {
       message.delete()
