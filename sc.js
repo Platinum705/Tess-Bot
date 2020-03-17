@@ -103,21 +103,21 @@ client.on("message",(message) =>
 	});
 */
 	 
-/*
+
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){	
     let date = new Date(msg.timestamp);	
     if (typeof msg.attachments[0] !== 'undefined'){	
 	console.log('Кинул в лс удаленное сообщение')	
-      client.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);	
+      client.channels.get("689453045611757613").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);	
     } else {	
-      client.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);	
+      client.channels.get("689453045611757613").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);	
     };	
   } else {	
-    client.users.get("405258156063850497").send("Удалено сообщение.");	
+    client.channels.get("689453045611757613").send("Удалено сообщение.");	
   };	
 });                                    
-*/
+
 
 client.on('message', message => {
      msg = message.content.toLowerCase();
