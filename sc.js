@@ -305,6 +305,13 @@ if(message.content.startsWith(p + "say2")) {
 
  }
 
+   let kickmem = message.mentions.users.first();
+   let kickmem2 = message.content;
+   if(message.content.startsWith(p + "kick")) {
+   if (mentionuser == null) { return; }
+   message.channel.send(kickmem + " ударил" + kickmem2)
+}
+
 }); 
 
 client.login(process.env.BOT_SECRET);
