@@ -305,11 +305,11 @@ if(message.content.startsWith(p + "say2")) {
 
  }
 
-   let kickmem = message.mentions.users.first();
-   let kickmem2 = message.content;
+   
    if(message.content.startsWith(p + "kick")) {
-   if (mentionuser == null) { return; }
-   message.channel.send(kickmem + " ударил" + kickmem2)
+    let kickmem = message.content.slice(10);
+    let kickmem2 = message.content.slice(11);
+   message.channel.send(kickmem + " ударил " + kickmem2)
 }
 
 }); 
