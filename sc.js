@@ -307,8 +307,10 @@ if(message.content.startsWith(p + "say2")) {
 
    
    if(message.content.startsWith(p + "kick")) {
-    let kickmem2 = message.mentions.users.first()
-    let kickmem = message.content.split("|")
+    message.delete()
+    let kickmem2 = message.mentions.users.first().split("|")
+    //let kickmem = message.content.slice(10).split("|")
+    let kickmem = message.mentions.users.first()
    message.channel.send(kickmem2 + " жестоко ударил с ноги " + kickmem)
 }
 
