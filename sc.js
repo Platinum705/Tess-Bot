@@ -313,6 +313,7 @@ if(message.content.startsWith(p + "say2")) {
     let kickmem2 = message.mentions.users.first()
     let kickmem = message.content.slice(10).split("/")
     message.channel.send(kickmem2 + " **ударил** " + kickmem[1], { files: ["./images/kick/" + kickNumber + ".gif"]} )
+    .catch(console.error)
 }
 
 }); 
