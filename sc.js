@@ -51,6 +51,10 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 
 });
 
+client.user.setActivity('https://juniper.bot',{ type: "PLAYING" })
+    client.user.setStatus('idle')
+
+/*
             setInterval(() => {
                 
 
@@ -66,9 +70,12 @@ second: 'numeric',
                 
            })
             }, 5000)
-        
+        */
+
+
         });
-        
+  
+
 
 
 client.on('message', message => {
@@ -317,5 +324,12 @@ if(message.content.startsWith(p + "say2")) {
 }
 
 }); 
+
+client.on('guildMemberAdd', (member) => {
+    console.log(`${member.displayName} вступил в ${member.guild.name}.`)
+if(member.guild.id === "677783637634318365"){
+client.channels.get('677803687522861076').send(`Приветствую тебя, ${member.displayName}, ты попал в клуб **LastSong** \n Убедительная просьба отписать свой игровой ник в ЛС главе клуба <@256840832433389579>`);
+	}
+});
 
 client.login(process.env.BOT_SECRET);
