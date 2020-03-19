@@ -319,7 +319,17 @@ if(message.content.startsWith(p + "say2")) {
     kickNumber = Math.floor (Math.random() * (kickCount - 1 + 1))+1;
     //let kickmem2 = message.mentions.users.first()
     let kickmem = message.content.slice(10).split("/")
-    client.channels.get("677796816678551583").send(kickmem[0] + " **ударил** " + kickmem[1], { files: ["./images/kick/" + kickNumber + ".gif"]} )
+    message.channel.send(kickmem[0] + " **ударил** " + kickmem[1], { files: ["./images/kick/" + kickNumber + ".gif"]} )
+    .catch(console.error)
+}
+   
+  if(message.content.startsWith(p + "kick2")) {
+    message.delete()
+    kickCount2 = 6
+    kickNumber2 = Math.floor (Math.random() * (kickCount2 - 1 + 1))+1;
+    //let kickmem3 = message.mentions.users.first()
+    let kickmem2 = message.content.slice(10).split("/")
+    client.channels.get("677796816678551583").send(kickmem2[0] + " **ударил** " + kickmem2[1], { files: ["./images/kick/" + kickNumber2 + ".gif"]} )
     .catch(console.error)
 }
 
