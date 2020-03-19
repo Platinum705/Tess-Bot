@@ -200,7 +200,7 @@ client.on('message', message => {
                 });     
             }
         });
-
+/*
 client.on('message', message => {
     if(message.content.startsWith("tesshelp') {
         const embed = new Discord.RichEmbed()
@@ -222,7 +222,7 @@ client.on('message', message => {
 
     }
 });
-
+*/
 
 client.on('message', message => {
 if(message.content.includes(p + "invitebot")) {
