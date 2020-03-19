@@ -308,9 +308,11 @@ if(message.content.startsWith(p + "say2")) {
    
    if(message.content.startsWith(p + "kick")) {
     message.delete()
+    kickCount = 6
+    kickNumber = Math.floor (Math.random() * (hentaiCount2 - 1 + 1))+1;
     let kickmem2 = message.mentions.users.first()
     let kickmem = message.content.slice(10).split("|")
-   message.channel.send(kickmem2 + " жестоко ударил с ноги " + kickmem[1])
+    message.channel.send(kickmem2 + " **ударил** " + kickmem[1], { files: ["./images/kick/" + kickNumber + ".gif"]} )
 }
 
 }); 
