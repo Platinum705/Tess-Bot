@@ -202,7 +202,7 @@ client.on('message', message => {
         });
 
 client.on('message', message => {
-    if(message.content.startsWith(p + 'help')) {
+    if(message.content.startsWith("tesshelp')) {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor("#00BFFF")
