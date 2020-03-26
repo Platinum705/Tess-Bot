@@ -113,7 +113,7 @@ client.on("message",(message) =>
 
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){
-  if (member.guild.id === "677783637634318365") { 	
+  if (msg.guild.id === "677783637634318365") { 	
     let date = new Date(msg.timestamp);	
     if (typeof msg.attachments[0] !== 'undefined'){	
 	console.log('Кинул в лс удаленное сообщение')	
