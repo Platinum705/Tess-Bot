@@ -338,13 +338,7 @@ if(message.content.startsWith(p + "say2")) {
     .catch(console.error)
 }
   
-   if(message.content.startsWith(p + "Test")) {
-   var Attachment1 = (message.attachments)
-  if (Attatchment1){
-    message.channel.send(Attatchment1.array()[0)
-    message.channel.send(Attatchment1.array()[0].url)
-  }
- }
+ 
 }); 
 
 
