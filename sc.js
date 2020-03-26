@@ -112,7 +112,8 @@ client.on("message",(message) =>
 	 
 
 client.on("messageDelete", (msg) => {	
-  if (typeof msg.content !== 'undefined'){	
+  if (typeof msg.content !== 'undefined'){
+  if (message.guild.id === "677783637634318365") { 	
     let date = new Date(msg.timestamp);	
     if (typeof msg.attachments[0] !== 'undefined'){	
 	console.log('Кинул в лс удаленное сообщение')	
@@ -123,6 +124,7 @@ client.on("messageDelete", (msg) => {
   } else {	
     client.channels.get("674482419415515146").send("Удалено сообщение.");	
   };	
+ };
 });                                    
 
 
