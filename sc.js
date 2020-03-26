@@ -336,14 +336,16 @@ if(message.content.startsWith(p + "say2")) {
     client.channels.get("677796816678551583").send(kickmem2[0] + " **ударил** " + kickmem2[1], { files: ["./images/kick/" + kickNumber2 + ".gif"]} )
     .catch(console.error)
 }
-
+  
+   if(message.content.startsWith(p + "Test")) {
+   var Attachment1 = (message.attachments)
+  if (Attatchment1){
+    message.channel.send(Attatchment.array()[0)
+    message.channel.send(Attatchment.array()[0].url)
+  }
+ }
 }); 
-/*
-client.on('guildMemberAdd', (member) => {
-    console.log(`${member.displayName} вступил в ${member.guild.name}.`)
-if(member.guild.id === "677783637634318365"){
-client.channels.get('677803687522861076').send(`Приветствую тебя, ${member.displayName}, ты попал в клуб **LastSong** \n Убедительная просьба отписать свой игровой ник в ЛС главе клуба <@256840832433389579>`);
-	}
-});
-*/
+
+
+
 client.login(process.env.BOT_SECRET);
