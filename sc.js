@@ -117,11 +117,12 @@ client.on("messageDelete", (msg) => {
   if (msg.guild.id === "677783637634318365") { 	
     let date = new Date(msg.timestamp);	
     let idmemb = msg.author.id;
+    let attachment1 = (msg.attachments)
     if (typeof msg.attachments[0] !== 'undefined'){	
 	console.log('Кинул в лс удаленное сообщение')	
       client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}", ${msg.attachments} \n id пользователя: ${msg.author.id} \n К сообщению было что-то прикреплено.`);	
     } else {	
-      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}", ${msg.attachments} \n id пользователя: ${msg.author.id}`);	
+      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" ` + attachment1[0].url + \n id пользователя: ${msg.author.id}`);	
     };	
   } else {	
     client.channels.get("692612229224202260").send("Удалено сообщение.");	
