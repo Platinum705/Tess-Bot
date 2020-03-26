@@ -113,6 +113,7 @@ client.on("message",(message) =>
 
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){
+  if (msg.author.bot) return;
   if (msg.guild.id === "677783637634318365") { 	
     let date = new Date(msg.timestamp);	
     let idmemb = msg.author.id;
