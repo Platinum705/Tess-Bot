@@ -120,7 +120,7 @@ client.on("messageDelete", (msg) => {
     let attachment1 = (msg.attachments)
     if (typeof msg.attachments[0] !== 'undefined'){	
 	console.log('Кинул в лс удаленное сообщение')	
-      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}", ${msg.attachments} \n id пользователя: ${msg.author.id} \n К сообщению было что-то прикреплено.`);	
+      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" ` + attachment1[0].url + \n id пользователя: ${msg.author.id} \n К сообщению было что-то прикреплено.`);	
     } else {	
       client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" ` + attachment1[0].url + \n id пользователя: ${msg.author.id}`);	
     };	
