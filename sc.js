@@ -114,11 +114,11 @@ client.on("message",(message) =>
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){
   if (msg.author.bot) return;
-  if (msg.author === "631041923280273438") return; //Пчёлка
-  if (msg.author === "407474888929181697") return; //Доктор
-  if (msg.author === "361572142644461570") return; //Аля
-  if (msg.author === "632228871307001885") return; //Женя
-  if (msg.author === "405258156063850497") return; //Чаёк
+  if (msg.author.id === "631041923280273438") return; //Пчёлка
+  if (msg.author.id === "407474888929181697") return; //Доктор
+  if (msg.author.id === "361572142644461570") return; //Аля
+  if (msg.author.id === "632228871307001885") return; //Женя
+  if (msg.author.id === "405258156063850497") return; //Чаёк
   if (msg.guild.id === "677783637634318365") { 	
     let date = new Date(msg.createdTimestamp);	
     let idmemb = msg.author.id;
