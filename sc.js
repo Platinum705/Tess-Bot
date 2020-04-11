@@ -314,11 +314,11 @@ try {
 if(message.content.startsWith(p + "say2")) {
       message.delete();
       saymessage2 = message.content.slice (10)
+      client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8woNTZ5MTPyXgFFaxPHNtS5I0YjGUy6Az').then(webhook => {
+			webhook.send(saymessage2)
+                .catch(console.error)
+ });
       
-      
-      let sayschannel2 = client.channels.get("677796816678551583")
-      sayschannel2.send(saymessage2)
-      .catch(console.error)
 
  }
 
