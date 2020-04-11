@@ -27,25 +27,13 @@ class Reminder
 
 updateTimer()
 {
-    let now = new Date().toLocaleTimeString('ru', {
-        timeZone: 'Europe/Moscow',
-hour: 'numeric',
-hour12: false ,
-minute: 'numeric',
-second: 'numeric',
-    });
+    let now = new Date();
 
-   let remindTime = new Date().toLocaleTimeString('ru', {
-        timeZone: 'Europe/Moscow',
-hour: 'numeric',
-hour12: false ,
-minute: 'numeric',
-second: 'numeric',
-    });
-/*
+   let remindTime = new Date();
+
    remindTime.setHours(this.hours);
    remindTime.setMinutes(this.minutes);
-*/
+
    if(now.getTime() == remindTime.getTime()) this.remindHandler();
    if(now >= remindTime ) remindTime.setDate(remindTime.getDate() + 1);
 
@@ -55,7 +43,7 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 }
 }
 //9:15
-let reminder = new Reminder('16:15', () => {
+let reminder = new Reminder('13:38', () => {
 
 client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MDe82I4WqQsTnx4q8bG1R3ll27mdnHdAX').then(webhook => {
 			webhook.send("@everyone, до мирового босса осталось 15 минут. Не огорчайте и не заставляйте падшую плакать, зайдите, пожалуйста" + emoji("583194072190156811"))
