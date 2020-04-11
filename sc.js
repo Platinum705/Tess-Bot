@@ -51,11 +51,11 @@ client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MD
 
 
 });
-
+/*
 client.user.setActivity('https://juniper.bot',{ type: "PLAYING" })
     client.user.setStatus('invisible')
+*/
 
-/*
             setInterval(() => {
                 
 
@@ -71,7 +71,7 @@ second: 'numeric',
                 
            })
             }, 5000)
-        */
+        
 
 
         });
