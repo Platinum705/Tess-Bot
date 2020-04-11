@@ -42,9 +42,10 @@ hour12: false ,
 minute: 'numeric',
 second: 'numeric',
     });
+/*
    remindTime.setHours(this.hours);
    remindTime.setMinutes(this.minutes);
-
+*/
    if(now.getTime() == remindTime.getTime()) this.remindHandler();
    if(now >= remindTime ) remindTime.setDate(remindTime.getDate() + 1);
 
