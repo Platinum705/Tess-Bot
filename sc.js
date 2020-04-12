@@ -52,6 +52,46 @@ client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8w
 
 
 });
+
+class Reminder2
+{ 
+  constructor(timeString, callback)
+  {
+       this.remindHandler = callback;
+       let timeArray = timeString.split(':');
+       this.hours = parseInt(timeArray[0]);
+       this.minutes = parseInt(timeArray [1]);
+       this.updateTimer();
+}
+
+updateTimer()
+{
+    let now2 = new Date();
+
+   let remindTime2 = new Date();
+
+   remindTime2.setHours(this.hours);
+   remindTime2.setMinutes(this.minutes);
+
+   if(now2.getTime() == remindTime2.getTime()) this.remindHandler();
+   if(now2 >= remindTime2 ) remindTime2.setDate(remindTime2.getDate() + 1);
+
+console.log('time to reminder evening: ' + (remindTime2 - now2));
+
+setTimeout(this.updateTimer.bind(this), remindTime2 - now2);
+}
+}
+//9:15
+let reminder2 = new Reminder2('18:45', () => {
+
+client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8woNTZ5MTPyXgFFaxPHNtS5I0YjGUy6Az').then(webhook => {
+			webhook.send("@everyone, до события в игре осталось 15 минут.")
+               
+ });
+
+
+});
+
 /*
 client.user.setActivity('https://juniper.bot',{ type: "PLAYING" })
     client.user.setStatus('invisible')
