@@ -43,10 +43,11 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 }
 }
 //9:15
-let reminder = new Reminder('13:38', () => {
+let reminder = new Reminder('11:15', () => {
 
-client.fetchWebhook('620966467994779658', 'g-yVItRDXMdx1TkfhsGIU3f6WYUy8R-OsU6MDe82I4WqQsTnx4q8bG1R3ll27mdnHdAX').then(webhook => {
-			webhook.send("@everyone, до мирового босса осталось 15 минут. Не огорчайте и не заставляйте падшую плакать, зайдите, пожалуйста" + emoji("583194072190156811"))
+client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8woNTZ5MTPyXgFFaxPHNtS5I0YjGUy6Az').then(webhook => {
+			webhook.send("@everyone, до события в игре осталось 15 минут.")
+               
  });
 
 
