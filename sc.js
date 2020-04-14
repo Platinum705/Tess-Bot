@@ -199,7 +199,7 @@ client.on("messageDelete", (msg) => {
   if (msg.author.id === "407474888929181697") return; //Доктор
   if (msg.author.id === "361572142644461570") return; //Аля
   if (msg.author.id === "632228871307001885") return; //Женя
-  if (msg.author.id === "405258156063850497") return; //Чаёк
+  //if (msg.author.id === "405258156063850497") return; //Чаёк
   if (msg.guild.id === "677783637634318365") { 	
     let date = new Date(msg.createdTimestamp);	
     let idmemb = msg.author.id;
