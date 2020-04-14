@@ -220,13 +220,14 @@ client.on("messageDelete", (msg) => {
 */
                                  
 client.on('messageDelete', message => {
-//if(message.author.id == msg.author.id)
+if(message.author.id == msg.author.id) {
 if(!msg.attachments.first()) return;
    let embed = new Discord.MessageEmbed()
   .setColor("#faafff")
   .setImage(msg.attachments.first().proxyURL)
 client.guilds.cache.get('677783637634318365')
 .channel.cache.get('692612229224202260').send(embed)
+}
 });
 
 client.on('message', message => {
