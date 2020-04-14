@@ -208,7 +208,7 @@ client.on("messageDelete", (msg) => {
     if (typeof msg.attachments[0] !== 'undefined'){  
   
 	console.log('Кинул в лс удаленное сообщение')	
-      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`, embed);	
+      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`);	
     } else {	
       client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`);	
     };	
@@ -221,10 +221,10 @@ client.on("messageDelete", (msg) => {
                                  
 client.on('messageDelete', message => {
 if(message.author.id == message.author.id) {
-if(!msg.attachments.first()) return;
+if(!message.attachments.first()) return;
    let embed = new Discord.MessageEmbed()
   .setColor("#faafff")
-  .setImage(msg.attachments.first().proxyURL)
+  .setImage(message.attachments.first().proxyURL)
 client.guilds.cache.get('677783637634318365')
 .channel.cache.get('692612229224202260').send(embed)
 }
