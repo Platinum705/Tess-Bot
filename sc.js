@@ -191,7 +191,7 @@ client.on("message",(message) =>
 	});
 */
 	 
-
+/
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){
   if (msg.author.bot) return;
@@ -203,10 +203,7 @@ client.on("messageDelete", (msg) => {
   if (msg.guild.id === "677783637634318365") { 	
     let date = new Date(msg.createdTimestamp);	
     let idmemb = msg.author.id;
-    if(!msg.attachments.first()) return;
-   let embed = new Discord.MessageEmbed()
-  .setColor("#faafff")
-  .setImage(msg.attachments.first().proxyURL)
+    
     //let attachment1 = (msg.attachments)
     if (typeof msg.attachments[0] !== 'undefined'){  
   
@@ -220,8 +217,18 @@ client.on("messageDelete", (msg) => {
   };	
  };
 });
-                                    
-
+  */
+                                 
+client.on('messageDelete', message => {
+//if(message.author.id == msg.author.id)
+if(!msg.attachments.first()) return;
+   let embed = new Discord.MessageEmbed()
+  .setColor("#faafff")
+  .setImage(msg.attachments.first().proxyURL)
+client.guilds.cache.get('677783637634318365')
+.channel.cache.get('692612229224202260').send(embed)
+}
+});
 
 client.on('message', message => {
      msg = message.content.toLowerCase();
