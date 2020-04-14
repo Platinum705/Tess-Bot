@@ -204,28 +204,22 @@ client.on("messageDelete", (msg) => {
     let date = new Date(msg.createdTimestamp);	
     let idmemb = msg.author.id;
     //let attachment1 = (msg.attachments)
-    if (typeof msg.attachments[0] !== 'undefined'){	
+    if (typeof msg.attachments[0] !== 'undefined'){  
+ if(!msg.attachments.first()) return;
+ let embed = new Discord.MessageEmbed()
+  .setColor("#faafff")
+  .setImage(msg.attachments.first().proxyURL) 
 	console.log('Кинул в лс удаленное сообщение')	
-      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id} \n К сообщению было что-то прикреплено.`);	
+      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id} \n К сообщению было что-то прикреплено.` + embed);	
     } else {	
-      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`);	
+      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}` + embed);	
     };	
   } else {	
-    client.channels.get("692612229224202260").send("Удалено сообщение.");	
+    client.channels.get("692612229224202260").send("Удалено сообщение." + embed);	
   };	
  };
 });
                                     
-client.on("messageDelete", message => {
-if(message.author.id == msg.author.id) {
- if(!message.attachments.first()) return;
- let embed = new Discord.MessageEmbed()
-  .setColor("#faafff")
-  .setImage(message.attachments.first().proxyURL)
-   client.guilds.cache.get("677783637634318365")
-  .channels.cache.get("692612229224202260").send(embed)
-}
-});
 
 
 client.on('message', message => {
