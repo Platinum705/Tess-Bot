@@ -191,7 +191,7 @@ client.on("message",(message) =>
 	});
 */
 	 
-/*
+
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){
   if (msg.author.bot) return;
@@ -199,7 +199,7 @@ client.on("messageDelete", (msg) => {
   if (msg.author.id === "407474888929181697") return; //Доктор
   if (msg.author.id === "361572142644461570") return; //Аля
   if (msg.author.id === "632228871307001885") return; //Женя
-  //if (msg.author.id === "405258156063850497") return; //Чаёк
+  if (msg.author.id === "405258156063850497") return; //Чаёк
   if (msg.guild.id === "677783637634318365") { 	
     let date = new Date(msg.createdTimestamp);	
     let idmemb = msg.author.id;
@@ -217,8 +217,8 @@ client.on("messageDelete", (msg) => {
   };	
  };
 });
-*/
-                                 
+
+ /*                                
 client.on('messageDelete', message => {
 if(message.author.id == message.author.id) {
 if(!message.attachments.first()) return 
@@ -229,6 +229,7 @@ client.guilds.cache.get('677783637634318365')
  .channel.cache.get('692612229224202260').send(embed)
 }
 });
+*/
 
 client.on('message', message => {
      msg = message.content.toLowerCase();
