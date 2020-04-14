@@ -227,7 +227,6 @@ if(!msg.attachments.first()) return;
   .setImage(msg.attachments.first().proxyURL)
 client.guilds.cache.get('677783637634318365')
 .channel.cache.get('692612229224202260').send(embed)
-}
 });
 
 client.on('message', message => {
