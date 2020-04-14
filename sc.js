@@ -218,7 +218,7 @@ client.on("messageDelete", (msg) => {
                                     
 client.on("messageDelete", message => {
 if(message.author.id == msg.author.id) {
- if(!message.attachments.first()) return
+ if(!message.attachments.first()) return;
  let embed = new Discord.MessageEmbed()
   .setColor("#faafff")
   .setImage(message.attachments.first().proxyURL)
