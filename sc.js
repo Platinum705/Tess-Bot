@@ -4,7 +4,7 @@ const client = new Discord.Client();
 let p = "tess!"
 let id2 = '<@405258156063850497>'
 //client.count = require("./count.json")
-
+let ap = "="
 
 function emoji (id) {
 return client.emojis.get(id).toString();
@@ -423,8 +423,13 @@ if(message.content.startsWith(p + "say2")) {
     client.channels.get("677796816678551583").send(kickmem2[0] + " **ударил** " + kickmem2[1], { files: ["./images/kick/" + kickNumber2 + ".gif"]} )
     .catch(console.error)
 }
-  
- 
+ if(message.content.includes(ap + "music")) {
+  let warnmem = message.author.id
+if (message.channel.id !== "677858308878630942") {
+ message.channel.send("<@" + warnmem + ">" + ", убедительная просьба, использовать команды музыкального бота в соответствующем канале — <#677858308878630942>")
+
+}
+   }
 }); 
 
 
