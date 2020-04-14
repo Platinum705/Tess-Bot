@@ -214,7 +214,18 @@ client.on("messageDelete", (msg) => {
     client.channels.get("692612229224202260").send("Удалено сообщение.");	
   };	
  };
-});                                    
+});
+                                    
+client.on("messageDelete", (msg) => {
+if(message.author.id == msg.author.id) {
+ if(!message.attachments.first()) return
+ let embed = new Discord.MessageEmbed()
+  .setColor()
+  .setImage(message.attachments.first().proxyURL)
+   client.guilds.cache.get("677783637634318365")
+  .channels.cache.get("692612229224202260").send(embed)
+}
+});
 
 
 client.on('message', message => {
