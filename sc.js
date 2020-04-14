@@ -212,10 +212,10 @@ client.on("messageDelete", (msg) => {
 	console.log('Кинул в лс удаленное сообщение')	
       client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`, embed);	
     } else {	
-      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`, embed);	
+      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`);	
     };	
   } else {	
-    client.channels.get("692612229224202260").send("Удалено сообщение.", embed);	
+    client.channels.get("692612229224202260").send("Удалено сообщение.");	
   };	
  };
 });
