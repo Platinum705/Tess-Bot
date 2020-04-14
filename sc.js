@@ -191,7 +191,7 @@ client.on("message",(message) =>
 	});
 */
 	 
-/
+/*
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){
   if (msg.author.bot) return;
@@ -217,7 +217,7 @@ client.on("messageDelete", (msg) => {
   };	
  };
 });
-  */
+*/
                                  
 client.on('messageDelete', message => {
 //if(message.author.id == msg.author.id)
