@@ -226,7 +226,7 @@ if(!message.attachments.first()) return;
   .setColor("#faafff")
   .setImage(message.attachments.first().proxyURL)
 client.guilds.cache.get('677783637634318365')
-.channel.cache.get('692612229224202260').send(embed)
+client.channel.cache.get('692612229224202260').send(embed)
 }
 });
 
