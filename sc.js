@@ -203,12 +203,13 @@ client.on("messageDelete", (msg) => {
   if (msg.guild.id === "677783637634318365") { 	
     let date = new Date(msg.createdTimestamp);	
     let idmemb = msg.author.id;
+    if(!msg.attachments.first()) return;
+   let embed = new Discord.MessageEmbed()
+  .setColor("#faafff")
+  .setImage(msg.attachments.first().proxyURL)
     //let attachment1 = (msg.attachments)
     if (typeof msg.attachments[0] !== 'undefined'){  
- if(!msg.attachments.first()) return;
- let embed = new Discord.MessageEmbed()
-  .setColor("#faafff")
-  .setImage(msg.attachments.first().proxyURL) 
+  
 	console.log('Кинул в лс удаленное сообщение')	
       client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`, embed);	
     } else {	
