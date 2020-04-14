@@ -221,12 +221,12 @@ client.on("messageDelete", (msg) => {
                                  
 client.on('messageDelete', message => {
 if(message.author.id == message.author.id) {
-if(!message.attachments.first()) return;
-   let embed = new Discord.MessageEmbed()
+if(!message.attachments.first()) return 
+   let embed = new Discord.RichEmbed()
   .setColor("#faafff")
   .setImage(message.attachments.first().proxyURL)
 client.guilds.cache.get('677783637634318365')
-client.channel.cache.get('692612229224202260').send(embed)
+ .channel.cache.get('692612229224202260').send(embed)
 }
 });
 
