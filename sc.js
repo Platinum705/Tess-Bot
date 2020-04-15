@@ -445,14 +445,14 @@ if (message.channel.id !== "677858308878630942") {
 }
    }
 
-
+/*
 if (message.content.startsWith(p + 'del')) {
 const fetchedChannel = message.guild.channels.find(r => r.name === message.content.slice(9));   
 client.channel.delete(fetchedChannel);
 }
 
 }); 
-
+*/
 
 
 client.login(process.env.BOT_SECRET);
