@@ -450,9 +450,9 @@ if (message.content.startsWith(p + 'del')) {
 const fetchedChannel = message.guild.channels.find(r => r.name === message.content.slice(9));   
 client.channel.delete(fetchedChannel);
 }
-
-}); 
 */
+}); 
+
 
 
 client.login(process.env.BOT_SECRET);
