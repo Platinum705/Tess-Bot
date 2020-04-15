@@ -348,7 +348,7 @@ client.on('message', message => {
       saymessage = message.content.slice (9)
       message.channel.send(saymessage)
       authormessage = message.author.username
-      let sayschannel = client.channels.get("683171550006214728")
+      let sayschannel = client.channels.get("674482419415515146")
       sayschannel.send(authormessage + " написал командой: " + saymessage)
       .catch(console.error)
 
@@ -405,7 +405,8 @@ try {
  message.channel.send("Вы уверены что указали число сообщений для удаления?")
  }
   }
- 
+
+/*
 if(message.content.startsWith(p + "say2")) {
       message.delete();
       saymessage2 = message.content.slice (10)
@@ -416,7 +417,7 @@ if(message.content.startsWith(p + "say2")) {
       
 
  }
-
+*/
    
    if(message.content.startsWith(p + "kick")) {
     message.delete()
