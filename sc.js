@@ -444,6 +444,14 @@ if (message.channel.id !== "677858308878630942") {
 
 }
    }
+
+
+if (message.content.startsWith(p + 'delete') {
+const fetchedChannel = message.guild.channels.find(r => r.name === args.join(' '));
+
+    fetchedChannel.delete();
+}
+
 }); 
 
 
