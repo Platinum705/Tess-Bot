@@ -13,7 +13,7 @@ return client.emojis.get(id).toString();
 client.on('ready', () => {
 
 
-
+/*
 class Reminder 
 { 
   constructor(timeString, callback)
@@ -127,7 +127,7 @@ client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8w
 			webhook.send("@everyone, до события в игре осталось 15 минут.")
                
  });
-
+*/
 
 });
 
