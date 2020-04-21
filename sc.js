@@ -448,7 +448,7 @@ if (message.channel.id !== "677858308878630942") {
 if(message.content.startsWith(p + "sexx")) {
      let hentaiCount = 9
      let hentaiNumber = Math.floor (Math.random() * (hentaiCount - 1 + 1))+1;
-     let hent = message.content.slice(9).split("|")
+     let hent = message.content.slice(10).split("|")
      client.channels.get("682935788605931532").send(hent[0] + " отхентаил(а) " + hent[1], { files: ["./images/hentai/" + hentaiNumber + ".gif"]} )
      .catch(console.error)
 
