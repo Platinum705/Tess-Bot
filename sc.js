@@ -126,10 +126,9 @@ let reminder3 = new Reminder3('19:35', () => {
 client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8woNTZ5MTPyXgFFaxPHNtS5I0YjGUy6Az').then(webhook => {
 			webhook.send("@everyone, до события в игре осталось 15 минут.")
                
- });
+
 */
 
-});
 
 /*
 client.user.setActivity('https://juniper.bot',{ type: "PLAYING" })
