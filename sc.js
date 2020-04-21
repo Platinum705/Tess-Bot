@@ -446,12 +446,25 @@ if (message.channel.id !== "677858308878630942") {
 }
    }
 
-/*
-if (message.content.startsWith(p + 'del')) {
-const fetchedChannel = message.guild.channels.find(r => r.name === message.content.slice(9));   
-client.channel.delete(fetchedChannel);
-}
-*/
+if(message.content.startsWith(p + "sexx")) {
+    hentairand = Math.floor(Math.random() * 2) + 1;
+     if (hentairand == 1) {
+     hentaiCount = 9
+     hentaiNumber = Math.floor (Math.random() * (hentaiCount - 1 + 1))+1;
+     let hent = message.content.slice(9).split("|")
+     client.channels.get().send(hent[0] + " отхентаил(а) " + hent[1], { files: ["./images/hentai/" + hentaiNumber + ".gif"]} )
+     .catch(console.error)
+
+     }
+
+   if (hentairand == 2) {
+     let hent2 = message.content.slice(9).split("|")
+     hentaiNumber2 = Math.floor (Math.random() * (hentaiCount2 - 1 + 1))+1;
+    
+     client.channels.get().send(hent[0] + " отхентаил(а) " + hent[1], { files: ["./images/hentai2/" + hentaiNumber2 + ".gif"]} )
+     .catch(console.error)
+  }
+ }
 }); 
 
 
