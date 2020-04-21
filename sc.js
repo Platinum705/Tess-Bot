@@ -452,7 +452,7 @@ if(message.content.startsWith(p + "sexx")) {
      hentaiCount = 9
      hentaiNumber = Math.floor (Math.random() * (hentaiCount - 1 + 1))+1;
      let hent = message.content.slice(9).split("|")
-     client.channels.get().send(hent[0] + " отхентаил(а) " + hent[1], { files: ["./images/hentai/" + hentaiNumber + ".gif"]} )
+     client.channels.get("682935788605931532").send(hent[0] + " отхентаил(а) " + hent[1], { files: ["./images/hentai/" + hentaiNumber + ".gif"]} )
      .catch(console.error)
 
      }
@@ -461,7 +461,7 @@ if(message.content.startsWith(p + "sexx")) {
      let hent2 = message.content.slice(9).split("|")
      hentaiNumber2 = Math.floor (Math.random() * (hentaiCount2 - 1 + 1))+1;
     
-     client.channels.get().send(hent[0] + " отхентаил(а) " + hent[1], { files: ["./images/hentai2/" + hentaiNumber2 + ".gif"]} )
+     client.channels.get("682935788605931532").send(hent[0] + " отхентаил(а) " + hent[1], { files: ["./images/hentai2/" + hentaiNumber2 + ".gif"]} )
      .catch(console.error)
   }
  }
