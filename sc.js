@@ -452,9 +452,8 @@ if(message.content.startsWith(p + "sexx")) {
      client.channels.get("682935788605931532").send(hent[0] + " отхентаил(а) " + hent[1], { files: ["./images/hentai/" + hentaiNumber + ".gif"]} )
      .catch(console.error)
 
-     
+}
 
-   
 }); 
 
 
