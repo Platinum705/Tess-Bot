@@ -190,7 +190,7 @@ client.on("message",(message) =>
 	});
 */
 	 
-/* //Норм удаление
+
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){
   if (msg.author.bot) return;
@@ -207,16 +207,17 @@ client.on("messageDelete", (msg) => {
     if (typeof msg.attachments[0] !== 'undefined'){  
   
 	console.log('Кинул в лс удаленное сообщение')	
-      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`);	
+      client.channels.get("674482419415515146").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`);	
     } else {	
-      client.channels.get("692612229224202260").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`);	
+      client.channels.get("674482419415515146").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`);	
     };	
   } else {	
-    client.channels.get("692612229224202260").send("Удалено сообщение.");	
+    client.channels.get("674482419415515146").send("Удалено сообщение.");	
   };	
  };
 });
-*/
+
+
 client.on('messageDelete', message => {
 
 
