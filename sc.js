@@ -217,6 +217,57 @@ client.on("messageDelete", (msg) => {
  };
 });
 
+client.on('messageDelete', message => {
+
+if (!message.guild) return;
+    if (!message.content) return;
+    const logs = message.guild.channels.find(c => c.name === 'logs');
+
+    if (!logs) {
+        return console.log(`[WARN]: The Delete Logs channel does not exist in the server named '${message.guild.name}'`)
+    }
+
+    if (message.attachments.size > 0) { // If I change this to: message.attachments.size>0 && message it works with deleted image & text but as it is without this said line it doesn't function
+
+        var Attachment = (message.attachments).array();
+
+        message.attachments.forEach(function(attachment) {
+            const logembed = new Discord.RichEmbed()
+
+                .setAuthor(message.author.tag, message.author.displayAvatarURL)
+                .setDescription(`**Image sent by ${message.author.tag} deleted in <#${message.channel.id}>**`)
+                .setImage(attachment.proxyURL)
+
+                .setColor(message.guild.member(client.user).displayHexColor)
+
+                .setFooter(`Deleted Image`)
+                .setTimestamp()
+
+            logs.send(logembed);
+            console.log(attachment.proxyURL);
+        })
+    } else {
+        const logembed = new Discord.RichEmbed()
+            //.setTitle('Message Deleted')
+            .setAuthor(message.author.tag, message.author.displayAvatarURL)
+            .setDescription(`**Message sent by ${message.author.tag} deleted in <#${message.channel.id}>**`)
+            .addField("Message Content", `${message.content}`)
+
+            .setColor(message.guild.member(client.user).displayHexColor)
+
+            .setFooter(`Deleted Message`)
+            .setTimestamp()
+
+        logs.send(logembed);
+
+    }
+});
+
+
+
+
+
+
  /*                                
 client.on('messageDelete', message => {
 if(message.author.id == message.author.id) {
