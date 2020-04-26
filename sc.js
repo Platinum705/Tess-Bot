@@ -477,7 +477,7 @@ if(message.content.startsWith(p + "sexx")) {
 
 }); 
 
-onst { inspect } = require('util');
+const { inspect } = require('util');
 
 client.on('message', async message => {
   if (message.content.startsWith(p + "eval")) {
