@@ -219,7 +219,7 @@ client.on("messageDelete", (msg) => {
 client.on('messageDelete', message => {
 
 
-    if (message.attachments.size > 0) { // If I change this to: message.attachments.size>0 && message it works with deleted image & text but as it is without this said line it doesn't function
+    if (message.attachments.size > 0) { 
 
         var Attachment = (message.attachments).array();
 
@@ -478,36 +478,21 @@ if(message.content.startsWith(p + "sexx")) {
 }); 
 
 client.on("message", message => {
-  if (message.content.startsWith(p + 'eval')) {
-	  if(message.author.id === '405258156063850497'){
-			     
-const code = message.content.split(" ").slice(1).join(" ");
-        try {
-         let evaled = eval(code);
-         if (!code) {
-             return message.channel.send("нужна больше кода!");
-         }
-    
-         if (typeof evaled !== 'string')
-           evaled = require('util').inspect(evaled);
-        
-           const embed = new Discord.RichEmbed()
-           .setTitle(`EVAL ✅`)
-       
-           .setColor("0x4f351")
-           .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(evaled)}\`\`\``)
-       
-         message.channel.send({embed});
-       } catch (err) {
-         const embed = new Discord.RichEmbed()
-         .setTitle(`EVAL ❌`)
-  
-         .setColor("0xff0202")
-         .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(err)}\`\`\``)
-    
-         message.channel.send({embed});
-       }} else { return message.reply("Прости, но ты не можешь использовать это!") }
+  const args = message.content.split(" ").slice(1);
+ 
+  if (message.content.startsWith(p + "eval")) {
+    try {
+      const code = args.join(" ");
+      let evaled = eval(code);
+ 
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
+ 
+      message.channel.send(clean(evaled), {code:"xl"});
+    } catch (err) {
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+    }
   }
-  })
+});
 
 client.login(process.env.BOT_SECRET);
