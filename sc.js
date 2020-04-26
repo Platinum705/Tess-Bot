@@ -130,14 +130,13 @@ client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8w
 */
 
 
-/*
-client.user.setActivity('https://juniper.bot',{ type: "PLAYING" })
-    client.user.setStatus('invisible')
-*/
 
-setTimeout (msc, 1000)
-function msc () {
-            setInterval(() => {
+client.user.setActivity('https://https://github.com/0CherryTea0/Tess-Bot/',{ type: "PLAYING" })
+    client.user.setStatus('idle')
+
+});
+
+           /* setInterval(() => {
                 
 
 
@@ -151,60 +150,12 @@ second: 'numeric',
                     type: 'WATCHING'
                 
            })
-            }, 60000)
+            }, 60000)* /
         
 
 
         
-setTimeout (tym, 600000)
- }
 
-function tym () {
-            setInterval(() => {
-                
-
-
-                 client.user.setActivity("на время по мск - " + new Date().toLocaleTimeString('ru', {
-        timeZone: 'Asia/Tyumen',
-hour: 'numeric',
-hour12: false ,
-minute: 'numeric',
-second: 'numeric',
-    }), {
-                    type: 'WATCHING'
-                
-           })
-            }, 60000)
-        
-
-
-        });
-setTimeout (mark, 600000)
- }
-
-function mark () {
-            setInterval(() => {
-                
-
-
-                 client.user.setActivity("на время по мск - " + new Date().toLocaleTimeString('ru', {
-        timeZone: 'Asia/Krasnoyarsk',
-hour: 'numeric',
-hour12: false ,
-minute: 'numeric',
-second: 'numeric',
-    }), {
-                    type: 'WATCHING'
-                
-           })
-            }, 60000)
-        
-
-
-        });
-setTimeout (msc, 600000)
- }
-})
 client.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
 try {
