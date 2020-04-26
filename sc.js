@@ -155,7 +155,7 @@ second: 'numeric',
         
 
 
-        });
+        
 setTimeout (tym, 600000)
  }
 
@@ -204,7 +204,7 @@ second: 'numeric',
         });
 setTimeout (msc, 600000)
  }
-
+})
 client.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
 try {
