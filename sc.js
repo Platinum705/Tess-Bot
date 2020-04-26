@@ -135,6 +135,8 @@ client.user.setActivity('https://juniper.bot',{ type: "PLAYING" })
     client.user.setStatus('invisible')
 */
 
+setTimeout (msc, 1000)
+function msc () {
             setInterval(() => {
                 
 
@@ -149,14 +151,59 @@ second: 'numeric',
                     type: 'WATCHING'
                 
            })
-            }, 5000)
+            }, 60000)
         
 
 
         });
-  
+setTimeout (tym, 600000)
+ }
+
+function tym () {
+            setInterval(() => {
+                
 
 
+                 client.user.setActivity("на время по мск - " + new Date().toLocaleTimeString('ru', {
+        timeZone: 'Asia/Tyumen',
+hour: 'numeric',
+hour12: false ,
+minute: 'numeric',
+second: 'numeric',
+    }), {
+                    type: 'WATCHING'
+                
+           })
+            }, 60000)
+        
+
+
+        });
+setTimeout (mark, 600000)
+ }
+
+function mark () {
+            setInterval(() => {
+                
+
+
+                 client.user.setActivity("на время по мск - " + new Date().toLocaleTimeString('ru', {
+        timeZone: 'Asia/Krasnoyarsk',
+hour: 'numeric',
+hour12: false ,
+minute: 'numeric',
+second: 'numeric',
+    }), {
+                    type: 'WATCHING'
+                
+           })
+            }, 60000)
+        
+
+
+        });
+setTimeout (msc, 600000)
+ }
 
 client.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
