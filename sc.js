@@ -477,22 +477,28 @@ if(message.content.startsWith(p + "sexx")) {
 
 }); 
 
-client.on("message", message => {
-  const args = message.content.split(" ").slice(1);
- 
-  if (message.content.startsWith(p + "eval")) {
-    try {
-      const code = args.join(" ");
-      let evaled = eval(code);
- 
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
- 
-      message.channel.send(clean(evaled), {code:"xl"});
-    } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
-  }
-});
+onst { inspect } = require('util');
 
+client.on('message', async message => {
+  if (message.content.startsWith(p + "eval")) {
+  const args = message.content.split(' ');
+  const command = args.shift().toLowerCase();
+  
+  if (command === 'eval') {
+    // Put your userID here
+    //if (message.author.id !== 'ownerID') return;
+    
+    let evaled;
+    try {
+      evaled = await eval(args.join(' '));
+      message.channel.send(inspect(evaled));
+      console.log(inspect(evaled));
+    }
+    catch (error) {
+      console.error(error);
+      message.reply('there was an error during evaluation.');
+     }
+   }
+ }
+});
 client.login(process.env.BOT_SECRET);
