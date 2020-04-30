@@ -11,151 +11,11 @@ return client.emojis.get(id).toString();
 } 
 
 client.on('ready', () => {
-
-
-/*
-class Reminder 
-{ 
-  constructor(timeString, callback)
-  {
-       this.remindHandler = callback;
-       let timeArray = timeString.split(':');
-       this.hours = parseInt(timeArray[0]);
-       this.minutes = parseInt(timeArray [1]);
-       this.updateTimer();
-}
-
-updateTimer()
-{
-    let now = new Date();
-
-   let remindTime = new Date();
-
-   remindTime.setHours(this.hours);
-   remindTime.setMinutes(this.minutes);
-
-   if(now.getTime() == remindTime.getTime()) this.remindHandler();
-   if(now >= remindTime ) remindTime.setDate(remindTime.getDate() + 1);
-
-console.log('time to reminder: ' + (remindTime - now));
-
-setTimeout(this.updateTimer.bind(this), remindTime - now);
-}
-}
-//9:15
-let reminder = new Reminder('11:15', () => {
-
-client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8woNTZ5MTPyXgFFaxPHNtS5I0YjGUy6Az').then(webhook => {
-			webhook.send("@everyone, до события в игре осталось 15 минут.")
-               
- });
-
-
-});
-
-class Reminder2
-{ 
-  constructor(timeString, callback)
-  {
-       this.remindHandler = callback;
-       let timeArray = timeString.split(':');
-       this.hours = parseInt(timeArray[0]);
-       this.minutes = parseInt(timeArray [1]);
-       this.updateTimer();
-}
-
-updateTimer()
-{
-    let now2 = new Date();
-
-   let remindTime2 = new Date();
-
-   remindTime2.setHours(this.hours);
-   remindTime2.setMinutes(this.minutes);
-
-   if(now2.getTime() == remindTime2.getTime()) this.remindHandler();
-   if(now2 >= remindTime2 ) remindTime2.setDate(remindTime2.getDate() + 1);
-
-console.log('time to reminder evening: ' + (remindTime2 - now2));
-
-setTimeout(this.updateTimer.bind(this), remindTime2 - now2);
-}
-}
-//9:15
-let reminder2 = new Reminder2('18:45', () => {
-
-client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8woNTZ5MTPyXgFFaxPHNtS5I0YjGUy6Az').then(webhook => {
-			webhook.send("@everyone, до события в игре осталось 15 минут.")
-               
- });
-
-
-});
-
-class Reminder3
-{ 
-  constructor(timeString, callback)
-  {
-       this.remindHandler = callback;
-       let timeArray = timeString.split(':');
-       this.hours = parseInt(timeArray[0]);
-       this.minutes = parseInt(timeArray [1]);
-       this.updateTimer();
-}
-
-updateTimer()
-{
-    let now3 = new Date();
-
-   let remindTime3 = new Date();
-
-   remindTime3.setHours(this.hours);
-   remindTime3.setMinutes(this.minutes);
-
-   if(now3.getTime() == remindTime3.getTime()) this.remindHandler();
-   if(now3 >= remindTime3 ) remindTime3.setDate(remindTime3.getDate() + 1);
-
-console.log('time to reminder evening 2: ' + (remindTime3 - now3));
-
-setTimeout(this.updateTimer.bind(this), remindTime3 - now3);
-}
-}
-//00:50
-let reminder3 = new Reminder3('19:35', () => {
-
-client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8woNTZ5MTPyXgFFaxPHNtS5I0YjGUy6Az').then(webhook => {
-			webhook.send("@everyone, до события в игре осталось 15 минут.")
-               
-
-*/
-
-
-
-client.user.setActivity('https://https://github.com/0CherryTea0/Tess-Bot/',{ type: "PLAYING" })
+  client.user.setActivity('https://https://github.com/0CherryTea0/Tess-Bot/',{ type: "PLAYING" })
     client.user.setStatus('idle')
-
 });
 
-           /* setInterval(() => {
-                
-
-
-                 client.user.setActivity("на время по мск - " + new Date().toLocaleTimeString('ru', {
-        timeZone: 'Europe/Moscow',
-hour: 'numeric',
-hour12: false ,
-minute: 'numeric',
-second: 'numeric',
-    }), {
-                    type: 'WATCHING'
-                
-           })
-            }, 60000)* /
-        
-
-
-        
-
+           
 client.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
 try {
@@ -171,24 +31,8 @@ message.channel.send('Ты уверен что это человек имеет 
 		}
 	}
 });
-/*
-client.on("message",(message) =>
 
-	{  
-
-	    if(message.content.startsWith(p + 'inv')) {
-                 message.delete()
-	    {
-	        message.channel.createInvite({temporary : true})
-
-	       .then(inv =>message.channel.sendMessage (`https://discord.gg/${inv.code} `));                   
-
-	    }
-}
-	});
-*/
-	 
-
+	
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){
   if (msg.author.bot) return;
@@ -200,10 +44,7 @@ client.on("messageDelete", (msg) => {
   if (msg.guild.id === "677783637634318365") { 	
     let date = new Date(msg.createdTimestamp);	
     let idmemb = msg.author.id;
-    
-    //let attachment1 = (msg.attachments)
-    if (typeof msg.attachments[0] !== 'undefined'){  
-  
+    if (typeof msg.attachments[0] !== 'undefined'){    
 	console.log('Кинул в лс удаленное сообщение')	
       client.channels.get("674482419415515146").send(`Удалено сообщение от` + "<@" + idmemb + ">" + ` написанное ${date.toUTCString()}: "${msg.content}" \n id пользователя: ${msg.author.id}`);	
     } else {	
@@ -215,83 +56,40 @@ client.on("messageDelete", (msg) => {
  };
 });
 
-
 client.on('messageDelete', message => {
-
-
-    if (message.attachments.size > 0) { 
-
+   if (message.attachments.size > 0) { 
         var Attachment = (message.attachments).array();
-
         message.attachments.forEach(function(attachment) {
             let embed = new Discord.RichEmbed()
              .setColor("#affaff")
-             .setImage(attachment.proxyURL)
-         
+             .setImage(attachment.proxyURL)         
             client.channels.get("674482419415515146").send(embed);
-        })
-}
+   })
+ }
 });
-
-
-
-
-
-
- /*                                
-client.on('messageDelete', message => {
-if(message.author.id == message.author.id) {
-if(!message.attachments.first()) return 
-   let embed = new Discord.RichEmbed()
-  .setColor("#faafff")
-  .setImage(message.attachments.first().proxyURL)
-client.guilds.cache.get('677783637634318365')
- .channel.cache.get('692612229224202260').send(embed)
-}
-});
-*/
 
 client.on('message', message => {
      msg = message.content.toLowerCase();
-
-if(message.author.bot) return;
-
-mention = message.mentions.users.first();
-
+     if(message.author.bot) return;
+     mention = message.mentions.users.first();
          if(msg.startsWith (p + "send")) {
            if (mention == null) { return; }
            message.delete();
            mentionMessage = message.content.slice (10);
            mention.sendMessage (mentionMessage);
-           message.channel.send("done!")
-
-}
-/*
-if(msg.includes( emoji("583194072190156811"))) {
-let emojiCounter = client.count["counter"].sadEmoji;
-client.count ["counter"] = {
-sadEmoji: emojiCounter + 1
-}
-fs.writeFile ("./count.json", JSON.stringify (client.count, null, 4), err => {
-if (err) throw err;
-message.channel.send("emoji counted")
-
-});
-
  }
-*/
-  });
+});
 
 client.on('message', message => {
 	if(message.content === (p + 'logo')) {
-try {
+ try {
 	const embed = new Discord.RichEmbed()
 		.setTitle('Логотип сервера')
             .setColor('RANDOM')
 		.setImage(message.guild.iconURL)
 		 message.channel.send({embed})
 		console.log(`показал логотип сервера ${message.guild.name} для ${message.author.displayName}`)
-} catch (err) {
+ } catch (err) {
 message.channel.send('Произошла ошибка, возможно, вы пытаетесь крашнуть бота :D')
 		}
 	}
@@ -325,29 +123,6 @@ client.on('message', message => {
                 });     
             }
         });
-/*
-client.on('message', message => {
-    if(message.content.startsWith("tesshelp') {
-        const embed = new Discord.RichEmbed()
-            .setTitle("Помощь")
-            .setColor("#00BFFF")
-            .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar (@user)** - стырить аву пользователя \n **tess!invitebot** - пригласить бота к себе на сервер \n **tess!send (@user) (message)** - отправить сообщение от имени бота пользователю в личные сообщения (команда бесполезная, но играться можно) \n **tess!say (message)** - написать сообщение в чате от имени бота \n **tess!burn (@user)** - сжечь пользователя \n \n ***Этот список будет дополняться т.к автор ленивая жопа***')
-            .setFooter("Tess bot")
-            .setTimestamp();
-    message.channel.send({embed}).then(sentMessage => {   
-            sentMessage.react('🇭')
-                .then(() => sentMessage.react('🇪'))
-                    .then(() => sentMessage.react('🇱'))
-                    .then(() => sentMessage.react('🇵'))
-                    
-                    .catch(console.error)
-           
-        });
-      
-
-    }
-});
-*/
 
 client.on('message', message => {
 if(message.content.includes(p + "invitebot")) {
