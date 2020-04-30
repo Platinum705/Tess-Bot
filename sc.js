@@ -2,8 +2,6 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client();
 let p = "tess!"
-let id2 = '<@405258156063850497>'
-let ap = "="
 
 function emoji (id) {
 return client.emojis.get(id).toString();
