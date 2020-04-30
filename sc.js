@@ -8,7 +8,7 @@ return client.emojis.get(id).toString();
 } 
 
 client.on('ready', () => {
-  client.user.setActivity('https://https://github.com/0CherryTea0/Tess-Bot/',{ type: "PLAYING" })
+  client.user.setActivity('https://github.com/0CherryTea0/Tess-Bot/',{ type: "PLAYING" })
     client.user.setStatus('idle')
 });
            
