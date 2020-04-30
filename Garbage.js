@@ -1,4 +1,3 @@
-
 class Reminder 
 { 
   constructor(timeString, callback)
@@ -30,3 +29,19 @@ setTimeout(this.updateTimer.bind(this), remindTime - now);
 let reminder = new Reminder('11:15', () => {
 
 });
+
+
+client.on("message",(message) =>
+
+	{  
+
+	    if(message.content.startsWith(p + 'inv')) {
+                 message.delete()
+	    {
+	        message.channel.createInvite({temporary : true})
+
+	       .then(inv =>message.channel.sendMessage (`https://discord.gg/${inv.code} `));                   
+
+	    }
+}
+	});
