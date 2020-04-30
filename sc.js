@@ -19,8 +19,8 @@ client.on('message', message => {
 try {
 let mentions1 = message.mentions
 		const embed = new Discord.RichEmbed()
-		.setTitle('Аватар пользователя:')
-            .setColor('RANDOM')
+		 .setTitle('Аватар пользователя:')
+                 .setColor('RANDOM')
 		 .setImage(message.mentions.users.first().avatarURL)
 		 message.channel.send({embed})
 		console.log(`показал аватар ${mentions1[0]} для ${message.author.displayName} в ${message.guild.name}`)
@@ -29,7 +29,6 @@ message.channel.send('Ты уверен что это человек имеет 
 		}
 	}
 });
-
 	
 client.on("messageDelete", (msg) => {	
   if (typeof msg.content !== 'undefined'){
