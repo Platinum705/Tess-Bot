@@ -3,7 +3,6 @@ const fs = require("fs");
 const client = new Discord.Client();
 let p = "tess!"
 let id2 = '<@405258156063850497>'
-//client.count = require("./count.json")
 let ap = "="
 
 function emoji (id) {
@@ -14,7 +13,6 @@ client.on('ready', () => {
   client.user.setActivity('https://https://github.com/0CherryTea0/Tess-Bot/',{ type: "PLAYING" })
     client.user.setStatus('idle')
 });
-
            
 client.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
@@ -146,8 +144,7 @@ client.on('message', message => {
       let sayschannel = client.channels.get("674482419415515146")
       sayschannel.send(authormessage + " написал командой: " + saymessage)
       .catch(console.error)
-
- }
+}
 
 mentionuser = message.mentions.users.first();
    if(message.content.startsWith(p + "burn")) {
@@ -157,8 +154,7 @@ mentionuser = message.mentions.users.first();
      firemember = message.author
      firedelay = message.content.slice (10)
      message.channel.send(firemember + " сжег(сожгла) " + firedelay, { files: ["./images/burn/" + fireNumber + ".gif"]} )
-
-  }
+}
   
    if(message.content.startsWith(p + "sex")) {
      if (mentionuser == null) { return; }
@@ -172,8 +168,7 @@ mentionuser = message.mentions.users.first();
      hentaidelay = message.content.slice (9)
      message.channel.send(hentaimember + " отхентаил(а) " + hentaidelay, { files: ["./images/hentai/" + hentaiNumber + ".gif"]} )
      .catch(console.error)
-
-     }
+}
 
    if (hentairand == 2) {
      hentaiCount2 = 9
@@ -184,16 +179,13 @@ mentionuser = message.mentions.users.first();
      .catch(console.error)
   }
  }
-    
-
-    
-
+   
     if(message.content.startsWith(p + "clear")) {
       message.delete()
 try {
      delmsg = message.content.slice (11) 
      message.channel.bulkDelete(delmsg).then(() => {
-  message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
+     message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
 
    });
 } catch(err) {
@@ -201,81 +193,13 @@ try {
  }
   }
 
-/*
-if(message.content.startsWith(p + "say2")) {
-      message.delete();
-      saymessage2 = message.content.slice (10)
-      client.fetchWebhook('698513073270423633', '6ZbT_naWDiAwPRJKmLR1y_XUkrBrhYbA5AQ8woNTZ5MTPyXgFFaxPHNtS5I0YjGUy6Az').then(webhook => {
-			webhook.send(saymessage2)
-                .catch(console.error)
- });
-      
-
- }
-*/
-   
    if(message.content.startsWith(p + "kick")) {
     message.delete()
     kickCount = 6
     kickNumber = Math.floor (Math.random() * (kickCount - 1 + 1))+1;
-    //let kickmem2 = message.mentions.users.first()
     let kickmem = message.content.slice(10).split("/")
     message.channel.send(kickmem[0] + " **ударил** " + kickmem[1], { files: ["./images/kick/" + kickNumber + ".gif"]} )
     .catch(console.error)
-}
-   
-  if(message.content.startsWith(p + "kick2")) {
-    message.delete()
-    kickCount2 = 6
-    kickNumber2 = Math.floor (Math.random() * (kickCount2 - 1 + 1))+1;
-    //let kickmem3 = message.mentions.users.first()
-    let kickmem2 = message.content.slice(10).split("/")
-    client.channels.get("677796816678551583").send(kickmem2[0] + " **ударил** " + kickmem2[1], { files: ["./images/kick/" + kickNumber2 + ".gif"]} )
-    .catch(console.error)
-}
- if(message.content.includes(ap + "music")) {
-  let warnmem = message.author.id
-if (message.channel.id !== "677858308878630942") {
- message.channel.send("<@" + warnmem + ">" + ", убедительная просьба, использовать команды музыкального бота в соответствующем канале — <#677858308878630942>")
-
-}
-   }
-
-if(message.content.startsWith(p + "sexx")) {
-     let hentaiCount = 9
-     let hentaiNumber = Math.floor (Math.random() * (hentaiCount - 1 + 1))+1;
-     let hent = message.content.slice(10).split("|")
-     client.channels.get("682935788605931532").send(hent[0] + " отхентаил(а) " + hent[1], { files: ["./images/hentai/" + hentaiNumber + ".gif"]} )
-     .catch(console.error)
-
-}
-
-
-
-}); 
-
-const { inspect } = require('util');
-
-client.on('message', async message => {
-  if (message.content.startsWith(p + "eval")) {
-  const args = message.content.split(' ');
-  const command = args.shift().toLowerCase();
-  
-  if (command === 'eval') {
-    // Put your userID here
-    //if (message.author.id !== 'ownerID') return;
-    
-    let evaled;
-    try {
-      evaled = await eval(args.join(' '));
-      message.channel.send(inspect(evaled));
-      console.log(inspect(evaled));
-    }
-    catch (error) {
-      console.error(error);
-      message.reply('there was an error during evaluation.');
-     }
-   }
  }
 });
 client.login(process.env.BOT_SECRET);
