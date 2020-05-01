@@ -222,7 +222,7 @@ if(message.content.startsWith(p + "eval")) {
     }
 
 }
- 
+ }
 });
 
 
