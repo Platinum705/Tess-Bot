@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client();
 let p = "tess!"
+const { inspect } = require("util");
 
 function emoji (id) {
 return client.emojis.get(id).toString();
