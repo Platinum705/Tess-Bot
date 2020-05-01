@@ -204,6 +204,7 @@ try {
 //ЗОНА ГОВНОКОДА
 client.on('message' message => {
 if (message.content.startsWith(p + "st")) {
+try {
 const status = {
                         
                             "online": "Онлайн.",
@@ -211,7 +212,7 @@ const status = {
                             "dnd": "Не беспокоить.",
                             "offline": "Оффлайн."
                           }
-                          try {
+                          
                           let mbr = message.mentions.members.first()  message.member; 
                                 if (mbr){ 
                                 let embed = new Discord.MessageEmbed() 
@@ -231,9 +232,10 @@ const status = {
                                 message.channel.send(embed);
      
                      
-                       } else { message.reply("Вы забыли упомянуть пользователя."); 
+                       } catch(err) { message.reply("Вы забыли упомянуть пользователя."); 
+  
   }
  }
-})
+});
 
 client.login(process.env.BOT_SECRET);
