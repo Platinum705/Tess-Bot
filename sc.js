@@ -202,7 +202,7 @@ try {
 
 
 //ЗОНА ГОВНОКОДА
-client.on('message' message => {
+client.on('message', message => {
 if (message.content.startsWith(p + "st")) {
 try {
 const status = {
