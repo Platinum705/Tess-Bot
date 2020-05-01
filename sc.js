@@ -198,7 +198,9 @@ try {
     message.channel.send(kickmem[0] + " **ударил** " + kickmem[1], { files: ["./images/kick/" + kickNumber + ".gif"]} )
     .catch(console.error)
  }
- if(message.content.startsWith(p + "eval")) {
+ 
+
+if(message.content.startsWith(p + "eval")) {
 try {
             let toEval = args.join(" ")
 			let evaluated = inspect(eval(toEval, { depth: 0 }));
@@ -219,7 +221,6 @@ try {
 
       } 
 
- }
 });
 
 
