@@ -203,8 +203,7 @@ try {
 
 if(message.content.startsWith(p + "eval")) {
 
-        //Eval command discord.js
-    if(cmd === `${prefix}eval`){
+        //
         let embed = new Discord.RichEmbed()
         .setTitle("Evaluation")
         .setDescription("Sorry, the `eval` command can only be executed by the Developer.")
