@@ -201,41 +201,6 @@ try {
 });
 
 
-//ЗОНА ГОВНОКОДА
-client.on('message', message => {
-if (message.content.startsWith(p + "st")) {
-try {
-const status = {
-                        
-                            "online": "Онлайн.",
-                            "idle": "Не на месте.",
-                            "dnd": "Не беспокоить.",
-                            "offline": "Оффлайн."
-                          }
-                          
-                          let mbr = message.mentions.members.first() || message.member; 
-                                if (mbr){ 
-                                let embed = new Discord.MessageEmbed() 
-                                .setAuthor(mbr.user.tag, mbr.user.avatarURL) 
-                                .setColor(GREEN) 
-                                .setTitle("Тег") 
-                                .setDescription(mbr.user.tag) 
-                                .addField("ID",  mbr.user.id) 
-                                .addField("Никнейм",  mbr.nickname !== null ? mbr.nickname : "No nickname") 
-                                .addField("Статус", status[mbr.user.presence.status]) 
-                                .addField("Играет в ", mbr.user.presence.game ? mbr.user.presence.game.name : "Ничего") 
-                                .addField("Присоединился", moment(mbr.joinedAt).format('MMMM Do YYYY h:mm:ss')) 
-                                .addField("Аккаунт создан", mbr.user.createdAt.toLocaleString()) 
-                                .addField("Роли на сервере", mbr.roles.filter(r => r.id !== message.guild.id).map(roles => \${roles.name}``).join(" | ")  "No Roles")
-                                .setThumbnail(mbr.user.displayAvatarURL()) 
-                                .setFooter("Информация о пользователе.")
-                                message.channel.send(embed);
-     
-                     
-                       } catch(err) { message.reply("Вы забыли упомянуть пользователя."); 
-  
-  }
- }
-});
+
 
 client.login(process.env.BOT_SECRET);
