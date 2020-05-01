@@ -213,7 +213,7 @@ const status = {
                             "offline": "Оффлайн."
                           }
                           
-                          let mbr = message.mentions.members.first()  message.member; 
+                          let mbr = message.mentions.members.first() || message.member; 
                                 if (mbr){ 
                                 let embed = new Discord.MessageEmbed() 
                                 .setAuthor(mbr.user.tag, mbr.user.avatarURL) 
