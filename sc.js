@@ -217,12 +217,8 @@ if(message.content.startsWith(p + "eval")) {
         } catch(e) {
             message.channel.send(`Error whilst evaluating: \`${e.message}\``)
         }
-    } else {
-        return message.reply(" you dont have permission to use this command.").then(m => m.delete(10000))
-    }
-
 }
- }
+ 
 });
 
 
