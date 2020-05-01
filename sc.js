@@ -220,12 +220,9 @@ if(message.content.startsWith(p + "eval")) {
             return message.channel.send(`Error while evaluating: \`${e.message}\``);
         
 
-      } else {
-        return message.reply(" you are not the bot owner!").then(msg => msg.delete(5000))
-      }
-   
-}
-
+       
+  }
+ }
 });
 
 
