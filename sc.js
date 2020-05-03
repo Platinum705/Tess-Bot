@@ -196,9 +196,9 @@ mentionuser = message.mentions.users.first();
    
     if(message.content.startsWith(p + "clear")) {
       message.delete()
-     delmsg = message.content.split(" ")
-      
-     message.channel.bulkDelete(parseInt(delmsg[1])).then(() => {
+     delmsgsplit = message.content.split(" ")
+     delmsg = parseInt(delmsgsplit[1])
+     message.channel.bulkDelete(delmsg).then(() => {
      message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
 
    });
