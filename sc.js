@@ -228,8 +228,8 @@ client.on('message', message => {
   day = time.getDay();
   hour = time.getHours();
   minute = time.getMinutes();
-   if(day === 0 && hour === 16 && minute === 53) {
-    message.channel.send("test")
+   if(day === 0 && hour === 16 && minute === 56) {
+    client.channels.get("674482419415515146").send("test")
   }
  }
 })
