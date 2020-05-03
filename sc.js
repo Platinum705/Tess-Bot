@@ -201,9 +201,11 @@ mentionuser = message.mentions.users.first();
       if(delmsg === Number) {
      message.channel.bulkDelete(delmsg).then(() => {
      message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
+    });
      } else {
      message.reply("Число гони")
-   });
+   
+   }
 
  }
   
