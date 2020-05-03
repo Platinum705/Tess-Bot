@@ -224,10 +224,10 @@ if(message.content.startsWith(p + "eval")) {
 //ЗОНА ЭКСПЕРИМЕНТОВ
 client.on('message', message => {
  if(message.content.startsWith(p + "time")) {
-  let Date = new Date();
-  day = Date.getDay();
-  hour = Date.getHours();
-  minute = Date.getMinutes();
+  let time = new Date();
+  day = time.getDay();
+  hour = time.getHours();
+  minute = time.getMinutes();
    message.reply(day + ' ' + hour + ' ' + minute)
  }
 })
