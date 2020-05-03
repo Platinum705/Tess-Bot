@@ -193,20 +193,18 @@ mentionuser = message.mentions.users.first();
      .catch(console.error)
   }
  }
-   
+
     if(message.content.startsWith(p + "clear")) {
       message.delete()
      delmsgsplit = message.content.split(" ")
      delmsg = parseInt(delmsgsplit[1])
-     if(!isNaN(delmsg)) { 
+     if(delmsg !== NaN) { 
      message.channel.bulkDelete(delmsg).then(() => {
      message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
     });
      
    } else {
-    message.reply("Гони число")
-   
-
+    message.reply("Гони число")  
  }
   
 
