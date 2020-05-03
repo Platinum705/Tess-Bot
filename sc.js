@@ -237,7 +237,7 @@ client.on('message', message => {
   day = time.getDay();
   hour = time.getHours();
   minute = time.getMinutes();
-   client.channels.get("674482419415515146").send(minutes) 
+   client.channels.get("674482419415515146").send(minute) 
  }
 })
 
