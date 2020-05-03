@@ -221,7 +221,15 @@ if(message.content.startsWith(p + "eval")) {
  
 });
 
-
-
+//ЗОНА ЭКСПЕРИМЕНТОВ
+client.on('message', message => {
+ if(message.content.startsWith(p + "time")) {
+  let Date = new Date();
+  day = Date.getDay();
+  hour = Date.getHours();
+  minute = Date.getMinutes();
+   message.reply(day + ' ' + hour + ' ' + minute)
+ }
+})
 
 client.login(process.env.BOT_SECRET);
