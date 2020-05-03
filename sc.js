@@ -9,6 +9,15 @@ return client.emojis.get(id).toString();
 } 
 
 client.on('ready', () => {
+ let time = new Date();
+ day = time.getDay();
+ hour = time.getHours();
+ minute = time.getMinutes();
+  if(day === 0 && hour === 17 && minute === 10) {
+    client.channels.get("674482419415515146").send("test")
+}
+
+
   client.user.setActivity('https://github.com/0CherryTea0/Tess-Bot/',{ type: "PLAYING" })
     client.user.setStatus('idle')
 });
@@ -228,9 +237,7 @@ client.on('message', message => {
   day = time.getDay();
   hour = time.getHours();
   minute = time.getMinutes();
-   if(day === 0 && hour === 16 && minute === 56) {
-    client.channels.get("674482419415515146").send("test")
-  }
+   client.channels.get("674482419415515146").send(minutes) 
  }
 })
 
