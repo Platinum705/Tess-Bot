@@ -198,9 +198,11 @@ mentionuser = message.mentions.users.first();
       message.delete()
      delmsgsplit = message.content.split(" ")
      delmsg = parseInt(delmsgsplit[1])
+      if(delmsg === Number) {
      message.channel.bulkDelete(delmsg).then(() => {
      message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
-
+     } else {
+     message.reply("Число гони")
    });
 
  }
