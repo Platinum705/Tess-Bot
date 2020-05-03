@@ -204,7 +204,7 @@ mentionuser = message.mentions.users.first();
    } else {
     message.reply("Гони число")  
  }
-  
+}
 
    if(message.content.startsWith(p + "kick")) {
     message.delete()
