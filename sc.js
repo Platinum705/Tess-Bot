@@ -196,16 +196,15 @@ mentionuser = message.mentions.users.first();
    
     if(message.content.startsWith(p + "clear")) {
       message.delete()
-try {
-     delmsg = message.content.slice (11) 
-     message.channel.bulkDelete(delmsg).then(() => {
+     delmsg = message.content.split(" ")
+      
+     message.channel.bulkDelete(parseInt(delmsg[1])).then(() => {
      message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
 
    });
-} catch(err) {
- message.channel.send("Вы уверены что указали число сообщений для удаления?")
+
  }
-  }
+  
 
    if(message.content.startsWith(p + "kick")) {
     message.delete()
