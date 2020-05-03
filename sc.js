@@ -16,6 +16,12 @@ client.on('ready', () => {
   if(day === 0 && hour === 17 && minute === 10) {
     client.channels.get("674482419415515146").send("test")
 }
+  if(day === 0 && hour === 17 && minute === 13) {
+    client.channels.get("674482419415515146").send("test")
+}
+  if(day === 0 && hour === 17 && minute === 14) {
+    client.channels.get("674482419415515146").send("test")
+}
 
 
   client.user.setActivity('https://github.com/0CherryTea0/Tess-Bot/',{ type: "PLAYING" })
@@ -102,9 +108,10 @@ message.channel.send('Произошла ошибка, возможно, вы п
 
 client.on('message', message => {
     if(message.content.startsWith(p + 'afk on')) {
+        let hex = message.content.split(" ");
         const embed = new Discord.RichEmbed()
             .setTitle("AFK")
-            .setColor("#00BFFF")
+            .setColor(hex[1])
             .setDescription('Вош(е)л(а) в AFK,не мешайте.')
             .setFooter("AFK|Tess bot")
             .setTimestamp();
