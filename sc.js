@@ -228,7 +228,9 @@ client.on('message', message => {
   day = time.getDay();
   hour = time.getHours();
   minute = time.getMinutes();
-   message.reply(day + ' ' + hour + ' ' + minute)
+   if(day === 0 && hour === 16 && minute === 53) {
+    message.channel.send("test")
+  }
  }
 })
 
