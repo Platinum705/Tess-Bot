@@ -200,9 +200,7 @@ mentionuser = message.mentions.users.first();
      delmsg = parseInt(delmsgsplit[1])
      if(delmsg !== NaN) { 
      message.channel.bulkDelete(delmsg).then(() => {
-     message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
-    });
-     
+     message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000))
    } else {
     message.reply("Гони число")  
  }
