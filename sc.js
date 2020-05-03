@@ -107,7 +107,7 @@ message.channel.send('Произошла ошибка, возможно, вы п
 });
 
 client.on('message', message => {
-    if(message.content.startsWith(p + 'afk on')) {
+    if(message.content.startsWith(p + 'afkon')) {
         let hex = message.content.split(" ");
         const embed = new Discord.RichEmbed()
             .setTitle("AFK")
