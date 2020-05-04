@@ -198,11 +198,12 @@ mentionuser = message.mentions.users.first();
       message.delete()
      delmsgsplit = message.content.split(" ")
      delmsg = parseInt(delmsgsplit[1])
-     if(delmsg !== NaN) { 
+     if(!NaN) { 
      message.channel.bulkDelete(delmsg).then(() => {
      message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000))
    })
- }
+ } else {
+  message.reply("Нужно число и только число")
 }
 
    if(message.content.startsWith(p + "kick")) {
