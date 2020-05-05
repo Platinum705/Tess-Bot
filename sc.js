@@ -201,9 +201,10 @@ mentionuser = message.mentions.users.first();
      if(!NaN) { 
      message.channel.bulkDelete(delmsg).then(() => {
      message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
-   });
-   } else {
-   message.channel.send("Скорми мне цисло полностью")
+ });
+}
+   if(delmsg === NaN) {
+   message.channel.send("Скорми мне число полностью")
  }
 }
 
