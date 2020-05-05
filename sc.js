@@ -195,15 +195,16 @@ mentionuser = message.mentions.users.first();
  }
 
     if(message.content.startsWith(p + "clear")) {
-      message.delete()
-     delmsgsplit = message.content.split(" ")
-     delmsg = parseInt(delmsgsplit[1])
+      message.delete():
+     delmsgsplit = message.content.split(" ");
+     delmsg = parseInt(delmsgsplit[1]);
      if(!NaN) { 
      message.channel.bulkDelete(delmsg).then(() => {
-     message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000))
-   })
- } else {
-  message.reply("Нужно число и только число")
+     message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
+   });
+   } else {
+   message.channel.send("Скорми мне цисло полностью")
+ }
 }
 
    if(message.content.startsWith(p + "kick")) {
