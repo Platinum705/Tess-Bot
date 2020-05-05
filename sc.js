@@ -195,7 +195,7 @@ mentionuser = message.mentions.users.first();
  }
 
     if(message.content.startsWith(p + "clear")) {
-      message.delete():
+      message.delete();
      delmsgsplit = message.content.split(" ");
      delmsg = parseInt(delmsgsplit[1]);
      if(!NaN) { 
