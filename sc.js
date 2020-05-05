@@ -198,7 +198,7 @@ mentionuser = message.mentions.users.first();
       message.delete();
       delmsgsplit = message.content.split(" ");
       delmsg = parseInt(delmsgsplit[1]);     
-     if(delmsg === NaN) {
+     if(delmsg !== Number) {
       message.channel.send("Скорми мне число полностью")
  } else {
    message.channel.bulkDelete(delmsg).then(() => {
