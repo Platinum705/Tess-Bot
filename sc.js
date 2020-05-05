@@ -198,9 +198,9 @@ mentionuser = message.mentions.users.first();
       message.delete();
       delmsgsplit = message.content.split(" ");
       delmsg = parseInt(delmsgsplit[1]);     
-     if(isNaN(delmsg) {
-      message.channel.send("Скорми мне число полностью")
- } else {
+     if(isNaN(delmsg) 
+      return message.channel.send("Скорми мне число полностью");
+    if(delmsg !== NaN) {
    message.channel.bulkDelete(delmsg).then(() => {
    message.channel.send("Удалено " + delmsg + " сообщений").then(msg => msg.delete(1500));
   });
