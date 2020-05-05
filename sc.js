@@ -196,14 +196,13 @@ mentionuser = message.mentions.users.first();
 
     if(message.content.startsWith(p + "clear")) {
       message.delete();
-      delmsgsplit = message.content.split(" ");
-      delmsg = parseInt(delmsgsplit[1]);     
-     if(isNaN(delmsg) 
-      return message.channel.send("Скорми мне число полностью");
-    if(delmsg !== NaN) {
-   message.channel.bulkDelete(delmsg).then(() => {
+      delmsg = message.content.split(" ");     
+     if(Boolean(Number(delmsg[1]))) {
+   message.channel.bulkDelete(delmsg[1]).then(() => {
    message.channel.send("Удалено " + delmsg + " сообщений").then(msg => msg.delete(1500));
   });
+  } else {
+   message.channel.send("Число мне, число давай")
  }
 }
 
