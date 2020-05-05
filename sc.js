@@ -196,15 +196,14 @@ mentionuser = message.mentions.users.first();
 
     if(message.content.startsWith(p + "clear")) {
       message.delete();
-     delmsgsplit = message.content.split(" ");
-     delmsg = parseInt(delmsgsplit[1]);
-     if(!NaN) { 
-     message.channel.bulkDelete(delmsg).then(() => {
-     message.channel.send("Deleted " + delmsg + " messages.").then(msg => msg.delete(3000));
- });
-}
-   if(delmsg === NaN) {
-   message.channel.send("Скорми мне число полностью")
+      delmsgsplit = message.content.split(" ");
+      delmsg = parseInt(delmsgsplit[1]);     
+     if(delmsg === NaN) {
+      message.channel.send("Скорми мне число полностью")
+ } else {
+   message.channel.bulkDelete(delmsg).then(() => {
+   message.channel.send("Удалено " + delmsg + " сообщений").then(msg => msg.delete(1500));
+  });
  }
 }
 
