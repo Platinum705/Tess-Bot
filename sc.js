@@ -199,7 +199,7 @@ mentionuser = message.mentions.users.first();
       delmsg = message.content.split(" ");     
      if(Boolean(Number(delmsg[1]))) {
    message.channel.bulkDelete(delmsg[1]).then(() => {
-   message.channel.send("Удалено " + delmsg + " сообщений").then(msg => msg.delete(1500));
+   message.channel.send("Удалено " + delmsg[1] + " сообщений").then(msg => msg.delete(1500));
   });
   } else {
    message.channel.send("Число мне, число давай")
