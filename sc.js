@@ -208,6 +208,8 @@ client.on('message', message => {
  if(message.content.startsWith(p + "role")) {
   let user = message.author;
   client.channels.get("674482419415515146").send(user + " запрашивает роль");
+}
+
    if(message.content.startsWith(p + "give")) {
     let rolename = message.content.split(" ");
     let usermention = message.mentions.user.first();
@@ -219,7 +221,6 @@ client.on('message', message => {
    .then(role => console.log(`Created new role with name ` + rolename[2] + ` and color ${role.color}`))
   .catch(console.error);
     client.users.get(usermention).addRole(rolename[2]);
-  }
  }
 })
  
