@@ -213,7 +213,7 @@ client.on('message', message => {
    if(message.content.startsWith(p + "give")) {
     let rolename = message.content.split(" ");
     let usermention = message.content.split(" ");
-     client.guild.createRole({
+     client.createRole({
       name: rolename[2],
    })
     .then(() => client.users.get(usermention[1]).addRole(rolename[2]) );
