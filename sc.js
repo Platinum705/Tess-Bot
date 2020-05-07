@@ -215,8 +215,8 @@ client.on('message', message => {
     let usermention = message.content.split(" ");
      guild.createRole({
       name: rolename[2],
-   });
-    .then() { client.users.get(usermention[1]).addRole(rolename[2]) };
+   })
+    .then(() => client.users.get(usermention[1]).addRole(rolename[2]) );
  }
 })
  
