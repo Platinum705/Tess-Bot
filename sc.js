@@ -212,11 +212,11 @@ client.on('message', message => {
 
    if(message.content.startsWith(p + "give")) {
     let rolename = message.content.split(" ");
-    let usermention = message.mentions.user.first();
+    let usermention = message.content.split(" ");
      guild.createRole({
       name: rolename[2],
    });
-    client.users.get(usermention).addRole(rolename[2]);
+    .then() { client.users.get(usermention[1]).addRole(rolename[2]) });
  }
 })
  
