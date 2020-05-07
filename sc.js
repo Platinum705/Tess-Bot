@@ -9,21 +9,7 @@ return client.emojis.get(id).toString();
 } 
 
 client.on('ready', () => {
- let time = new Date();
- day = time.getDay();
- hour = time.getHours();
- minute = time.getMinutes();
-  if(day === 0 && hour === 17 && minute === 10) {
-    client.channels.get("674482419415515146").send("test")
-}
-  if(day === 0 && hour === 17 && minute === 13) {
-    client.channels.get("674482419415515146").send("test")
-}
-  if(day === 0 && hour === 17 && minute === 14) {
-    client.channels.get("674482419415515146").send("test")
-}
-
-
+ 
   client.user.setActivity('https://github.com/0CherryTea0/Tess-Bot/',{ type: "PLAYING" })
     client.user.setStatus('idle')
 });
@@ -124,9 +110,10 @@ client.on('message', message => {
  
     client.on('message', message => {
         if(message.content.startsWith(p + 'afk off')) {
+            let hex2 = message.content.split(" ")
             const embed = new Discord.RichEmbed()
                 .setTitle("AFK")
-                .setColor("#00BFFF")
+                .setColor(hex2[1])
                 .setDescription('Выш(е)л(а) из AFK,теперь он(а) с нами.')
                 .setFooter("AFK|Tess bot")
                 .setTimestamp();
