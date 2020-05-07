@@ -202,25 +202,11 @@ mentionuser = message.mentions.users.first();
     .catch(console.error)
  }
  
-
-if(message.content.startsWith(p + "eval")) {
-        let toEval = args.join(" ");
-        let evaluated = inspect(eval(toEval, { depth: 0 } ))
-        try {
-            if(toEval) {
-                let hrStart = process.hrtime()
-                let hrDiff;
-                hrDiff = process.hrtime(hrStart)
-                return message.channel.send(`*Executed in ${hrDiff[0] > 0 ? `${hrDiff[0]}s` : ''}${hrDiff[1] / 1000000}ms.*\`\`\`javascript\n${evaluated}\n\`\`\``, { maxLength: 1900 })
-                
-            } else {
-                message.channel.send("Error whilst evaluating: `cannot evaluated air`")
-            }
-        } catch(e) {
-            message.channel.send(`Error whilst evaluating: \`${e.message}\``)
-        }
-}
- 
+/*
+if(message.content.startsWith(p + "help")) { //help
+        
+ }
+*/
 });
 
 //ЗОНА ЭКСПЕРИМЕНТОВ
@@ -233,8 +219,10 @@ client.on('message', message => {
     let usermention = message.mentions.user.first();
     let rolecolor = message.content.split(" ");
      guild.createRole({
-      name: rolename[2]
-  });
+      name: rolename[2]})
+  
+   .then(role => console.log(`Created new role with name ` + rolename[2] + ` and color ${role.color}`))
+  .catch(console.error);
     client.users.get(usermention).addRole(rolename[2]);
  };
 });
