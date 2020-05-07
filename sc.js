@@ -225,13 +225,20 @@ if(message.content.startsWith(p + "eval")) {
 
 //ЗОНА ЭКСПЕРИМЕНТОВ
 client.on('message', message => {
- if(message.content.startsWith(p + "time")) {
-  let time = new Date();
-  day = time.getDay();
-  hour = time.getHours();
-  minute = time.getMinutes();
-   client.channels.get("674482419415515146").send(minute) 
+ if(message.content.startsWith(p + "role")) {
+  let user = message.author;
+  client.channels.get("674482419415515146").send(user + " запрашивает роль");
+   if(message.content.startsWith(p + "give")) {
+    let rolename = message.content.split(" ");
+    let usermention = message.mentions.user.first();
+    let rolecolor = message.content.split(" ");
+     if(rolecolor === null || rolecolor === underfined) return;
+     guild.createRole({
+      name: rolename[2]
+      color: rolecolor[3]
+  })
+    client.users.get(usermention).addRole(rolename[2]);
  }
 })
-
+ 
 client.login(process.env.BOT_SECRET);
