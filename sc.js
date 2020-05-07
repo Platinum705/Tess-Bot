@@ -201,13 +201,7 @@ mentionuser = message.mentions.users.first();
     message.channel.send(kickmem[0] + " **ударил** " + kickmem[1], { files: ["./images/kick/" + kickNumber + ".gif"]} )
     .catch(console.error)
  }
- 
-/*
-if(message.content.startsWith(p + "help")) { //help
-        
- }
-*/
-});
+})
 
 //ЗОНА ЭКСПЕРИМЕНТОВ
 client.on('message', message => {
@@ -219,12 +213,14 @@ client.on('message', message => {
     let usermention = message.mentions.user.first();
     let rolecolor = message.content.split(" ");
      guild.createRole({
-      name: rolename[2]})
+      name: rolename[2]
+   });
   
    .then(role => console.log(`Created new role with name ` + rolename[2] + ` and color ${role.color}`))
   .catch(console.error);
     client.users.get(usermention).addRole(rolename[2]);
- };
-});
+  }
+ }
+})
  
 client.login(process.env.BOT_SECRET);
