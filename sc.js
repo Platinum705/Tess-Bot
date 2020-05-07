@@ -234,8 +234,8 @@ client.on('message', message => {
     let rolecolor = message.content.split(" ");
      if(rolecolor === null || rolecolor === underfined) return;
      guild.createRole({
-      name: rolename[2]
-      color: rolecolor[3]
+      name: rolename[2],
+      color: rolecolor[3],
   })
     client.users.get(usermention).addRole(rolename[2]);
  }
