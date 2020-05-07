@@ -213,9 +213,8 @@ client.on('message', message => {
    if(message.content.startsWith(p + "give")) {
     let rolename = message.content.split(" ");
     let usermention = message.mentions.user.first();
-    let rolecolor = message.content.split(" ");
      guild.createRole({
-      name: rolename[2]
+      name: rolename[2],
    });
     client.users.get(usermention).addRole(rolename[2]);
  }
