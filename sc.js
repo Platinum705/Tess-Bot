@@ -217,9 +217,6 @@ client.on('message', message => {
      guild.createRole({
       name: rolename[2]
    });
-  
-   .then(role => console.log(`Created new role with name ` + rolename[2] + ` and color ${role.color}`))
-  .catch(console.error);
     client.users.get(usermention).addRole(rolename[2]);
  }
 })
