@@ -109,7 +109,7 @@ client.on('message', message => {
 });
  
     client.on('message', message => {
-        if(message.content.startsWith(p + 'afk off')) {
+        if(message.content.startsWith(p + 'afkoff')) {
             let hex2 = message.content.split(" ")
             const embed = new Discord.RichEmbed()
                 .setTitle("AFK")
@@ -134,6 +134,25 @@ const embed = new Discord.RichEmbed()
     message.channel.send({embed})
     .catch(console.error)
 }
+  if(message.content.startsWith(p + "help")) {
+   const helpembed = new Discord.RichEmbed();
+    .setTitle("Мои команды")
+    .setColor("#affaff")
+    .setDescription(
+     "**tess!logo** - украсть аватарку сервера\n",
+     "**tess!say {message}** - сообщение от имени бота\n",
+     "**tess!clear {0-99}** - очистить указанное число сообщений\n",
+     "**tess!invitebot** - пригласить бота к себе на сервере\n",
+     "**tess!afkon #hex** - войти в афк режим (можно выбрать самому цвет эмбеда)\n",
+     "**tess!afkoff #hex** - выйти из афк режима (можно выбрать самому цвет эмбеда)\n",
+     "**tess!avatar {@user}** - украсть аватарку человека\n",
+     "***Список будет дополняться по мере создания команд***"
+  )
+    .setFooter("Help|TessBot")
+    .setTimestamp()
+    message.channel.send(helpembed)
+   .catch(console.error)
+ }
 });
 
 client.on('message', message => {
