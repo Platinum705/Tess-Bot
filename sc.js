@@ -10,7 +10,7 @@ return client.emojis.get(id).toString();
 
 client.on('ready', () => {
  
-  client.user.setActivity('https://github.com/0CherryTea0/Tess-Bot/',{ type: "PLAYING" })
+  client.user.setActivity('tess!help',{ type: "PLAYING" })
     client.user.setStatus('idle')
 });
            
@@ -139,14 +139,15 @@ const embed = new Discord.RichEmbed()
     .setTitle("Мои команды")
     .setColor("#affaff")
     .setDescription(
-     "**tess!logo** - украсть аватарку сервера\n",
-     "**tess!say {message}** - сообщение от имени бота\n",
-     "**tess!clear {0-99}** - очистить указанное число сообщений\n",
-     "**tess!invitebot** - пригласить бота к себе на сервере\n",
-     "**tess!afkon #hex** - войти в афк режим (можно выбрать самому цвет эмбеда)\n",
-     "**tess!afkoff #hex** - выйти из афк режима (можно выбрать самому цвет эмбеда)\n",
-     "**tess!avatar {@user}** - украсть аватарку человека\n",
-     "***Список будет дополняться по мере создания команд***"
+     "**tess!logo** - украсть аватарку сервера\n
+     **tess!say {message}** - сообщение от имени бота\n
+     **tess!clear {0-99}** - очистить указанное число сообщений\n
+     **tess!invitebot** - пригласить бота к себе на сервере\n
+     **tess!afkon #hex** - войти в афк режим (можно выбрать самому цвет эмбеда)\n
+     **tess!afkoff #hex** - выйти из афк режима (можно выбрать самому цвет эмбеда)\n
+     **tess!avatar {@user}** - украсть аватарку человека\n
+     **tess!burn {@user}** - сжечь пользователя\n
+     ***Список будет дополняться по мере создания команд***"
   )
     .setFooter("Help|TessBot")
     .setTimestamp()
