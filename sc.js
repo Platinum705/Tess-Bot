@@ -135,7 +135,7 @@ const embed = new Discord.RichEmbed()
     .catch(console.error)
 }
   if(message.content.startsWith(p + "help")) {
-   const helpembed = new Discord.RichEmbed();
+   const helpembed = new Discord.RichEmbed()
     .setTitle("Мои команды")
     .setColor("#affaff")
     .setDescription(
