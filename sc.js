@@ -241,14 +241,14 @@ client.on('message', message => {
  
 client.on("message", message => {
   const args = message.content.split(" ").slice(1);
-  /*
-  const clean = text => {
+  
+  function clean(text) {
   if (typeof(text) === "string")
     return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
   else
       return text;
 }
- */
+ 
   if (message.content.startsWith(p + "eval")) {
     try {
       const code = args.join(" ");
