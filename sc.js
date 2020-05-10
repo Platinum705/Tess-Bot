@@ -225,18 +225,10 @@ mentionuser = message.mentions.users.first();
 
 //ЗОНА ЭКСПЕРИМЕНТОВ
 client.on('message', message => {
- if(message.content.startsWith(p + "role")) {
-  let user = message.author;
-  client.channels.get("674482419415515146").send(user + " запрашивает роль");
-}
-
-   if(message.content.startsWith(p + "give")) {
-    let rolename = message.content.split(" ");
-    let usermention = message.content.split(" ");
-     client.createRole({
-      name: rolename[2],
-   })
-    .then(() => client.users.get(usermention[1]).addRole(rolename[2]) );
+ if(message.content.startsWith(p + "leave")) {
+  message.delete();
+  if(message.guild.id === "706856394762092554") {
+   message.guild.leave()
  }
 })
  
