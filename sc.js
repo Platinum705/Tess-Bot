@@ -229,6 +229,7 @@ client.on('message', message => {
   message.delete();
   if(message.guild.id === "706856394762092554") {
    message.guild.leave()
+  }
  }
 })
  
