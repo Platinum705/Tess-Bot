@@ -230,7 +230,7 @@ client.on('message', message => {
   let leaveemb = new Discord.RichEmbed()
    .setTitle("Прощание с сервером")
    .setColor("#affaff")
-   .setDescription("Участники этого сервера, хочу сообщить, что мне не нравится тут находиться и я ухожу, всем досвидание")
+   .setDescription("Участники этого сервера, хочу сообщить, что мне не нравится тут находиться и я ухожу, всем до свидания") 
   message.delete().then(() => {
    message.channel.send(leaveemb).then(() => {
    message.guild.leave(guildID)
