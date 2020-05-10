@@ -228,7 +228,7 @@ client.on('message', message => {
  if(message.content.startsWith(p + "leave")) {
   let guildID = message.guild.id
   message.delete().then(() => {
-   message.guild.leave(guildID)
+   message.guild.leave(guildID).catch(console.error)
   })
  }
 })
