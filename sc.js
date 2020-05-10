@@ -239,4 +239,30 @@ client.on('message', message => {
  }
 })
  
+client.on("message", message => {
+  const args = message.content.split(" ").slice(1);
+  const clean = text => {
+  if (typeof(text) === "string")
+    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+  else
+      return text;
+}
+ 
+  if (message.content.startsWith(p + "eval")) {
+    if(message.author.id !== "708983740558344193") return;
+    try {
+      const code = args.join(" ");
+      let evaled = eval(code);
+ 
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
+ 
+      message.channel.send(clean(evaled), {code:"xl"});
+    } catch (err) {
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+    }
+  }
+});
+
+
 client.login(process.env.BOT_SECRET);
