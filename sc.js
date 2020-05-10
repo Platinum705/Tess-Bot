@@ -268,7 +268,7 @@ client.on('message', message => {
  if(message.content.startsWith(p + "role")) {
  let reactCount = 2
   message.channel.send("Test").then(() => { message.react('👎') })
-   if (reaction.emoji.name === '👎' && reaction.count = reactCount ) {
+   if (reaction.emoji.name == '👎' && reaction.count = reactCount ) {
     message.channel.send("test")
   }
  }
