@@ -229,7 +229,7 @@ client.on('message', message => {
   let guildID = message.guild.id
   message.delete().then(() => {
    message.guild.leave(guildID)
-  }
+  })
  }
 })
  
