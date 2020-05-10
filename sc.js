@@ -227,8 +227,14 @@ mentionuser = message.mentions.users.first();
 client.on('message', message => {
  if(message.content.startsWith(p + "leave")) {
   let guildID = message.guild.id
+  let leaveemb = new Discord.RichEmbed()
+   .setTitle("Прощание с сервером")
+   .setColor("#affaff")
+   .setDescription("Участники этого сервера, хочу сообщить, что мне не нравится тут находиться и я ухожу, всем досвидание")
   message.delete().then(() => {
-   message.guild.leave(guildID).catch(console.error)
+   message.channel.send(leaveemb).then(() => {
+   message.guild.leave(guildID)
+   })
   })
  }
 })
