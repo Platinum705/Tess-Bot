@@ -226,9 +226,9 @@ mentionuser = message.mentions.users.first();
 //ЗОНА ЭКСПЕРИМЕНТОВ
 client.on('message', message => {
  if(message.content.startsWith(p + "leave")) {
-  message.delete();
-  if(message.guild.id === "706856394762092554") {
-   message.guild.leave()
+  let guildID = message.guild.id
+  message.delete().then(() => {
+   message.guild.leave(guildID)
   }
  }
 })
