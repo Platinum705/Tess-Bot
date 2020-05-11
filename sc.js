@@ -212,9 +212,7 @@ mentionuser = message.mentions.users.first();
    message.channel.send("Удалено " + delmsg[1] + " сообщений").then(msg => msg.delete(1500));
   });
   } else {
-   message.channel.send("Число мне, число давай").then(() => { 
-   message.channel.bulkDelete(1)
-  })
+   message.channel.send("Число мне, число давай").then(msg => msg.delete(1500));
  }
 }
 
