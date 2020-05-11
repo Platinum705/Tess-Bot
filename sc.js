@@ -127,10 +127,12 @@ if(message.content.includes(p + "invitebot")) {
 const embed = new Discord.RichEmbed()
             .setTitle("Приглашение")
             .setColor("#00BFFF")
-            .setDescription('Пригласить бота с правами администратора\n https://discordapp.com/api/oauth2/authorize?client_id=466896060682469377&permissions=8&scope=bot\n Пригласить бота без прав администратора\n https://discordapp.com/api/oauth2/authorize?client_id=466896060682469377&permissions=0&scope=bot')
-            .setFooter("Tess bot")
+            .setDescription (
+             "[Пригласить бота](https://discord.com/api/oauth2/authorize?client_id=479713309881532416&permissions=8&scope=bot)"
+             )
+            .setFooter("Приглашение|Tess bot")
             .setTimestamp();
-    message.channel.send({embed})
+    message.channel.send(embed)
     .catch(console.error)
 }
   if(message.content.startsWith(p + "help")) {
