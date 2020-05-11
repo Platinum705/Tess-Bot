@@ -16,18 +16,17 @@ client.on('ready', () => {
            
 client.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
-try {
-let mentions1 = message.mentions
 		const embed = new Discord.RichEmbed()
 		 .setTitle('Аватар пользователя:')
                  .setColor('RANDOM')
 		 .setImage(message.mentions.users.first().avatarURL)
-		 message.channel.send({embed})
-		console.log(`показал аватар ${mentions1[0]} для ${message.author.displayName} в ${message.guild.name}`)
-} catch (err) {
-message.channel.send('Ты уверен что это человек имеет аватарку?')
-		}
-	}
+                 .setFooter("Аватар|Tess bot")
+                 .setTimestamp()
+		 message.channel.send(embed)
+
+  } else {
+   message.channel.send("Пользователя мне, пользователя").then(() => message.delete(1500))
+ }
 });
 	
 client.on("messageDelete", (msg) => {	
@@ -209,7 +208,7 @@ mentionuser = message.mentions.users.first();
    message.channel.send("Удалено " + delmsg[1] + " сообщений").then(msg => msg.delete(1500));
   });
   } else {
-   message.channel.send("Число мне, число давай")
+   message.channel.send("Число мне, число давай").then(() => message.delete(1500))
  }
 }
 
