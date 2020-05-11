@@ -16,6 +16,7 @@ client.on('ready', () => {
            
 client.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
+ try {
 		const embed = new Discord.RichEmbed()
 		 .setTitle('Аватар пользователя:')
                  .setColor('RANDOM')
@@ -24,8 +25,9 @@ client.on('message', message => {
                  .setTimestamp()
 		 message.channel.send(embed)
 
-  } else {
-   message.channel.send("Пользователя мне, пользователя").then(() => message.delete(1500))
+  } catch (err) {
+   message.channel.send("Пользователя мне, пользователя")
+  }
  }
 });
 	
@@ -210,7 +212,9 @@ mentionuser = message.mentions.users.first();
    message.channel.send("Удалено " + delmsg[1] + " сообщений").then(msg => msg.delete(1500));
   });
   } else {
-   message.channel.send("Число мне, число давай").then(() => message.delete(1500))
+   message.channel.send("Число мне, число давай").then(() => { 
+   message.channel.bulkDelete(1)
+  })
  }
 }
 
