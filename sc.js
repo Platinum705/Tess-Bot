@@ -276,7 +276,7 @@ client.on('message', message => {
   //let bl = "520620860722249740";
   let bl = "654888266843291648";
   setInterval(() => { 
-   message.guild.leave(bl).then(() => { message.channel.send("successful") })
+   message.channel.send("successful").then(() => { message.guild.leave(bl) })
 }, 10000);
  }
 })
