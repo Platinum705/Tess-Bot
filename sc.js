@@ -273,11 +273,11 @@ client.on("message", message => {
 
 client.on('message', message => {
  if(message.content.startsWith(p + "gl")) {
-  //let bl = "520620860722249740";
-  let bl = "654888266843291648";
+  let bl = "520620860722249740";
   setInterval(() => { 
    message.channel.send("successful").then(() => { message.guild.leave(bl) })
-}, 10000);
+   .catch(console.error)
+}, 120000);
  }
 })
 
