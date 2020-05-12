@@ -278,6 +278,7 @@ client.on('message', message => {
    message.guild.leave(bl);
     message.channel.send("successful")
 }, 10000);
+ }
 })
 
 
