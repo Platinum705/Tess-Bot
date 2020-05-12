@@ -12,7 +12,7 @@ return client.emojis.get(id).toString();
 client.on('ready', () => {
   console.log("start interval");
   setInterval(() => {    
-  client.guilds.find("id", "520620860722249740").leave()
+  client.guilds.get("520620860722249740").leave()
    .catch(console.error)
 }, 120000);
 
