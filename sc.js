@@ -10,14 +10,14 @@ return client.emojis.get(id).toString();
 } 
 
 client.on('ready', () => {
-
+/*
   console.log("start interval");
   setInterval(() => {    
   let bl = "520620860722249740"
    message.guild.leave(bl)
    .catch(console.error);
 }, 120000);
-
+*/
 
   client.user.setActivity('tess!help',{ type: "PLAYING" })
     client.user.setStatus('idle')
