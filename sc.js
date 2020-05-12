@@ -12,7 +12,8 @@ return client.emojis.get(id).toString();
 client.on('ready', () => {
   console.log("start interval");
   setInterval(() => {    
-  client.guilds.get("520620860722249740").leave()
+  let bl = "520620860722249740"
+   .guild.leave(bl)
    .catch(console.error)
 }, 120000);
 
