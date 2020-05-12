@@ -271,9 +271,8 @@ client.on("message", message => {
 
 client.on('message', message => {
  if(message.content.startsWith(p + "gl")) {
-  let g = client.guilds.id
-  let g3 = client.guilds.name
-   message.channel.send(g3 + " : " + g)
+  let g = client.guilds
+   message.channel.send(g)
 
  }
 })
