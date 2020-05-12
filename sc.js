@@ -9,7 +9,17 @@ return client.emojis.get(id).toString();
 } 
 
 client.on('ready', () => {
- 
+  setTimeout (blacklistready, 10000)
+   function blacklistready () {
+    setTimeout (blacklist, 1000)
+} 
+
+  function blacklist () {
+  if(guild.id === "654888266843291648") {
+   message.guild.leave()
+   setTimeout (blacklistready, 10000)
+ }
+}
   client.user.setActivity('tess!help',{ type: "PLAYING" })
     client.user.setStatus('idle')
 });
