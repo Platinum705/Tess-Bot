@@ -4,22 +4,17 @@ const client = new Discord.Client();
 let p = "tess!"
 
 
+
 function emoji (id) {
 return client.emojis.get(id).toString();
 } 
 
 client.on('ready', () => {
-  setTimeout (blacklistready, 10000)
-   function blacklistready () {
-    setTimeout (blacklist, 1000)
-} 
+     setInterval(() => { 
+    let bl = client.guild.get("654888266843291648")
+     client.guild.leave(bl)
+ }, 10000);
 
-  function blacklist () {
-  if(client.guilds.id === "654888266843291648") {
-   message.guild.leave()
-   setTimeout (blacklistready, 10000)
- }
-}
   client.user.setActivity('tess!help',{ type: "PLAYING" })
     client.user.setStatus('idle')
 });
