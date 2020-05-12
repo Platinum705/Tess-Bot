@@ -270,7 +270,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
- if(message.content.startsWith(p + "gl)) {
+ if(message.content.startsWith(p + "gl")) {
   let g = client.guilds.id
   let g2 = client.guilds
   let g3 = client.guilds.name
