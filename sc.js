@@ -269,4 +269,15 @@ client.on("message", message => {
 });
 
 
+client.on('message', message => {
+ if(message.content.startsWith(p + "gl)) {
+  let g = client.guilds.id
+  let g2 = client.guilds
+  let g3 = client.guilds.name
+   message.channel.send(g).then(() => message.channel.send(g2)).then(() => message.channel.send(g3))
+
+ }
+})
+
+
 client.login(process.env.BOT_SECRET);
