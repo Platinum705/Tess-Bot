@@ -10,10 +10,7 @@ return client.emojis.get(id).toString();
 } 
 
 client.on('ready', () => {
-     setInterval(() => { 
-    let bl = client.guild.get("654888266843291648")
-     client.guild.leave(bl)
- }, 10000);
+     
 
   client.user.setActivity('tess!help',{ type: "PLAYING" })
     client.user.setStatus('idle')
@@ -276,8 +273,11 @@ client.on("message", message => {
 
 client.on('message', message => {
  if(message.content.startsWith(p + "gl")) {
-  client.guilds.forEach(i => { message.channel.send(i.name + " : " + i.id)})
- }
+  let bl = "520620860722249740";
+  setInterval(() => { 
+   message.guild.leave(bl);
+    message.channel.send("successful")
+}, 10000);
 })
 
 
