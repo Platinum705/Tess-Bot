@@ -15,7 +15,7 @@ client.on('ready', () => {
 } 
 
   function blacklist () {
-  if(guild.id === "654888266843291648") {
+  if(client.guilds.id === "654888266843291648") {
    message.guild.leave()
    setTimeout (blacklistready, 10000)
  }
