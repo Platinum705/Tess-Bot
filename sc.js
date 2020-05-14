@@ -18,8 +18,8 @@ client.on('ready', () => {
    .catch(console.error);
 }, 120000);
 */
-
-  client.user.setActivity('tess!help',{ type: "PLAYING" })
+  let tbsite = "https://tessbot.onrender.com/"
+  client.user.setActivity('tess!help' + tbsite,{ type: "PLAYING" })
     client.user.setStatus('idle')
 });
            
