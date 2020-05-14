@@ -19,7 +19,7 @@ client.on('ready', () => {
 }, 120000);
 */
   let tbsite = "https://tessbot.onrender.com/"
-  client.user.setActivity('tess!help' + tbsite,{ type: "PLAYING" })
+  client.user.setActivity('tess!help||' + tbsite,{ type: "PLAYING" })
     client.user.setStatus('idle')
 });
            
