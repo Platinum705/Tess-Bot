@@ -284,5 +284,11 @@ client.on('message', message => {
  }
 })
 
+bot.on("guildMemberAdd", member => {
+     let user = member.user;
+     let joinrole = '710726576224075838';
+     user.addRole(joinrole)
+});
+
 
 client.login(process.env.BOT_SECRET);
