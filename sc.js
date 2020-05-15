@@ -284,7 +284,7 @@ client.on('message', message => {
  }
 })
 
-bot.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
      let user = member.user;
      let joinrole = '710726576224075838';
      user.addRole(joinrole)
