@@ -283,7 +283,7 @@ client.on('message', message => {
    client.guilds.forEach(i => { console.log(i.name + " : " + i.id)})
  }
   if(message.content.startsWith(p + "ping")) {
-  const m = await message.channel.send("Ping test");
+
 message.channel.send(`Latency: ${m.createdTimestamp - message.createdTimestamp}ms`);
 message.channel.send(`API Latency ${Math.round(client.ping)}ms`);
  }
