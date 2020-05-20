@@ -283,6 +283,8 @@ client.on('message', message => {
    client.guilds.forEach(i => { console.log(i.name + " : " + i.id)})
  }
   if(message.content.startsWith(p + "sex")) {
+   if (mentionuser == null) return; 
+     if (message.channel.nsfw == false) { return message.channel.send("Разрешено только в каналах с nsfw") }
    let hentimg = [
     'https://cdn.discordapp.com/attachments/674482419415515146/712583114576101426/5.gif',
     'https://cdn.discordapp.com/attachments/674482419415515146/712583115176149023/7.gif',
